@@ -1,5 +1,5 @@
 self.RESEARCH_RELEASE = {
-  "version": "3abf054c64cdfe243499e5fb238732f3f9ada57419d23ac03cf530d85019bb54",
+  "version": "090cd28b8ffec4eb2ea7e8e5e30df9f3bd1d3d75d832d66f015a4527453bf63d",
   "files": {
     "app.js": "7be14736c504fc35c4c36463f15ef3335bf6ea2311dd8c8024c29c3967d15f1c",
     "basis.html": "bab9798157358288b1728432e9df6276a698f71ac65087835940aab144a6809e",
@@ -14,7 +14,7 @@ self.RESEARCH_RELEASE = {
     "icons/apple-touch-icon.png": "afeea60530c0e5035e82e719dc6f1ecb166770625e108f86e320f20ef2bf92fc",
     "icons/favicon-32.png": "5ca221c8416fe004dbb3818aacb5b6aede7101f918c821615cfaaef340bfb9e9",
     "icons/favicon.ico": "27cf3deaaccf35c73504ed29a4526c5a508b7ad933543ee2a9065d851d53f6b2",
-    "index.html": "aba67a7d2eb4340548868c8830380a833e4bdfcc4afd39fc228996d0e8e5a41c",
+    "index.html": "21f785f05bffdb6acfbf2cbe878058a0fc5475540f02bfdef3d2ad958626741d",
     "manifest.webmanifest": "aae3747161cf4b5f93f34c8d210cb62e32f9764754cc36efbabb768bb3edce48",
     "online/api.js": "dfdf4e2feaa20fa6454c5bea1b8b091553eb76f2d534223ff2616df47893869e",
     "online/data.js": "b2785c07c6258357b0895fe33fec83b70ef50b5221b2375612be5b6d89fef5d6",
@@ -23,6 +23,8 @@ self.RESEARCH_RELEASE = {
     "online/signal_weights.js": "c9746056a0cef97ca0f112d7251a158a46ed2e6a31411bc16bde2abf63956d24",
     "online/simulator.js": "3ed39f9389b89d361053ced74e448a7b4f71452aeb625b7a5bb8375152bae6bd",
     "online/worker.js": "eca324e5a63c5ac1859a464fa7f53a26e537d1cfb181804a3c4a46befe6719f7",
+    "opportunities10.html": "95bcf5c6ad61e50da783127033e3fd0b49d18ed891af4e47bdc11514db09875c",
+    "opportunities10.pdf": "7a2cfdad6ff7726aca2628b5c2f0b6be904c76eaa33d89e781356025d158eaf9",
     "opportunities8.html": "a4033877a7b597cb8b4b7973a56993d2886ef518f047222212ced55d72388a9f",
     "opportunities8.pdf": "a4829c9731b258156423b67a7263fa29de9e917cecb8a49e866b27333dc6bd72",
     "reference/daily_balanced.json": "e3de7aed06a71a71d4d11beef8e1ced8375f2c0a4a18ad66c466372dc9cd6540",
@@ -30,7 +32,7 @@ self.RESEARCH_RELEASE = {
     "reference/four_hour_half.json": "801f490ac669c828710aa1a2ff6b9c3e245fa0f519c17b980bc182542a6d7eb0",
     "returns7.html": "d12a9e1c31cca72dabf867dc6d450e2df1b4ebc18385fbbecc8bd43ef9f73185",
     "returns7.pdf": "d526bda287cfd8165cf33b184f85064645165994970a40d009a306db0c23359e",
-    "robustness9.html": "d921a9d20153a57b9edc461dfce0fcf0e1902c1caa96be217784094921219bc8",
+    "robustness9.html": "44c26f346987d4ee18bbe3d3a461be38cebf8a979c29fba448d90328411d22df",
     "robustness9.pdf": "24d5fd0b8c77867f18121e7e465dee5c726e3a4cc93060a879cb9c1dd3a31941",
     "style.css": "d422f20ef2759c7d06ccb44f6a004d76e81e79c25353d16b80dfc3a734960614"
   }

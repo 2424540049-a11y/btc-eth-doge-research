@@ -122,7 +122,7 @@ self.addEventListener("fetch", event => {
   url.hash = "";
   if (request.headers.has("range")) {
     const path = shellPaths.get(url.href);
-    if (path === "basis.pdf" || path === "basis6.pdf" || path === "returns7.pdf" || path === "opportunities8.pdf" || path === "robustness9.pdf") event.respondWith(reportRange(path, request.headers.get("range")));
+    if (path === "basis.pdf" || path === "basis6.pdf" || path === "returns7.pdf" || path === "opportunities8.pdf" || path === "robustness9.pdf" || path === "opportunities10.pdf") event.respondWith(reportRange(path, request.headers.get("range")));
     return;
   }
   if (request.mode === "navigate" && (url.pathname === new URL(base).pathname || url.pathname === new URL("index.html", base).pathname)) {

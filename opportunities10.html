@@ -1,0 +1,2525 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#173f35"><title>第十轮交易机会与实盘约束</title><link rel="manifest" href="./manifest.webmanifest"><link rel="apple-touch-icon" href="./icons/app-192.png"><style>:root{color-scheme:light;--ink:#183430;--muted:#4a625d;--line:#cfded7;--green:#13634e;--red:#923d32;--paper:white}
+*{box-sizing:border-box}body{margin:0;background:#e9efeb;color:var(--ink);font:16px/1.65 "Microsoft YaHei","PingFang SC",sans-serif}a{color:#075f51;text-underline-offset:3px}nav{background:#173f35;color:white}nav>div{max-width:930px;margin:auto;padding:12px 24px;display:flex;gap:20px;flex-wrap:wrap}nav a{font-size:14px;color:white}.sheet{max-width:930px;margin:24px auto;padding:36px 46px 24px;background:var(--paper);border:1px solid var(--line)}header{display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line);padding-bottom:9px;color:var(--green);font-size:13px;letter-spacing:.05em}h1,h2,h3{margin:0;line-height:1.35}h1{font-size:40px;letter-spacing:-.045em}h2{font-size:30px;letter-spacing:-.025em}h3{font-size:17px;margin:18px 0 5px}.title{margin:23px 0 12px}.lead{color:var(--muted);font-size:18px;margin:0 0 18px}p{margin:10px 0}table{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums;margin:12px 0}th,td{text-align:right;padding:7px 9px;border-bottom:1px solid var(--line)}th{background:#edf4ef;font-size:.91em;color:#36584e}td:first-child,th:first-child{text-align:left}.neg{color:var(--red)}.pos{color:var(--green)}.note{border-left:3px solid #418772;background:#edf4ef;padding:10px 14px}.caption{font-size:13px;color:var(--muted)}.metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:19px 0}.metric{border-top:3px solid #729c87;padding:12px 4px}.metric strong,.metric small{display:block}.metric strong{font-size:30px;line-height:1.25}.metric small{margin-top:6px;color:var(--muted)}footer{border-top:1px solid var(--line);padding-top:9px;margin-top:23px;color:var(--muted);display:flex;justify-content:space-between;gap:12px;font-size:12px}label{font-size:14px}select{font:inherit;background:white;border:1px solid #8aa49a;color:var(--ink);border-radius:4px;padding:3px}.filters{display:flex;gap:12px;flex-wrap:wrap;margin:10px 0}.chart{width:100%;height:auto;display:block}.chartwrap{padding:5px 0}button{cursor:pointer}ul{padding-left:22px}li+li{margin-top:5px}
+@media(max-width:650px){.sheet{margin:10px 0;padding:22px 15px 16px;border-left:0;border-right:0}nav>div{padding:10px 15px;gap:15px}h1{font-size:32px}h2{font-size:25px}.lead{font-size:16px}.metrics{gap:5px}.metric strong{font-size:21px}.metric small{font-size:12px}table{font-size:13px}th,td{padding:7px 3px}header{font-size:11px}footer{font-size:11px}.chartwrap{margin:0 -4px}.caption{overflow-wrap:anywhere}}
+@page{size:A4;margin:0}
+@media print{body{background:white;font-size:11pt;line-height:1.6;-webkit-print-color-adjust:exact;print-color-adjust:exact}.screen{display:none!important}.sheet{height:297mm;width:210mm;max-width:none;margin:0;padding:16mm 16mm 12mm;border:0;display:flex;flex-direction:column;break-after:page}.sheet:last-of-type{break-after:auto}header{font-size:9pt}footer{margin-top:auto;font-size:8pt}.title{margin:8mm 0 4mm}h1{font-size:31pt}h2{font-size:24pt}h3{font-size:13pt;margin-top:5mm}.lead{font-size:13pt;margin-bottom:5mm}.caption{font-size:9pt}th,td{padding:2mm 2.8mm}nav{display:none}a{color:var(--green)}.note{padding:3mm 4mm}.metric strong{font-size:24pt}.metrics{margin:5mm 0}}
+.printonly{display:none}@media print{.printonly{display:block}}
+.download{padding:4px 0;color:var(--green);font:inherit;font-size:13px;background:none;border:0;text-decoration:underline;text-underline-offset:3px}
+@media print{#p2 th,#p2 td{padding:1.1mm 2.8mm}#p2 h3{margin-top:3.5mm}#p2 table{margin:2mm 0}#p2 p{margin:2mm 0}}
+
+.plot{margin:12px 0}.plot svg{display:block;width:100%;height:auto}.sheet{overflow-wrap:break-word}.filters{flex-wrap:wrap}@media print{.plot{margin:2mm 0}.plot svg{height:43mm}th,td{padding:1.55mm 2.3mm}.lead{margin-bottom:4mm}.note{margin-bottom:1mm}}</style></head><body><nav><div><a href="./">研究台首页</a><a href="./robustness9.html">第九轮收益复核</a><a href="./opportunities10.pdf">下载本轮 PDF</a></div></nav><section class="sheet" id="p1"><header><span>BTC · ETH · DOGE　/　第十轮研究</span><span>自有资金 · 同币对冲</span></header><main><h1 class="title">增加现货预算后，净收益还能保留多少？</h1><p class="lead">BTC、ETH、DOGE 各分 3,333.33 USDT。每币买现货，同时在同一交易所做空等量永续。各自保留保证金，按季度检查，目标偏移超过 25% 才调整。以下为 2025 年 1 月 1 日至 2026 年 11 月 20 日的累计结果。</p><table><thead><tr><th>每币现货预算</th><th>币安净赚</th><th>Bybit 净赚</th><th>币安借现货款后</th><th>币安小时回撤</th></tr></thead><tbody><tr><td>20%</td><td><span class="pos">+109.03</span></td><td><span class="pos">+111.18</span></td><td><span class="neg">−30.01</span></td><td>0.11%</td></tr><tr><td>35%</td><td><span class="pos">+194.99</span></td><td><span class="pos">+195.84</span></td><td><span class="neg">−50.20</span></td><td>0.19%</td></tr><tr><td>45%</td><td><span class="pos">+249.65</span></td><td><span class="pos">+250.33</span></td><td><span class="neg">−63.81</span></td><td>0.24%</td></tr></tbody></table><h3>用逐笔成交独立复核</h3><p>表中币安按分钟成交估价。改为每腿按实际方向逐笔匹配，20%、35%、45% 账户分别净赚 109.47、196.43、252.17。45% 档 DOGE 最慢一次开仓，两腿完成时间相隔 160 秒，期间单边敞口峰值 1,356.76。</p><h3>高仓位的代价</h3><p>近期 45% 档的小时末回撤约 0.24%。若把每小时现货最低价与合约最高价同时计入，保守回撤上界约 10.18%。两种计价频率和价格假设不能混用。</p><p class="note">2021–22 年币安小时高价检查中，35% 和 45% 档的衍生品最低可用保证金分别为 −861.38 和 −1,194.71；两个账户的全期现金收益均列为无效。20% 档净赚 476.74，但也有 29 个持仓小时缺完整风控价格。</p><p class="caption">币安用分方向分钟成交量，Bybit 用该所小时成交额与数量近似。现货单边手续费 10 基点，永续为 5 或 5.5 基点；每腿额外滑点按 BTC、ETH、DOGE 分别为 2、3、6 基点。<a href="https://github.com/binance/binance-public-data">币安历史市场数据</a>　<a href="https://bybit-exchange.github.io/docs/v5/market/kline">Bybit 历史行情</a></p></main><footer><span>2026 年 11 月 21 日　·　账户本金 10,000 USDT</span><span>1 / 7</span></footer></section><section class="sheet" id="p2"><header><span>BTC · ETH · DOGE　/　第十轮研究</span><span>补足缺失的市场暴露</span></header><main><h2 class="title">少了六个月的数据，组合结论会怎样？</h2><p class="lead">原七三组合在没有当时 Git 版本的周里，把链上部分放回现金。这次从独立区块浏览器重建 2026 年 6 至 11 月的 25 个缺口周，再把目标仓位交给相同的 Bybit 现货账户执行。</p><table><thead><tr><th>七成资金费、三成链上</th><th>净收益</th><th>双倍费滑</th><th>日末回撤</th><th>去最佳两季</th></tr></thead><tbody><tr><td>仅用当时的 Git 存档</td><td><span class="pos">+525.34</span></td><td><span class="pos">+498.30</span></td><td>1.15%</td><td><span class="pos">+75.27</span></td></tr><tr><td>另补 DOGE 原链信号</td><td><span class="pos">+556.53</span></td><td><span class="pos">+527.50</span></td><td>1.15%</td><td><span class="pos">+105.12</span></td></tr><tr><td>三币独立区块浏览器</td><td><span class="pos">+624.29</span></td><td><span class="pos">+594.51</span></td><td>1.83%</td><td><span class="neg">−1.99</span></td></tr></tbody></table><h3>成交确实改变了结果</h3><p>25 周中，BTC 在 14 周满足每块交易数和手续费同时走强，DOGE 在 1 周满足，ETH 为 0 周。完整补入增加 +98.95，同时将去最佳两季的结果降至 −1.99。</p><h3>五三二组合的变化</h3><p>加入两所拥挤多空以后，完整补入的近期净收益为 +669.94，双倍成本 +616.82，剔除最佳两季 −16.18。两个组合各自从一万元起步。</p><p class="note">2021 年 4 月 12 日另缺一周。4 月 7 日已发布 109 天数据，余下三天取任意非负值，仍可确定 ETH、DOGE 各六分之一。只补该周，币安独立现货账户长样本净利从 16,336.10 增至 31,354.91；当周及其后复利增加 15,018.81。</p><p class="caption"><a href="https://github.com/coinmetrics/data/commit/79f4405057b05626a4a1d115d15c0d4f8407405a">4 月 7 日的原始提交</a>　<a href="https://registry.opendata.aws/aws-public-blockchain/">开放链数据归档</a>　<a href="https://blockchair.com/">Blockchair 历史统计</a></p></main><footer><span>2026 年 11 月 21 日　·　账户本金 10,000 USDT</span><span>2 / 7</span></footer></section><section class="sheet" id="p3"><header><span>BTC · ETH · DOGE　/　第十轮研究</span><span>多策略同时筛选</span></header><main><h2 class="title">把挑中赢家的机会计入不确定性</h2><p class="lead">同一近期样本里同时看 13 个策略，按共同日历把所有策略的周收益一起分块。以下为累计收益及校正同时筛选后的年化对数收益 95% 区间。</p><table><thead><tr><th>策略</th><th>近期累计</th><th>按四周分块</th><th>按八周分块</th></tr></thead><tbody><tr><td>少换手资金费</td><td>+1.29%</td><td>+0.38% 至 +0.98%</td><td>+0.31% 至 +1.04%</td></tr><tr><td>七三分仓 · 严格存档</td><td>+5.25%</td><td>-0.91% 至 +6.33%</td><td>-1.55% 至 +6.97%</td></tr><tr><td>五三二分仓 · 严格存档</td><td>+5.71%</td><td>-1.00% 至 +6.88%</td><td>-1.64% 至 +7.52%</td></tr><tr><td>链上需求现货</td><td>+14.63%</td><td>-3.85% 至 +18.32%</td><td>-5.85% 至 +20.32%</td></tr><tr><td>ETF 完整汇总表</td><td>+28.96%</td><td>-13.11% 至 +40.06%</td><td>-12.65% 至 +39.59%</td></tr></tbody></table><h3>能跨过什么门槛</h3><p>两种分块下，原有 20% 少换手资金费规则的区间下界都超过零。以全账户每年 4% 为门槛，同一组测试未找到可靠领先者。这里沿用上一轮已经公布的持仓和再平衡规则，与本轮各账户分开计算。</p><h3>盈利与选币能力分别检验</h3><p>对交易方向、现金占比或事前波动匹配的控制账户另做成组比较。没有一组在多重检验后达到 5% 水平。共同下跌或上涨造成的相关性保留在每一次重采样中。</p><p class="note">这些区间只覆盖列出的 13 项以及指定的市场区间。研究者已见过历史行情，结果仍需要事先冻结规则的前瞻检验。</p><p class="caption">周收益由每日净值复合。四周检验抽取 65,536 组共同符号，八周检验穷举分块符号组合。账本首先逐项与期末现金核对。</p></main><footer><span>2026 年 11 月 21 日　·　账户本金 10,000 USDT</span><span>3 / 7</span></footer></section><section class="sheet" id="p4"><header><span>BTC · ETH · DOGE　/　第十轮研究</span><span>真实基差 · 公告后交易</span></header><main><h2 class="title">公告让期现价差扩大，够付四条腿吗？</h2><p class="lead">以美国 47 次利率决议、70 次 CPI 公告为事件。先计算公告前一小时的常态基差，再看公告后 30 分钟，永续可卖成交均价与现货可买成交均价之差。决策后下一分钟才允许成交。</p><table><thead><tr><th>币安 · 买现货空永续</th><th>实际触发成交</th><th>全期净收益</th><th>2025 年起</th></tr></thead><tbody><tr><td>FOMC · 超过完整成本</td><td>0</td><td><span class="neg">+0.00</span></td><td><span class="neg">+0.00</span></td></tr><tr><td>FOMC · 只需价差扩大</td><td>140</td><td><span class="neg">−664.04</span></td><td><span class="neg">−210.15</span></td></tr><tr><td>CPI · 超过完整成本</td><td>1</td><td><span class="neg">−10.81</span></td><td><span class="neg">+0.00</span></td></tr><tr><td>CPI · 只需价差扩大</td><td>208</td><td><span class="neg">−1,004.78</span></td><td><span class="neg">−319.50</span></td></tr></tbody></table><h3>唯一超过完整门槛的机会</h3><p>2022 年 5 月 11 日的 DOGE。报价相对常态的偏离约 64 基点，高于 DOGE 模拟四腿成本 54 基点，但用下一分钟的方向成交、滑点与 90 分钟后平仓计算，净亏 10.81。交易决策时看到的价差与真正入场的价差有差距。</p><h3>永续折价的另一边</h3><p>另在每个公告前就用自有资金买好现货。出现永续折价时卖出现货、买入等量永续，最后一起退出。CPI 合计 +407.23，同样预持三币但不换腿为 +409.33，替换仓位本身贡献 −2.10。</p><p class="note">价差按同币现货和永续计算。周末缺口是另一个现象：BTC、ETH 的周末价格大幅偏离后，反向持有 48 小时，全期 96 笔亏 1,377.70，近期 39 笔赚 303.98。CME 全天候交易上线后仅有 9 笔，亏 165.97。</p><p class="caption"><a href="https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm">美联储利率日历</a>　<a href="https://www.bls.gov/bls/news-release/cpi.htm">美国 CPI 公告</a>　<a href="https://www.cmegroup.com/markets/cryptocurrencies/24-7-trading.html">CME 加密产品交易时段</a></p></main><footer><span>2026 年 11 月 21 日　·　账户本金 10,000 USDT</span><span>4 / 7</span></footer></section><section class="sheet" id="p5"><header><span>BTC · ETH · DOGE　/　第十轮研究</span><span>美国现货市场 · 地域价差</span></header><main><h2 class="title">美元溢价能否预测下一周的相对需求？</h2><p class="lead">取上周二至周五纽约时间 10–16 时的现货成交收盘价，用同一美元交易所的 USDT/USD 汇率校正币安价格。某币溢价为正且高于此前十二周中位数，周一将账户六分之一分给它。</p><table><thead><tr><th>信号来源</th><th>2021 年 10 月起</th><th>2025 年起</th><th>近期同风险篮子</th><th>近期日末回撤</th></tr></thead><tbody><tr><td>Coinbase</td><td><span class="pos">+3,841.79</span></td><td><span class="pos">+764.44</span></td><td><span class="pos">+710.09</span></td><td>14.28%</td></tr><tr><td>Bitstamp</td><td><span class="pos">+1,253.02</span></td><td><span class="neg">−332.37</span></td><td><span class="neg">−748.92</span></td><td>17.71%</td></tr><tr><td>两所同时确认</td><td><span class="pos">+1,830.17</span></td><td><span class="pos">+407.05</span></td><td><span class="neg">−83.63</span></td><td>11.32%</td></tr></tbody></table><figure class="plot"><svg role="img" aria-label="美国溢价规则与风险匹配账户的日末净值" xmlns:xlink="http://www.w3.org/1999/xlink" width="518.4pt" height="140.4pt" viewBox="0 0 518.4 140.4" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.10.7, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 140.4 
+L 518.4 140.4 
+L 518.4 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 36.554459 121.492026 
+L 515.39976 121.492026 
+L 515.39976 3.00024 
+L 36.554459 3.00024 
+z
+" style="fill: #ffffff"/>
+   </g>
+   <g id="matplotlib.axis_1">
+    <g id="xtick_1">
+     <g id="line2d_1">
+      <defs>
+       <path id="m5f32cf5975" d="M 0 0 
+L 0 3.5 
+" style="stroke: #000000; stroke-width: 0.8"/>
+      </defs>
+      <g>
+       <use xlink:href="#m5f32cf5975" x="58.320154" y="121.492026" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_1">
+      <!-- 2025-01 -->
+      <g transform="translate(41.528006 135.286713) scale(0.085 -0.085)">
+       <defs>
+        <path id="MicrosoftYaHei-32" d="M 2666 3572 
+Q 2666 3963 2419 4186 
+Q 2172 4409 1747 4409 
+Q 1447 4409 1140 4256 
+Q 834 4103 569 3819 
+L 569 4413 
+Q 806 4659 1107 4790 
+Q 1409 4922 1816 4922 
+Q 2472 4922 2872 4570 
+Q 3272 4219 3272 3619 
+Q 3272 3084 3026 2693 
+Q 2781 2303 2188 1894 
+Q 1581 1475 1376 1294 
+Q 1172 1113 1090 947 
+Q 1009 781 1009 544 
+L 3416 544 
+L 3416 0 
+L 372 0 
+L 372 241 
+Q 372 659 486 951 
+Q 600 1244 862 1520 
+Q 1125 1797 1681 2184 
+Q 2250 2584 2458 2886 
+Q 2666 3188 2666 3572 
+z
+" transform="scale(0.015625)"/>
+        <path id="MicrosoftYaHei-30" d="M 284 2325 
+Q 284 3606 709 4264 
+Q 1134 4922 1941 4922 
+Q 3478 4922 3478 2441 
+Q 3478 1216 3045 567 
+Q 2613 -81 1831 -81 
+Q 1094 -81 689 534 
+Q 284 1150 284 2325 
+z
+M 909 2353 
+Q 909 425 1888 425 
+Q 2850 425 2850 2384 
+Q 2850 4413 1906 4413 
+Q 909 4413 909 2353 
+z
+" transform="scale(0.015625)"/>
+        <path id="MicrosoftYaHei-35" d="M 3294 1494 
+Q 3294 784 2823 350 
+Q 2353 -84 1559 -84 
+Q 878 -84 544 119 
+L 544 744 
+Q 1034 425 1544 425 
+Q 2050 425 2361 704 
+Q 2672 984 2672 1447 
+Q 2672 1909 2348 2167 
+Q 2025 2425 1434 2425 
+Q 978 2425 613 2384 
+L 791 4841 
+L 3053 4841 
+L 3053 4303 
+L 1306 4303 
+L 1206 2931 
+L 1647 2950 
+Q 2416 2950 2855 2567 
+Q 3294 2184 3294 1494 
+z
+" transform="scale(0.015625)"/>
+        <path id="MicrosoftYaHei-2d" d="M 2328 1681 
+L 488 1681 
+L 488 2153 
+L 2328 2153 
+L 2328 1681 
+z
+" transform="scale(0.015625)"/>
+        <path id="MicrosoftYaHei-31" d="M 1781 0 
+L 1781 4141 
+Q 1638 3997 1295 3819 
+Q 953 3641 663 3569 
+L 663 4169 
+Q 1047 4275 1484 4508 
+Q 1922 4741 2156 4947 
+L 2388 4947 
+L 2388 0 
+L 1781 0 
+z
+" transform="scale(0.015625)"/>
+       </defs>
+       <use xlink:href="#MicrosoftYaHei-32"/>
+       <use xlink:href="#MicrosoftYaHei-30" transform="translate(58.642578 0)"/>
+       <use xlink:href="#MicrosoftYaHei-32" transform="translate(117.285156 0)"/>
+       <use xlink:href="#MicrosoftYaHei-35" transform="translate(175.927734 0)"/>
+       <use xlink:href="#MicrosoftYaHei-2d" transform="translate(234.570312 0)"/>
+       <use xlink:href="#MicrosoftYaHei-30" transform="translate(277.832031 0)"/>
+       <use xlink:href="#MicrosoftYaHei-31" transform="translate(336.474609 0)"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_2">
+     <g id="line2d_2">
+      <g>
+       <use xlink:href="#m5f32cf5975" x="134.246999" y="121.492026" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_2">
+      <!-- 2025-05 -->
+      <g transform="translate(117.454851 135.286713) scale(0.085 -0.085)">
+       <use xlink:href="#MicrosoftYaHei-32"/>
+       <use xlink:href="#MicrosoftYaHei-30" transform="translate(58.642578 0)"/>
+       <use xlink:href="#MicrosoftYaHei-32" transform="translate(117.285156 0)"/>
+       <use xlink:href="#MicrosoftYaHei-35" transform="translate(175.927734 0)"/>
+       <use xlink:href="#MicrosoftYaHei-2d" transform="translate(234.570312 0)"/>
+       <use xlink:href="#MicrosoftYaHei-30" transform="translate(277.832031 0)"/>
+       <use xlink:href="#MicrosoftYaHei-35" transform="translate(336.474609 0)"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_3">
+     <g id="line2d_3">
+      <g>
+       <use xlink:href="#m5f32cf5975" x="212.072015" y="121.492026" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_3">
+      <!-- 2025-09 -->
+      <g transform="translate(195.279867 135.286713) scale(0.085 -0.085)">
+       <defs>
+        <path id="MicrosoftYaHei-39" d="M 578 656 
+Q 978 425 1441 425 
+Q 2091 425 2448 937 
+Q 2806 1450 2806 2394 
+Q 2800 2388 2794 2394 
+Q 2475 1788 1722 1788 
+Q 1113 1788 713 2206 
+Q 313 2625 313 3294 
+Q 313 4006 750 4464 
+Q 1188 4922 1884 4922 
+Q 2606 4922 3012 4355 
+Q 3419 3788 3419 2703 
+Q 3419 1363 2894 641 
+Q 2369 -81 1441 -81 
+Q 931 -81 578 84 
+L 578 656 
+z
+M 931 3372 
+Q 931 2884 1181 2598 
+Q 1431 2313 1872 2313 
+Q 2253 2313 2512 2573 
+Q 2772 2834 2772 3206 
+Q 2772 3728 2514 4070 
+Q 2256 4413 1834 4413 
+Q 1444 4413 1187 4116 
+Q 931 3819 931 3372 
+z
+" transform="scale(0.015625)"/>
+       </defs>
+       <use xlink:href="#MicrosoftYaHei-32"/>
+       <use xlink:href="#MicrosoftYaHei-30" transform="translate(58.642578 0)"/>
+       <use xlink:href="#MicrosoftYaHei-32" transform="translate(117.285156 0)"/>
+       <use xlink:href="#MicrosoftYaHei-35" transform="translate(175.927734 0)"/>
+       <use xlink:href="#MicrosoftYaHei-2d" transform="translate(234.570312 0)"/>
+       <use xlink:href="#MicrosoftYaHei-30" transform="translate(277.832031 0)"/>
+       <use xlink:href="#MicrosoftYaHei-39" transform="translate(336.474609 0)"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_4">
+     <g id="line2d_4">
+      <g>
+       <use xlink:href="#m5f32cf5975" x="289.264307" y="121.492026" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_4">
+      <!-- 2026-01 -->
+      <g transform="translate(272.472159 135.286713) scale(0.085 -0.085)">
+       <defs>
+        <path id="MicrosoftYaHei-36" d="M 3181 4219 
+Q 2803 4413 2391 4413 
+Q 1763 4413 1381 3866 
+Q 1000 3319 994 2372 
+L 1009 2372 
+Q 1353 3038 2106 3038 
+Q 2734 3038 3109 2628 
+Q 3484 2219 3484 1541 
+Q 3484 831 3051 375 
+Q 2619 -81 1947 -81 
+Q 1209 -81 789 495 
+Q 369 1072 369 2131 
+Q 369 3413 920 4167 
+Q 1472 4922 2372 4922 
+Q 2888 4922 3181 4781 
+L 3181 4219 
+z
+M 1031 1584 
+Q 1031 1106 1286 765 
+Q 1541 425 1963 425 
+Q 2363 425 2613 719 
+Q 2863 1013 2863 1475 
+Q 2863 1975 2627 2253 
+Q 2391 2531 1956 2531 
+Q 1544 2531 1287 2250 
+Q 1031 1969 1031 1584 
+z
+" transform="scale(0.015625)"/>
+       </defs>
+       <use xlink:href="#MicrosoftYaHei-32"/>
+       <use xlink:href="#MicrosoftYaHei-30" transform="translate(58.642578 0)"/>
+       <use xlink:href="#MicrosoftYaHei-32" transform="translate(117.285156 0)"/>
+       <use xlink:href="#MicrosoftYaHei-36" transform="translate(175.927734 0)"/>
+       <use xlink:href="#MicrosoftYaHei-2d" transform="translate(234.570312 0)"/>
+       <use xlink:href="#MicrosoftYaHei-30" transform="translate(277.832031 0)"/>
+       <use xlink:href="#MicrosoftYaHei-31" transform="translate(336.474609 0)"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_5">
+     <g id="line2d_5">
+      <g>
+       <use xlink:href="#m5f32cf5975" x="365.191152" y="121.492026" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_5">
+      <!-- 2026-05 -->
+      <g transform="translate(348.399004 135.286713) scale(0.085 -0.085)">
+       <use xlink:href="#MicrosoftYaHei-32"/>
+       <use xlink:href="#MicrosoftYaHei-30" transform="translate(58.642578 0)"/>
+       <use xlink:href="#MicrosoftYaHei-32" transform="translate(117.285156 0)"/>
+       <use xlink:href="#MicrosoftYaHei-36" transform="translate(175.927734 0)"/>
+       <use xlink:href="#MicrosoftYaHei-2d" transform="translate(234.570312 0)"/>
+       <use xlink:href="#MicrosoftYaHei-30" transform="translate(277.832031 0)"/>
+       <use xlink:href="#MicrosoftYaHei-35" transform="translate(336.474609 0)"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_6">
+     <g id="line2d_6">
+      <g>
+       <use xlink:href="#m5f32cf5975" x="443.016168" y="121.492026" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_6">
+      <!-- 2026-09 -->
+      <g transform="translate(426.22402 135.286713) scale(0.085 -0.085)">
+       <use xlink:href="#MicrosoftYaHei-32"/>
+       <use xlink:href="#MicrosoftYaHei-30" transform="translate(58.642578 0)"/>
+       <use xlink:href="#MicrosoftYaHei-32" transform="translate(117.285156 0)"/>
+       <use xlink:href="#MicrosoftYaHei-36" transform="translate(175.927734 0)"/>
+       <use xlink:href="#MicrosoftYaHei-2d" transform="translate(234.570312 0)"/>
+       <use xlink:href="#MicrosoftYaHei-30" transform="translate(277.832031 0)"/>
+       <use xlink:href="#MicrosoftYaHei-39" transform="translate(336.474609 0)"/>
+      </g>
+     </g>
+    </g>
+   </g>
+   <g id="matplotlib.axis_2">
+    <g id="ytick_1">
+     <g id="line2d_7">
+      <path d="M 36.554459 115.776527 
+L 515.39976 115.776527 
+" clip-path="url(#p2a978c75b4)" style="fill: none; stroke: #dae5df; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_8">
+      <defs>
+       <path id="mdd0dbb1493" d="M 0 0 
+L -3.5 0 
+" style="stroke: #000000; stroke-width: 0.8"/>
+      </defs>
+      <g>
+       <use xlink:href="#mdd0dbb1493" x="36.554459" y="115.776527" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_7">
+      <!-- -10 -->
+      <g transform="translate(15.907974 119.173871) scale(0.085 -0.085)">
+       <use xlink:href="#MicrosoftYaHei-2d"/>
+       <use xlink:href="#MicrosoftYaHei-31" transform="translate(43.261719 0)"/>
+       <use xlink:href="#MicrosoftYaHei-30" transform="translate(101.904297 0)"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_2">
+     <g id="line2d_9">
+      <path d="M 36.554459 81.42054 
+L 515.39976 81.42054 
+" clip-path="url(#p2a978c75b4)" style="fill: none; stroke: #dae5df; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_10">
+      <g>
+       <use xlink:href="#mdd0dbb1493" x="36.554459" y="81.42054" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_8">
+      <!-- 0 -->
+      <g transform="translate(24.570006 84.817884) scale(0.085 -0.085)">
+       <use xlink:href="#MicrosoftYaHei-30"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_3">
+     <g id="line2d_11">
+      <path d="M 36.554459 47.064553 
+L 515.39976 47.064553 
+" clip-path="url(#p2a978c75b4)" style="fill: none; stroke: #dae5df; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_12">
+      <g>
+       <use xlink:href="#mdd0dbb1493" x="36.554459" y="47.064553" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_9">
+      <!-- 10 -->
+      <g transform="translate(19.585553 50.461897) scale(0.085 -0.085)">
+       <use xlink:href="#MicrosoftYaHei-31"/>
+       <use xlink:href="#MicrosoftYaHei-30" transform="translate(58.642578 0)"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_4">
+     <g id="line2d_13">
+      <path d="M 36.554459 12.708566 
+L 515.39976 12.708566 
+" clip-path="url(#p2a978c75b4)" style="fill: none; stroke: #dae5df; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_14">
+      <g>
+       <use xlink:href="#mdd0dbb1493" x="36.554459" y="12.708566" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_10">
+      <!-- 20 -->
+      <g transform="translate(19.585553 16.10591) scale(0.085 -0.085)">
+       <use xlink:href="#MicrosoftYaHei-32"/>
+       <use xlink:href="#MicrosoftYaHei-30" transform="translate(58.642578 0)"/>
+      </g>
+     </g>
+    </g>
+    <g id="text_11">
+     <!-- 相对本金变动（%） -->
+     <g transform="translate(9.794927 100.027305) rotate(-90) scale(0.085 -0.085)">
+      <defs>
+       <path id="MicrosoftYaHei-76f8" d="M 2738 4891 
+L 6025 4891 
+L 6025 -822 
+L 5550 -822 
+L 5550 -397 
+L 3213 -397 
+L 3213 -822 
+L 2738 -822 
+L 2738 4891 
+z
+M 94 1409 
+Q 784 2372 1128 3622 
+L 169 3622 
+L 169 4041 
+L 1138 4041 
+L 1138 5284 
+L 1594 5284 
+L 1594 4041 
+L 2506 4041 
+L 2506 3622 
+L 1594 3622 
+L 1594 2534 
+L 1844 2791 
+Q 2275 2372 2638 1984 
+L 2300 1653 
+Q 1956 2059 1594 2444 
+L 1594 -809 
+L 1138 -809 
+L 1138 2444 
+Q 800 1516 319 866 
+Q 225 1134 94 1409 
+z
+M 3213 28 
+L 5550 28 
+L 5550 1241 
+L 3213 1241 
+L 3213 28 
+z
+M 5550 4466 
+L 3213 4466 
+L 3213 3266 
+L 5550 3266 
+L 5550 4466 
+z
+M 3213 1653 
+L 5550 1653 
+L 5550 2853 
+L 3213 2853 
+L 3213 1653 
+z
+" transform="scale(0.015625)"/>
+       <path id="MicrosoftYaHei-5bf9" d="M 694 3691 
+Q 1234 2909 1741 2166 
+Q 2113 3081 2213 4147 
+L 250 4147 
+L 250 4622 
+L 2725 4622 
+L 2725 4166 
+Q 2553 2809 2059 1700 
+Q 2569 953 3044 247 
+L 2594 -53 
+Q 2203 563 1803 1181 
+Q 1247 163 388 -622 
+Q 263 -428 81 -166 
+Q 975 638 1500 1647 
+Q 919 2538 319 3434 
+L 694 3691 
+z
+M 2975 3941 
+L 5056 3941 
+L 5056 5278 
+L 5563 5278 
+L 5563 3941 
+L 6325 3941 
+L 6325 3466 
+L 5563 3466 
+L 5563 191 
+Q 5563 -716 4669 -716 
+Q 4388 -716 3744 -709 
+Q 3713 -478 3644 -147 
+Q 4263 -197 4588 -197 
+Q 5056 -197 5056 278 
+L 5056 3466 
+L 2975 3466 
+L 2975 3941 
+z
+M 3088 2684 
+L 3494 2928 
+Q 4000 2184 4388 1484 
+L 3919 1216 
+Q 3550 1922 3088 2684 
+z
+" transform="scale(0.015625)"/>
+       <path id="MicrosoftYaHei-672c" d="M 6281 803 
+Q 6119 641 5856 366 
+Q 4344 1531 3444 3353 
+L 3444 878 
+L 4875 878 
+L 4875 441 
+L 3444 441 
+L 3444 -841 
+L 2956 -841 
+L 2956 441 
+L 1475 441 
+L 1475 878 
+L 2956 878 
+L 2956 3353 
+Q 2159 1766 513 291 
+Q 269 522 100 666 
+Q 1878 2125 2759 3753 
+L 238 3753 
+L 238 4216 
+L 2956 4216 
+L 2956 5341 
+L 3444 5341 
+L 3444 4216 
+L 6163 4216 
+L 6163 3753 
+L 3622 3753 
+Q 4616 1884 6281 803 
+z
+" transform="scale(0.015625)"/>
+       <path id="MicrosoftYaHei-91d1" d="M 300 -141 
+L 2950 -141 
+L 2950 1384 
+L 713 1384 
+L 713 1841 
+L 2950 1841 
+L 2950 2716 
+L 1325 2716 
+L 1325 3153 
+Q 881 2872 363 2591 
+Q 231 2828 50 3059 
+Q 2131 4034 2994 5297 
+L 3675 5297 
+L 3531 5122 
+Q 4525 3853 6344 3147 
+Q 6175 2909 6013 2647 
+Q 5525 2853 5069 3141 
+L 5069 2716 
+L 3450 2716 
+L 3450 1841 
+L 5675 1841 
+L 5675 1384 
+L 3450 1384 
+L 3450 -141 
+L 6113 -141 
+L 6113 -603 
+L 300 -603 
+L 300 -141 
+z
+M 3206 4766 
+Q 2563 3953 1350 3172 
+L 5019 3172 
+Q 4044 3791 3206 4766 
+z
+M 4094 284 
+Q 4600 809 4950 1309 
+L 5388 1028 
+Q 4950 484 4469 -16 
+L 4094 284 
+z
+M 1000 1003 
+L 1369 1297 
+Q 1825 834 2263 334 
+L 1838 -3 
+Q 1463 491 1000 1003 
+z
+" transform="scale(0.015625)"/>
+       <path id="MicrosoftYaHei-53d8" d="M 838 1634 
+L 838 2066 
+L 5088 2066 
+L 5088 1634 
+Q 4494 853 3659 309 
+Q 4675 -178 6313 -297 
+Q 6088 -609 5950 -822 
+Q 4275 -594 3178 34 
+Q 2122 -509 425 -866 
+Q 269 -622 106 -403 
+Q 1741 -122 2728 328 
+Q 2047 838 1553 1634 
+L 838 1634 
+z
+M 231 4534 
+L 3081 4534 
+Q 2888 4884 2725 5141 
+L 3175 5359 
+Q 3481 4884 3600 4659 
+L 3359 4534 
+L 6200 4534 
+L 6200 4091 
+L 4181 4091 
+L 4181 2353 
+L 3700 2353 
+L 3700 4091 
+L 2694 4091 
+L 2694 2341 
+L 2213 2341 
+L 2213 4091 
+L 231 4091 
+L 231 4534 
+z
+M 4475 1634 
+L 2116 1634 
+Q 2575 953 3197 572 
+Q 3947 1016 4475 1634 
+z
+M 4556 3434 
+L 4900 3728 
+Q 5700 3009 6213 2459 
+L 5825 2116 
+Q 5219 2797 4556 3434 
+z
+M 1381 3741 
+L 1756 3422 
+Q 1119 2691 500 2097 
+Q 344 2272 138 2447 
+Q 794 3009 1381 3741 
+z
+" transform="scale(0.015625)"/>
+       <path id="MicrosoftYaHei-52a8" d="M 2975 4022 
+L 3906 4022 
+Q 3916 4650 3913 5309 
+L 4425 5309 
+Q 4422 4656 4409 4022 
+L 6094 4022 
+Q 6050 1659 5969 216 
+Q 5900 -666 5150 -678 
+Q 4763 -678 4306 -659 
+Q 4263 -397 4206 -109 
+Q 4638 -166 4994 -172 
+Q 5456 -172 5475 347 
+Q 5569 1897 5588 3547 
+L 4400 3547 
+Q 4394 3278 4388 3016 
+Q 4356 553 2900 -872 
+Q 2725 -659 2525 -447 
+Q 3831 716 3888 3028 
+Q 3894 3284 3900 3547 
+L 2975 3547 
+L 2975 4022 
+z
+M 2338 1866 
+Q 2731 1016 3063 178 
+Q 2788 59 2594 -28 
+Q 2550 91 2506 209 
+Q 1316 97 338 -16 
+L 119 491 
+Q 394 647 563 997 
+Q 869 1613 1200 2559 
+L 144 2559 
+L 144 3022 
+L 3163 3022 
+L 3163 2559 
+L 1725 2559 
+Q 1191 1228 800 491 
+Q 1519 544 2347 631 
+Q 2138 1163 1906 1672 
+L 2338 1866 
+z
+M 406 4778 
+L 2913 4778 
+L 2913 4316 
+L 406 4316 
+L 406 4778 
+z
+" transform="scale(0.015625)"/>
+       <path id="MicrosoftYaHei-ff08" d="M 5288 -1100 
+Q 4172 119 4172 1850 
+Q 4172 3603 5288 4838 
+L 5825 4838 
+Q 4716 3572 4716 1856 
+Q 4716 166 5819 -1100 
+L 5288 -1100 
+z
+" transform="scale(0.015625)"/>
+       <path id="MicrosoftYaHei-25" d="M 272 3619 
+Q 272 4213 589 4563 
+Q 906 4913 1444 4913 
+Q 1959 4913 2248 4591 
+Q 2538 4269 2538 3694 
+Q 2538 3122 2219 2765 
+Q 1900 2409 1372 2409 
+Q 872 2409 572 2740 
+Q 272 3072 272 3619 
+z
+M 753 3650 
+Q 753 3247 928 3028 
+Q 1103 2809 1406 2809 
+Q 1719 2809 1889 3036 
+Q 2059 3263 2059 3675 
+Q 2059 4078 1892 4298 
+Q 1725 4519 1422 4519 
+Q 1113 4519 933 4289 
+Q 753 4059 753 3650 
+z
+M 4647 4841 
+L 1538 -31 
+L 1016 -31 
+L 4125 4841 
+L 4647 4841 
+z
+M 3172 1134 
+Q 3172 1728 3489 2083 
+Q 3806 2438 4341 2438 
+Q 4853 2438 5143 2114 
+Q 5434 1791 5434 1203 
+Q 5434 634 5112 279 
+Q 4791 -75 4272 -75 
+Q 3769 -75 3470 261 
+Q 3172 597 3172 1134 
+z
+M 3650 1163 
+Q 3650 769 3825 548 
+Q 4000 328 4303 328 
+Q 4616 328 4786 556 
+Q 4956 784 4956 1194 
+Q 4956 1600 4786 1815 
+Q 4616 2031 4319 2031 
+Q 4000 2031 3825 1801 
+Q 3650 1572 3650 1163 
+z
+" transform="scale(0.015625)"/>
+       <path id="MicrosoftYaHei-ff09" d="M 1113 -1100 
+L 575 -1100 
+Q 1684 163 1684 1888 
+Q 1684 3581 581 4838 
+L 1113 4838 
+Q 2222 3628 2222 1888 
+Q 2222 128 1113 -1100 
+z
+" transform="scale(0.015625)"/>
+      </defs>
+      <use xlink:href="#MicrosoftYaHei-76f8"/>
+      <use xlink:href="#MicrosoftYaHei-5bf9" transform="translate(100 0)"/>
+      <use xlink:href="#MicrosoftYaHei-672c" transform="translate(200 0)"/>
+      <use xlink:href="#MicrosoftYaHei-91d1" transform="translate(300 0)"/>
+      <use xlink:href="#MicrosoftYaHei-53d8" transform="translate(400 0)"/>
+      <use xlink:href="#MicrosoftYaHei-52a8" transform="translate(500 0)"/>
+      <use xlink:href="#MicrosoftYaHei-ff08" transform="translate(600 0)"/>
+      <use xlink:href="#MicrosoftYaHei-25" transform="translate(700 0)"/>
+      <use xlink:href="#MicrosoftYaHei-ff09" transform="translate(788.964844 0)"/>
+     </g>
+    </g>
+   </g>
+   <g id="line2d_15">
+    <path d="M 58.320154 81.42054 
+L 69.709181 81.42054 
+L 70.341905 80.337502 
+L 70.974628 78.143406 
+L 71.607352 79.52024 
+L 72.240076 79.405174 
+L 72.8728 78.862747 
+L 73.505523 78.932601 
+L 74.138247 80.134131 
+L 74.770971 80.392231 
+L 75.403694 85.28243 
+L 76.036418 82.384617 
+L 76.669142 78.176021 
+L 77.301865 78.957461 
+L 77.934589 86.811856 
+L 78.567313 99.676083 
+L 79.200037 110.09487 
+L 82.996379 110.096195 
+L 83.629103 106.038763 
+L 84.261826 108.607615 
+L 84.89455 102.413368 
+L 85.527274 104.710696 
+L 86.159997 101.253798 
+L 86.792721 101.886193 
+L 87.425445 104.612391 
+L 88.058168 102.604244 
+L 88.690892 104.050029 
+L 89.323616 103.176841 
+L 89.95634 102.724243 
+L 90.589063 104.230588 
+L 91.221787 102.219832 
+L 91.854511 101.087212 
+L 92.487234 101.669531 
+L 100.712643 101.675318 
+L 101.345366 112.031809 
+L 101.97809 107.122073 
+L 102.610814 104.995604 
+L 103.243537 108.470502 
+L 103.876261 105.0638 
+L 104.508985 103.100904 
+L 105.141709 106.930045 
+L 105.774432 104.216861 
+L 106.407156 105.741043 
+L 107.03988 99.099451 
+L 107.672603 103.809612 
+L 108.305327 105.01619 
+L 108.938051 104.565086 
+L 109.570775 102.205171 
+L 110.836222 102.24434 
+L 111.468946 102.546689 
+L 112.101669 102.345038 
+L 112.734393 104.100055 
+L 113.367117 105.210194 
+L 113.99984 105.371878 
+L 114.632564 105.715104 
+L 127.287038 105.715095 
+L 127.919762 106.964651 
+L 128.552486 97.339358 
+L 129.185209 95.883433 
+L 129.817933 96.554707 
+L 130.450657 95.64244 
+L 131.083381 94.432955 
+L 131.716104 95.973764 
+L 132.348828 94.122499 
+L 132.981552 95.97565 
+L 133.614275 96.89379 
+L 134.246999 91.603759 
+L 134.879723 90.983165 
+L 135.512446 93.646788 
+L 136.14517 96.900187 
+L 136.777894 96.253752 
+L 137.410618 94.627791 
+L 138.043341 94.746347 
+L 138.676065 70.763994 
+L 139.308789 64.484179 
+L 139.941512 41.679132 
+L 140.574236 50.191971 
+L 141.20696 50.21349 
+L 141.839684 44.849085 
+L 142.472407 46.944865 
+L 143.105131 48.308109 
+L 143.737855 48.77538 
+L 144.370578 50.518987 
+L 145.003302 47.958762 
+L 145.636026 48.253735 
+L 146.268749 47.113992 
+L 146.901473 42.689207 
+L 147.534197 35.502121 
+L 148.166921 47.05972 
+L 148.799644 46.723884 
+L 150.065092 44.522099 
+L 150.697815 42.402827 
+L 151.330539 42.558529 
+L 151.963263 45.075389 
+L 152.595987 48.486935 
+L 153.22871 48.216369 
+L 153.861434 47.330013 
+L 154.494158 47.764614 
+L 158.2905 47.765057 
+L 158.923224 43.787907 
+L 159.555947 42.558644 
+L 160.188671 44.456681 
+L 160.821395 48.498638 
+L 161.454118 48.73777 
+L 162.086842 49.475237 
+L 163.35229 51.324527 
+L 163.985013 53.358034 
+L 164.617737 52.519809 
+L 165.250461 52.529526 
+L 166.515908 63.899019 
+L 167.148632 66.70045 
+L 167.781356 56.893781 
+L 168.414079 55.138115 
+L 169.046803 56.383094 
+L 169.679527 58.258528 
+L 170.31225 57.65877 
+L 170.944974 56.302874 
+L 171.577698 52.281884 
+L 172.210421 55.129675 
+L 172.843145 60.681672 
+L 173.475869 50.756195 
+L 174.108593 48.599852 
+L 174.741316 54.931892 
+L 175.37404 54.113742 
+L 176.006764 49.355831 
+L 176.639487 50.787564 
+L 177.272211 49.010165 
+L 177.904935 45.270732 
+L 178.537659 40.822946 
+L 179.170382 40.653757 
+L 179.803106 41.017797 
+L 180.43583 40.317217 
+L 181.068553 39.077866 
+L 181.701277 37.518327 
+L 182.334001 32.012025 
+L 182.966724 29.441008 
+L 184.232172 27.676488 
+L 184.864896 24.432449 
+L 186.130343 24.890835 
+L 186.763067 26.987811 
+L 187.39579 25.590348 
+L 188.661238 24.983257 
+L 189.293962 22.654441 
+L 189.926685 24.634995 
+L 190.559409 24.787928 
+L 191.192133 24.569312 
+L 191.824856 27.668298 
+L 192.45758 32.693502 
+L 193.090304 34.748277 
+L 193.723028 32.034254 
+L 194.355751 28.394538 
+L 194.988475 31.88057 
+L 195.621199 30.091392 
+L 196.253922 24.476747 
+L 197.51937 18.654714 
+L 198.152093 20.664364 
+L 198.784817 25.889894 
+L 199.417541 15.287894 
+L 200.050265 8.38623 
+L 200.682988 20.476868 
+L 201.315712 21.264385 
+L 201.948436 20.859699 
+L 202.581159 19.065337 
+L 203.846607 32.860681 
+L 204.479331 25.382643 
+L 205.112054 29.067358 
+L 205.744778 12.443473 
+L 206.377502 14.475615 
+L 207.010225 15.744392 
+L 207.642949 17.388448 
+L 220.297423 17.386521 
+L 220.930147 19.665274 
+L 221.562871 18.416599 
+L 222.195594 15.535955 
+L 222.828318 16.142255 
+L 223.461042 20.241744 
+L 224.093765 19.643394 
+L 224.726489 21.584531 
+L 225.359213 26.989564 
+L 225.991937 28.054659 
+L 226.62466 27.02813 
+L 227.257384 31.709514 
+L 227.890108 29.254489 
+L 228.522831 29.685095 
+L 229.155555 27.987614 
+L 229.788279 28.669581 
+L 230.421002 29.185438 
+L 231.053726 24.687792 
+L 231.68645 21.080179 
+L 232.319174 22.141613 
+L 232.951897 24.190307 
+L 233.584621 23.632476 
+L 234.217345 20.909648 
+L 234.850068 26.211588 
+L 235.482792 23.987204 
+L 236.115516 27.212591 
+L 236.74824 40.001893 
+L 237.380963 42.384065 
+L 238.013687 34.04009 
+L 238.646411 33.849995 
+L 242.442753 33.850826 
+L 243.075477 31.564093 
+L 243.7082 35.213769 
+L 244.340924 37.766981 
+L 245.606371 33.040462 
+L 246.239095 33.140871 
+L 246.871819 26.705101 
+L 247.504543 26.581733 
+L 248.137266 28.831953 
+L 248.76999 30.04879 
+L 249.402714 31.611875 
+L 250.035437 30.926885 
+L 251.300885 29.991515 
+L 251.933609 31.037314 
+L 273.446215 31.039956 
+L 274.078938 29.895569 
+L 274.711662 21.704294 
+L 275.977109 27.171934 
+L 276.609833 33.68888 
+L 277.242557 32.062109 
+L 277.87528 37.013628 
+L 278.508004 39.483145 
+L 279.140728 38.487472 
+L 279.773452 42.394555 
+L 280.406175 43.031395 
+L 281.038899 37.923845 
+L 281.671623 37.792784 
+L 282.93707 36.461094 
+L 300.02061 36.460727 
+L 300.653334 35.940785 
+L 301.286058 46.620189 
+L 301.918781 43.510641 
+L 302.551505 45.088689 
+L 303.184229 44.790551 
+L 303.816952 45.378105 
+L 304.449676 52.182381 
+L 305.0824 49.138596 
+L 305.715124 47.146318 
+L 306.347847 47.765295 
+L 306.980571 51.781163 
+L 307.613295 52.54594 
+L 308.246018 58.554041 
+L 308.878742 58.55438 
+L 309.511466 56.492515 
+L 310.776913 58.888759 
+L 311.409637 67.875093 
+L 312.042361 62.022766 
+L 312.675084 62.16922 
+L 313.307808 63.106381 
+L 313.940532 63.367139 
+L 322.16594 63.367464 
+L 323.431387 66.414331 
+L 324.064111 50.546703 
+L 324.696835 54.396201 
+L 325.329558 61.139741 
+L 325.962282 58.663005 
+L 326.595006 61.848003 
+L 327.22773 55.498701 
+L 327.860453 57.3413 
+L 328.493177 48.85164 
+L 329.125901 52.18328 
+L 329.758624 57.675866 
+L 330.391348 58.742381 
+L 331.024072 60.944259 
+L 331.656796 58.416881 
+L 332.289519 54.310742 
+L 332.922243 54.942576 
+L 333.554967 52.994978 
+L 334.18769 51.58579 
+L 334.820414 51.407904 
+L 335.453138 47.923127 
+L 336.085862 37.281203 
+L 336.718585 41.014439 
+L 337.351309 49.757095 
+L 337.984033 53.89524 
+L 338.616756 52.751326 
+L 339.24948 57.70912 
+L 339.882204 60.291326 
+L 340.514927 57.718933 
+L 341.780375 56.350116 
+L 342.413099 59.135548 
+L 343.045822 60.444366 
+L 343.678546 59.844319 
+L 344.31127 60.215266 
+L 344.943993 59.31274 
+L 348.740336 59.311919 
+L 349.373059 60.978149 
+L 350.005783 51.587715 
+L 350.638507 55.448547 
+L 351.27123 54.676997 
+L 351.903954 51.343515 
+L 352.536678 50.508283 
+L 353.169402 56.720421 
+L 353.802125 46.336078 
+L 354.434849 48.671794 
+L 355.700296 42.847512 
+L 356.33302 39.064194 
+L 357.598468 50.58138 
+L 358.231191 45.96904 
+L 358.863915 45.203975 
+L 359.496639 42.036949 
+L 361.39481 42.433024 
+L 362.027533 39.364435 
+L 362.660257 41.70652 
+L 363.925705 44.383898 
+L 364.558428 43.795828 
+L 365.191152 41.221802 
+L 365.823876 40.270539 
+L 366.456599 40.21311 
+L 367.089323 39.026694 
+L 367.722047 38.650698 
+L 368.354771 38.924843 
+L 368.987494 40.575526 
+L 370.252942 39.598663 
+L 370.885665 38.360727 
+L 371.518389 39.043935 
+L 372.151113 42.4509 
+L 372.783837 42.372061 
+L 373.41656 38.724349 
+L 374.682008 47.304081 
+L 375.947455 51.339632 
+L 376.580179 52.008084 
+L 377.212902 50.913714 
+L 377.845626 50.735681 
+L 378.47835 54.40783 
+L 379.111074 51.905742 
+L 379.743797 52.176556 
+L 381.641968 52.228788 
+L 393.030995 52.231922 
+L 393.663719 52.584388 
+L 394.296443 53.262508 
+L 394.929166 54.12951 
+L 395.56189 55.81431 
+L 396.827337 55.688046 
+L 397.460061 56.708733 
+L 398.092785 56.612345 
+L 398.725508 59.284661 
+L 399.358232 61.352572 
+L 399.990956 62.256088 
+L 400.62368 61.591749 
+L 401.889127 63.532381 
+L 402.521851 63.318613 
+L 403.154574 64.438424 
+L 403.787298 64.322716 
+L 404.420022 62.709139 
+L 405.052746 59.943595 
+L 406.318193 59.67164 
+L 406.950917 60.617513 
+L 407.58364 62.556813 
+L 408.216364 63.925478 
+L 408.849088 63.565492 
+L 409.481811 62.603443 
+L 410.114535 63.315073 
+L 410.747259 63.698199 
+L 411.379983 66.803442 
+L 412.012706 60.408951 
+L 412.64543 59.814425 
+L 413.278154 62.459639 
+L 413.910877 63.12297 
+L 414.543601 61.581979 
+L 415.176325 61.366818 
+L 415.809049 59.812066 
+L 416.441772 57.774186 
+L 417.074496 58.053203 
+L 417.70722 60.812986 
+L 418.339943 62.259567 
+L 418.972667 61.604043 
+L 419.605391 58.059775 
+L 420.238115 63.68641 
+L 420.870838 62.183145 
+L 421.503562 63.103382 
+L 422.136286 61.745593 
+L 422.769009 66.069133 
+L 423.401733 67.081829 
+L 424.034457 63.726464 
+L 424.66718 65.702547 
+L 425.299904 65.407107 
+L 425.932628 64.15682 
+L 426.565352 64.310163 
+L 427.198075 63.988195 
+L 427.830799 63.906416 
+L 428.463523 64.100935 
+L 429.096246 66.627815 
+L 429.72897 64.765745 
+L 430.361694 66.881105 
+L 430.994418 66.237811 
+L 431.627141 66.880623 
+L 432.892589 67.61642 
+L 433.525312 65.575685 
+L 434.158036 65.569095 
+L 434.79076 50.844578 
+L 435.423483 43.847319 
+L 436.056207 28.349392 
+L 436.688931 31.041773 
+L 437.321655 28.428251 
+L 437.954378 29.318452 
+L 438.587102 33.888443 
+L 439.219826 30.340535 
+L 439.852549 28.168197 
+L 440.485273 34.798863 
+L 441.117997 34.037983 
+L 441.750721 37.890506 
+L 442.383444 35.969896 
+L 443.016168 38.229074 
+L 443.648892 39.022732 
+L 444.281615 32.671772 
+L 444.914339 35.38808 
+L 445.547063 34.592177 
+L 446.179786 33.257032 
+L 446.81251 34.905257 
+L 448.077958 36.132237 
+L 448.710681 38.32023 
+L 449.343405 35.756593 
+L 449.976129 35.466791 
+L 450.608852 37.089799 
+L 456.303366 37.101668 
+L 459.466984 37.101812 
+L 460.099708 37.521572 
+L 460.732432 37.396377 
+L 461.365155 37.427008 
+L 461.997879 36.465751 
+L 462.630603 36.742777 
+L 463.263327 36.562562 
+L 463.89605 35.20341 
+L 465.161498 35.135548 
+L 468.325116 35.136276 
+L 468.95784 38.767454 
+L 469.590564 37.150052 
+L 470.223287 39.0445 
+L 470.856011 39.575839 
+L 471.488735 39.725752 
+L 472.121458 40.9086 
+L 472.754182 40.856014 
+L 473.386906 40.630786 
+L 474.01963 38.921961 
+L 474.652353 38.841052 
+L 475.285077 41.380426 
+L 475.917801 41.525553 
+L 476.550524 42.315428 
+L 477.183248 42.903955 
+L 477.815972 42.203919 
+L 478.448696 41.119328 
+L 479.081419 40.548047 
+L 479.714143 44.273964 
+L 480.346867 43.702997 
+L 480.97959 43.976089 
+L 481.612314 44.06691 
+L 482.245038 43.796587 
+L 486.04138 43.797299 
+L 486.674104 43.614071 
+L 487.306827 45.484688 
+L 487.939551 45.972882 
+L 488.572275 46.894881 
+L 489.204999 48.710682 
+L 489.837722 55.317274 
+L 490.470446 53.013788 
+L 491.10317 53.551911 
+L 491.735893 53.409667 
+L 492.368617 55.021036 
+L 493.634064 55.157493 
+L 493.634064 55.157493 
+" clip-path="url(#p2a978c75b4)" style="fill: none; stroke: #0a6755; stroke-width: 1.4; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_16">
+    <path d="M 58.320154 81.42054 
+L 69.709181 81.42054 
+L 70.341905 80.72129 
+L 70.974628 79.396311 
+L 71.607352 80.393828 
+L 73.505523 80.29105 
+L 74.138247 81.571881 
+L 74.770971 81.743653 
+L 75.403694 86.613154 
+L 76.036418 83.727664 
+L 76.669142 79.536919 
+L 77.301865 80.315011 
+L 77.934589 88.136132 
+L 78.567313 100.945891 
+L 79.200037 111.320405 
+L 82.996379 111.32181 
+L 83.629103 107.280178 
+L 84.261826 109.839067 
+L 84.89455 103.668973 
+L 85.527274 105.957366 
+L 86.159997 102.513943 
+L 86.792721 103.143836 
+L 87.425445 105.859466 
+L 88.058168 105.547444 
+L 88.690892 106.513276 
+L 89.323616 105.807355 
+L 89.95634 105.349943 
+L 90.589063 107.269166 
+L 91.221787 106.059677 
+L 91.854511 105.984504 
+L 92.487234 106.466561 
+L 100.712643 106.470938 
+L 101.345366 116.106035 
+L 101.97809 110.022609 
+L 102.610814 107.976156 
+L 103.243537 112.01897 
+L 103.876261 107.871711 
+L 104.508985 106.156572 
+L 105.141709 110.05932 
+L 105.774432 107.217026 
+L 106.407156 109.053756 
+L 107.03988 101.806603 
+L 107.672603 106.792516 
+L 108.305327 107.800882 
+L 108.938051 107.573263 
+L 109.570775 104.610818 
+L 110.203498 103.879724 
+L 110.836222 103.43156 
+L 111.468946 103.546136 
+L 112.101669 103.861057 
+L 112.734393 105.696625 
+L 113.367117 107.174089 
+L 113.99984 107.563983 
+L 114.632564 107.692432 
+L 127.287038 107.692963 
+L 127.919762 108.564911 
+L 128.552486 98.944368 
+L 129.185209 98.078707 
+L 130.450657 97.336123 
+L 131.083381 96.551566 
+L 131.716104 97.992022 
+L 132.348828 96.353915 
+L 132.981552 98.195365 
+L 133.614275 99.107798 
+L 134.246999 93.851401 
+L 134.879723 93.234792 
+L 135.512446 95.881591 
+L 136.14517 99.114262 
+L 136.777894 98.472486 
+L 137.410618 96.857648 
+L 138.043341 96.975411 
+L 138.676065 73.155751 
+L 139.308789 66.918433 
+L 139.941512 44.26855 
+L 140.574236 52.723403 
+L 141.20696 52.908149 
+L 141.839684 48.199735 
+L 143.105131 53.629925 
+L 143.737855 53.63217 
+L 144.370578 55.696352 
+L 145.003302 51.257853 
+L 145.636026 51.645598 
+L 146.268749 50.516345 
+L 146.901473 46.131483 
+L 147.534197 39.008286 
+L 148.166921 50.462712 
+L 148.799644 50.129984 
+L 149.432368 48.940165 
+L 150.065092 48.111344 
+L 150.697815 46.880598 
+L 151.330539 47.788663 
+L 151.963263 50.238888 
+L 152.595987 55.68468 
+L 153.22871 55.700501 
+L 153.861434 55.004466 
+L 154.494158 55.395715 
+L 158.2905 55.396093 
+L 158.923224 50.142107 
+L 159.555947 47.943263 
+L 160.188671 49.82952 
+L 160.821395 54.104676 
+L 161.454118 54.858532 
+L 162.086842 55.964273 
+L 163.35229 56.290244 
+L 163.985013 59.091612 
+L 164.617737 58.22719 
+L 165.250461 58.347755 
+L 166.515908 69.080325 
+L 167.148632 71.986347 
+L 167.781356 61.528417 
+L 168.414079 59.671965 
+L 169.046803 60.09524 
+L 169.679527 61.875219 
+L 170.31225 61.318617 
+L 170.944974 60.049344 
+L 171.577698 56.124845 
+L 172.210421 58.764345 
+L 172.843145 64.258569 
+L 173.475869 54.436337 
+L 174.108593 52.302414 
+L 174.741316 58.568562 
+L 175.37404 57.758925 
+L 176.006764 53.050538 
+L 176.639487 54.791856 
+L 177.272211 53.503532 
+L 177.904935 50.117326 
+L 178.537659 45.177826 
+L 179.170382 43.907547 
+L 179.803106 44.596127 
+L 180.43583 43.777567 
+L 181.068553 43.293369 
+L 181.701277 42.161667 
+L 182.334001 36.867048 
+L 182.966724 34.524499 
+L 183.599448 31.036449 
+L 184.232172 29.563635 
+L 184.864896 22.224 
+L 185.497619 23.186934 
+L 186.130343 22.784675 
+L 186.763067 26.624651 
+L 187.39579 26.984437 
+L 188.028514 26.59887 
+L 188.661238 26.544263 
+L 189.293962 24.848876 
+L 189.926685 27.925939 
+L 191.192133 28.781741 
+L 191.824856 31.868801 
+L 192.45758 35.740601 
+L 193.090304 38.248915 
+L 193.723028 35.718199 
+L 194.355751 31.508631 
+L 194.988475 34.581125 
+L 195.621199 32.745445 
+L 196.253922 27.020304 
+L 196.886646 24.954861 
+L 197.51937 21.034075 
+L 198.152093 21.325103 
+L 198.784817 26.210687 
+L 199.417541 15.626023 
+L 200.050265 8.735619 
+L 200.682988 20.806117 
+L 201.315712 21.59283 
+L 201.948436 21.188942 
+L 202.581159 19.397602 
+L 203.213883 25.499475 
+L 203.846607 33.672647 
+L 204.479331 26.415211 
+L 205.112054 30.537699 
+L 205.744778 13.734053 
+L 207.010225 18.364203 
+L 207.642949 20.174173 
+L 220.297423 20.173508 
+L 220.930147 22.442644 
+L 221.562871 21.856225 
+L 222.195594 19.17431 
+L 222.828318 19.588781 
+L 223.461042 23.330809 
+L 224.093765 22.836941 
+L 224.726489 24.411536 
+L 225.359213 30.082451 
+L 225.991937 31.049159 
+L 226.62466 30.25667 
+L 227.257384 35.848726 
+L 227.890108 33.28952 
+L 228.522831 33.605495 
+L 229.155555 31.132864 
+L 229.788279 30.30119 
+L 230.421002 31.154816 
+L 231.053726 26.178467 
+L 231.68645 22.870935 
+L 232.319174 22.680349 
+L 232.951897 23.809971 
+L 233.584621 23.028759 
+L 234.217345 19.411005 
+L 234.850068 25.11494 
+L 235.482792 22.611335 
+L 236.115516 25.42203 
+L 236.74824 40.439829 
+L 237.380963 42.942914 
+L 238.013687 35.177169 
+L 239.279134 35.102213 
+L 242.442753 35.104145 
+L 243.075477 32.03358 
+L 243.7082 36.202782 
+L 244.340924 38.702154 
+L 244.973648 35.348817 
+L 245.606371 33.030402 
+L 246.239095 32.792973 
+L 246.871819 25.955602 
+L 247.504543 26.120676 
+L 248.137266 27.837383 
+L 248.76999 28.937237 
+L 249.402714 30.835074 
+L 250.035437 29.951007 
+L 250.668161 29.61901 
+L 251.300885 29.463706 
+L 251.933609 30.377763 
+L 273.446215 30.382125 
+L 274.078938 29.235855 
+L 274.711662 21.030601 
+L 275.977109 26.50742 
+L 276.609833 33.035619 
+L 277.242557 31.406144 
+L 277.87528 36.366418 
+L 278.508004 39.01431 
+L 279.140728 37.795695 
+L 279.773452 41.821006 
+L 280.406175 43.477351 
+L 281.038899 37.321134 
+L 281.671623 37.323494 
+L 282.304346 37.11935 
+L 282.93707 36.506306 
+L 300.02061 36.505492 
+L 300.653334 35.985673 
+L 301.286058 46.66513 
+L 301.918781 43.555665 
+L 302.551505 45.133595 
+L 303.184229 44.835475 
+L 303.816952 45.42303 
+L 304.449676 52.227269 
+L 305.0824 48.403162 
+L 305.715124 46.200953 
+L 306.347847 46.633324 
+L 306.980571 51.947006 
+L 307.613295 53.60354 
+L 308.246018 60.81099 
+L 308.878742 63.251196 
+L 309.511466 60.832486 
+L 310.776913 66.239373 
+L 311.409637 77.693896 
+L 312.042361 69.559186 
+L 312.675084 69.795997 
+L 313.307808 69.813765 
+L 313.940532 70.146584 
+L 322.16594 70.147308 
+L 323.431387 73.137716 
+L 324.064111 57.565991 
+L 324.696835 61.343532 
+L 325.329558 67.961325 
+L 325.962282 65.530634 
+L 326.595006 68.656314 
+L 327.22773 63.613691 
+L 327.860453 66.242088 
+L 328.493177 57.250127 
+L 329.758624 65.908128 
+L 330.391348 67.134267 
+L 331.024072 68.831303 
+L 332.289519 61.542713 
+L 332.922243 61.834071 
+L 333.554967 60.214672 
+L 334.18769 58.953839 
+L 334.820414 58.641847 
+L 335.453138 55.102544 
+L 336.085862 44.861692 
+L 336.718585 48.523592 
+L 337.351309 57.09915 
+L 337.984033 61.158188 
+L 338.616756 60.036131 
+L 339.24948 64.89917 
+L 339.882204 67.432024 
+L 340.514927 64.229356 
+L 341.147651 64.060532 
+L 341.780375 63.385565 
+L 342.413099 66.471025 
+L 343.045822 68.517184 
+L 343.678546 68.280935 
+L 344.31127 68.653964 
+L 344.943993 67.996508 
+L 348.740336 67.995582 
+L 349.373059 69.62222 
+L 350.005783 60.454692 
+L 350.638507 64.223853 
+L 351.27123 63.470604 
+L 351.903954 60.21624 
+L 352.536678 59.400817 
+L 353.169402 65.465512 
+L 353.802125 55.328831 
+L 354.434849 57.608987 
+L 355.700296 51.923413 
+L 356.33302 48.230534 
+L 357.598468 59.473136 
+L 358.231191 54.970202 
+L 358.863915 54.223212 
+L 359.496639 51.131041 
+L 361.39481 51.517802 
+L 362.027533 48.521869 
+L 362.660257 50.066916 
+L 363.292981 50.707606 
+L 363.925705 49.639839 
+L 364.558428 48.213141 
+L 365.191152 45.639142 
+L 365.823876 45.01811 
+L 366.456599 45.070149 
+L 367.722047 41.618646 
+L 368.354771 42.124415 
+L 368.987494 44.380843 
+L 369.620218 43.733784 
+L 370.252942 43.54332 
+L 370.885665 41.640408 
+L 371.518389 42.654322 
+L 372.151113 46.031954 
+L 372.783837 45.953475 
+L 373.41656 42.337114 
+L 374.682008 50.843219 
+L 375.314731 52.936277 
+L 375.947455 55.622422 
+L 376.580179 56.797662 
+L 377.845626 54.83654 
+L 378.47835 58.736087 
+L 379.111074 56.698262 
+L 379.743797 57.207515 
+L 381.009245 57.29403 
+L 393.030995 57.295799 
+L 393.663719 56.066548 
+L 394.296443 56.624023 
+L 394.929166 58.00684 
+L 395.56189 59.816235 
+L 396.194614 59.582248 
+L 396.827337 58.838473 
+L 397.460061 60.097464 
+L 398.092785 59.488841 
+L 399.358232 63.956006 
+L 399.990956 65.562654 
+L 400.62368 65.034585 
+L 401.889127 66.086962 
+L 402.521851 65.141916 
+L 403.154574 66.799196 
+L 403.787298 65.666845 
+L 405.052746 60.838748 
+L 405.685469 60.257156 
+L 406.318193 59.922991 
+L 406.950917 59.950151 
+L 408.216364 62.476294 
+L 408.849088 61.994557 
+L 409.481811 60.669606 
+L 410.114535 61.164061 
+L 410.747259 61.080226 
+L 411.379983 63.32197 
+L 412.012706 57.578095 
+L 412.64543 57.376563 
+L 413.278154 60.148956 
+L 413.910877 60.487355 
+L 414.543601 59.456434 
+L 415.176325 59.366452 
+L 415.809049 58.440988 
+L 416.441772 56.346105 
+L 417.074496 56.768713 
+L 417.70722 60.853447 
+L 418.339943 61.636361 
+L 418.972667 59.945887 
+L 419.605391 56.54836 
+L 420.238115 62.293238 
+L 420.870838 60.784171 
+L 421.503562 61.70828 
+L 422.136286 60.346343 
+L 422.769009 64.684122 
+L 423.401733 65.70081 
+L 424.034457 62.333101 
+L 424.66718 63.858166 
+L 425.299904 63.551823 
+L 425.932628 62.800306 
+L 426.565352 63.350685 
+L 427.198075 62.765429 
+L 427.830799 62.430277 
+L 428.463523 62.931778 
+L 429.096246 65.334111 
+L 429.72897 63.466065 
+L 430.361694 65.588332 
+L 430.994418 64.942968 
+L 431.627141 65.587923 
+L 432.892589 66.32611 
+L 433.525312 63.533071 
+L 434.158036 63.391979 
+L 434.79076 49.190333 
+L 435.423483 41.385181 
+L 436.056207 26.112989 
+L 436.688931 29.005898 
+L 437.321655 26.597282 
+L 437.954378 27.133946 
+L 438.587102 31.724675 
+L 439.219826 28.160804 
+L 439.852549 25.97857 
+L 440.485273 32.639248 
+L 441.117997 31.874954 
+L 441.750721 35.744927 
+L 442.383444 34.022623 
+L 443.016168 36.117189 
+L 443.648892 36.592296 
+L 444.281615 29.286772 
+L 444.914339 32.648075 
+L 445.547063 29.582681 
+L 446.179786 28.069599 
+L 446.81251 29.38178 
+L 447.445234 30.034538 
+L 448.077958 32.232675 
+L 448.710681 35.195659 
+L 449.343405 32.861714 
+L 449.976129 32.422421 
+L 450.608852 34.629375 
+L 451.241576 34.397716 
+L 459.466984 34.396226 
+L 460.099708 34.81311 
+L 460.732432 34.860816 
+L 461.365155 34.698816 
+L 461.997879 34.346669 
+L 462.630603 34.9174 
+L 463.263327 34.769921 
+L 463.89605 33.606977 
+L 465.161498 33.547311 
+L 468.325116 33.54837 
+L 468.95784 37.081076 
+L 469.590564 35.286818 
+L 470.223287 37.56472 
+L 470.856011 37.368817 
+L 471.488735 37.875752 
+L 472.121458 38.70001 
+L 472.754182 38.368137 
+L 473.386906 38.402207 
+L 474.01963 36.60481 
+L 474.652353 35.835418 
+L 475.285077 39.218135 
+L 475.917801 39.396615 
+L 477.183248 41.226735 
+L 477.815972 40.954881 
+L 478.448696 39.788031 
+L 479.081419 39.217285 
+L 479.714143 43.752044 
+L 480.346867 43.816076 
+L 480.97959 43.731801 
+L 481.612314 43.215269 
+L 482.245038 42.943726 
+L 486.674104 42.871199 
+L 487.306827 45.414314 
+L 487.939551 45.508043 
+L 488.572275 47.389266 
+L 489.204999 50.613082 
+L 489.837722 57.331669 
+L 490.470446 54.948753 
+L 491.10317 55.768768 
+L 491.735893 55.286645 
+L 492.368617 56.876562 
+L 493.001341 57.012281 
+L 493.634064 57.024756 
+L 493.634064 57.024756 
+" clip-path="url(#p2a978c75b4)" style="fill: none; stroke-dasharray: 5.18,2.24; stroke-dashoffset: 0; stroke: #b76b35; stroke-width: 1.4"/>
+   </g>
+   <g id="line2d_17">
+    <path d="M 36.554459 81.42054 
+L 515.39976 81.42054 
+" clip-path="url(#p2a978c75b4)" style="fill: none; stroke: #84968f; stroke-width: 0.65; stroke-linecap: square"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 36.554459 121.492026 
+L 36.554459 3.00024 
+" style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 36.554459 121.492026 
+L 515.39976 121.492026 
+" style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="legend_1">
+    <g id="line2d_18">
+     <path d="M 44.204459 14.469928 
+L 52.704459 14.469928 
+L 61.204459 14.469928 
+" style="fill: none; stroke: #0a6755; stroke-width: 1.4; stroke-linecap: square"/>
+    </g>
+    <g id="text_12">
+     <!-- 按美国溢价筛币 -->
+     <g transform="translate(68.004459 17.444928) scale(0.085 -0.085)">
+      <defs>
+       <path id="MicrosoftYaHei-6309" d="M 1763 -366 
+Q 3172 -25 3822 450 
+Q 3184 791 2444 1147 
+Q 2713 1622 2959 2153 
+L 2194 2153 
+L 2194 2603 
+L 3159 2603 
+Q 3384 3119 3588 3684 
+L 4113 3503 
+Q 3919 3069 3700 2603 
+L 6263 2603 
+L 6263 2153 
+L 5444 2153 
+Q 5219 1191 4650 547 
+Q 5494 100 6238 -353 
+L 5938 -828 
+Q 5253 -338 4288 197 
+Q 3566 -394 2013 -834 
+Q 1938 -609 1763 -366 
+z
+M 88 1966 
+Q 503 2094 938 2244 
+L 938 3641 
+L 175 3641 
+L 175 4091 
+L 938 4091 
+L 938 5253 
+L 1413 5253 
+L 1413 4091 
+L 2100 4091 
+L 2100 3641 
+L 1413 3641 
+L 1413 2413 
+Q 1691 2513 1975 2622 
+Q 1988 2359 2025 2122 
+Q 1722 2016 1413 1900 
+L 1413 -78 
+Q 1413 -753 763 -759 
+Q 569 -766 206 -753 
+Q 181 -497 131 -234 
+Q 431 -272 681 -272 
+Q 938 -272 938 28 
+L 938 1722 
+Q 550 1575 150 1416 
+L 88 1966 
+z
+M 2300 4384 
+L 4056 4384 
+Q 3884 4734 3663 5122 
+L 4113 5347 
+Q 4419 4847 4550 4572 
+L 4178 4384 
+L 6119 4384 
+L 6119 3322 
+L 5619 3322 
+L 5619 3934 
+L 2800 3934 
+L 2800 3322 
+L 2300 3322 
+L 2300 4384 
+z
+M 3088 1328 
+Q 3656 1056 4188 784 
+Q 4750 1384 4934 2153 
+L 3488 2153 
+Q 3297 1753 3088 1328 
+z
+" transform="scale(0.015625)"/>
+       <path id="MicrosoftYaHei-7f8e" d="M 150 2403 
+L 2956 2403 
+L 2956 2991 
+L 663 2991 
+L 663 3416 
+L 2956 3416 
+L 2956 3991 
+L 288 3991 
+L 288 4416 
+L 2259 4416 
+Q 1938 4694 1425 5084 
+L 1713 5397 
+Q 2256 5028 2619 4753 
+L 2288 4416 
+L 3950 4416 
+L 3719 4678 
+Q 4213 5022 4613 5372 
+L 4981 5022 
+Q 4581 4722 4116 4416 
+L 6150 4416 
+L 6150 3991 
+L 3469 3991 
+L 3469 3416 
+L 5813 3416 
+L 5813 2991 
+L 3469 2991 
+L 3469 2403 
+L 6263 2403 
+L 6263 1978 
+L 150 1978 
+L 150 2403 
+z
+M 6313 -303 
+Q 6075 -622 5950 -822 
+Q 3897 -419 3216 803 
+Q 2606 -488 406 -872 
+Q 281 -659 100 -397 
+Q 2200 -106 2741 916 
+L 238 916 
+L 238 1341 
+L 2913 1341 
+Q 2975 1559 3013 1841 
+L 3525 1841 
+Q 3475 1566 3413 1341 
+L 6200 1341 
+L 6200 916 
+L 3631 916 
+Q 4363 -138 6313 -303 
+z
+" transform="scale(0.015625)"/>
+       <path id="MicrosoftYaHei-56fd" d="M 469 4997 
+L 5938 4997 
+L 5938 -834 
+L 5456 -834 
+L 5456 -522 
+L 950 -522 
+L 950 -841 
+L 469 -841 
+L 469 4997 
+z
+M 5456 4553 
+L 950 4553 
+L 950 -78 
+L 5456 -78 
+L 5456 4553 
+z
+M 1238 1009 
+L 2963 1009 
+L 2963 2247 
+L 1456 2247 
+L 1456 2672 
+L 2963 2672 
+L 2963 3509 
+L 1338 3509 
+L 1338 3934 
+L 5063 3934 
+L 5063 3509 
+L 3425 3509 
+L 3425 2672 
+L 4938 2672 
+L 4938 2247 
+L 3425 2247 
+L 3425 1009 
+L 5163 1009 
+L 5163 584 
+L 1238 584 
+L 1238 1009 
+z
+M 3750 1847 
+L 4100 2109 
+Q 4444 1753 4688 1441 
+L 4319 1159 
+Q 4019 1566 3750 1847 
+z
+" transform="scale(0.015625)"/>
+       <path id="MicrosoftYaHei-6ea2" d="M 1525 -134 
+L 2038 -134 
+L 2038 1853 
+L 5763 1853 
+L 5763 -134 
+L 6313 -134 
+L 6313 -572 
+L 1525 -572 
+L 1525 -134 
+z
+M 1869 4034 
+L 4284 4034 
+Q 4763 4700 5088 5322 
+L 5569 5084 
+Q 5197 4528 4822 4034 
+L 6150 4034 
+L 6150 3597 
+L 1869 3597 
+L 1869 4034 
+z
+M 831 1816 
+Q 1056 1716 1306 1628 
+Q 1088 709 744 -766 
+L 231 -597 
+Q 606 609 831 1816 
+z
+M 5313 1416 
+L 4663 1416 
+L 4663 -134 
+L 5313 -134 
+L 5313 1416 
+z
+M 3575 -134 
+L 4225 -134 
+L 4225 1416 
+L 3575 1416 
+L 3575 -134 
+z
+M 2488 -134 
+L 3138 -134 
+L 3138 1416 
+L 2488 1416 
+L 2488 -134 
+z
+M 3113 3397 
+L 3519 3109 
+Q 2613 2228 1869 1784 
+Q 1750 1934 1550 2153 
+Q 2438 2659 3113 3397 
+z
+M 4263 3066 
+L 4563 3397 
+Q 5413 2859 6281 2234 
+L 5956 1866 
+Q 5050 2547 4263 3066 
+z
+M 756 5222 
+Q 1294 4803 1775 4359 
+Q 1581 4153 1419 3984 
+Q 819 4584 456 4891 
+L 756 5222 
+z
+M 375 3609 
+Q 888 3234 1369 2847 
+Q 1163 2609 1031 2459 
+Q 456 2991 88 3272 
+L 375 3609 
+z
+M 2394 5059 
+L 2763 5322 
+Q 3200 4797 3500 4378 
+L 3088 4097 
+Q 2738 4634 2394 5059 
+z
+" transform="scale(0.015625)"/>
+       <path id="MicrosoftYaHei-4ef7" d="M 69 2166 
+Q 913 3484 1388 5259 
+L 1875 5109 
+Q 1650 4391 1400 3766 
+L 1400 -853 
+L 931 -853 
+L 931 2722 
+Q 619 2109 281 1622 
+Q 163 1959 69 2166 
+z
+M 4319 5272 
+L 4231 5116 
+Q 5006 3747 6319 3141 
+Q 6156 2953 5975 2703 
+Q 4706 3434 3975 4703 
+Q 3275 3497 2000 2603 
+Q 1850 2822 1675 2997 
+Q 3088 3884 3756 5272 
+L 4319 5272 
+z
+M 3313 2828 
+L 3313 1941 
+Q 3313 134 2275 -891 
+Q 2094 -709 1856 -541 
+Q 2825 347 2825 1897 
+L 2825 2828 
+L 3313 2828 
+z
+M 4631 2828 
+L 5119 2828 
+L 5119 -828 
+L 4631 -828 
+L 4631 2828 
+z
+" transform="scale(0.015625)"/>
+       <path id="MicrosoftYaHei-7b5b" d="M 3138 -72 
+L 2694 -72 
+L 2694 2247 
+L 4081 2247 
+L 4081 2922 
+L 2519 2922 
+L 2519 3334 
+L 6225 3334 
+L 6225 2922 
+L 4531 2922 
+L 4531 2247 
+L 5944 2247 
+L 5944 572 
+Q 5944 -78 5325 -78 
+Q 5094 -78 4775 -59 
+Q 4744 147 4681 384 
+Q 5019 341 5206 341 
+Q 5500 341 5500 672 
+L 5500 1847 
+L 4531 1847 
+L 4531 -841 
+L 4081 -841 
+L 4081 1847 
+L 3138 1847 
+L 3138 -72 
+z
+M 2119 3472 
+Q 1856 3816 1594 4103 
+L 1878 4322 
+L 1244 4322 
+Q 869 3791 425 3391 
+Q 300 3541 75 3728 
+Q 838 4378 1300 5334 
+L 1838 5334 
+Q 1675 5003 1497 4709 
+L 3325 4709 
+L 3325 4322 
+L 1950 4322 
+Q 2172 4097 2475 3753 
+L 2119 3472 
+z
+M 1594 3409 
+L 2044 3409 
+L 2044 1566 
+Q 2050 28 1006 -866 
+Q 763 -616 619 -534 
+Q 1600 203 1594 1566 
+L 1594 3409 
+z
+M 4013 5334 
+L 4550 5334 
+Q 4400 5003 4247 4709 
+L 6250 4709 
+L 6250 4322 
+L 4031 4322 
+Q 3756 3859 3463 3509 
+Q 3306 3647 3081 3816 
+Q 3613 4397 4013 5334 
+z
+M 531 3141 
+L 969 3141 
+L 969 534 
+L 531 534 
+L 531 3141 
+z
+M 4931 3422 
+Q 4669 3759 4388 4053 
+L 4706 4303 
+Q 4969 4059 5281 3697 
+L 4931 3422 
+z
+" transform="scale(0.015625)"/>
+       <path id="MicrosoftYaHei-5e01" d="M 1225 -128 
+L 725 -128 
+L 725 3284 
+L 2931 3284 
+L 2931 4425 
+Q 1766 4384 456 4353 
+Q 419 4572 369 4816 
+Q 3575 4853 5925 5022 
+L 6000 4559 
+Q 4828 4497 3444 4444 
+L 3444 3284 
+L 5681 3284 
+L 5681 703 
+Q 5681 -91 4869 -91 
+Q 4588 -91 4056 -84 
+Q 4019 147 3963 422 
+Q 4438 384 4781 384 
+Q 5181 384 5181 766 
+L 5181 2834 
+L 3444 2834 
+L 3444 -822 
+L 2931 -822 
+L 2931 2834 
+L 1225 2834 
+L 1225 -128 
+z
+" transform="scale(0.015625)"/>
+      </defs>
+      <use xlink:href="#MicrosoftYaHei-6309"/>
+      <use xlink:href="#MicrosoftYaHei-7f8e" transform="translate(100 0)"/>
+      <use xlink:href="#MicrosoftYaHei-56fd" transform="translate(200 0)"/>
+      <use xlink:href="#MicrosoftYaHei-6ea2" transform="translate(300 0)"/>
+      <use xlink:href="#MicrosoftYaHei-4ef7" transform="translate(400 0)"/>
+      <use xlink:href="#MicrosoftYaHei-7b5b" transform="translate(500 0)"/>
+      <use xlink:href="#MicrosoftYaHei-5e01" transform="translate(600 0)"/>
+     </g>
+    </g>
+    <g id="line2d_19">
+     <path d="M 144.504459 14.469928 
+L 153.004459 14.469928 
+L 161.504459 14.469928 
+" style="fill: none; stroke-dasharray: 5.18,2.24; stroke-dashoffset: 0; stroke: #b76b35; stroke-width: 1.4"/>
+    </g>
+    <g id="text_13">
+     <!-- 同预期风险三币篮子 -->
+     <g transform="translate(168.304459 17.444928) scale(0.085 -0.085)">
+      <defs>
+       <path id="MicrosoftYaHei-540c" d="M 1013 -772 
+L 531 -772 
+L 531 4959 
+L 5856 4959 
+L 5856 -47 
+Q 5856 -741 5125 -741 
+Q 4669 -741 4088 -716 
+Q 4056 -497 4000 -216 
+Q 4619 -272 5025 -272 
+Q 5375 -272 5375 78 
+L 5375 4497 
+L 1013 4497 
+L 1013 -772 
+z
+M 1875 2566 
+L 4506 2566 
+L 4506 597 
+L 2338 597 
+L 2338 272 
+L 1875 272 
+L 1875 2566 
+z
+M 4044 2116 
+L 2338 2116 
+L 2338 1047 
+L 4044 1047 
+L 4044 2116 
+z
+M 1363 3734 
+L 5025 3734 
+L 5025 3284 
+L 1363 3284 
+L 1363 3734 
+z
+" transform="scale(0.015625)"/>
+       <path id="MicrosoftYaHei-9884" d="M 531 3872 
+L 844 4147 
+Q 1069 3947 1275 3747 
+L 1938 4553 
+L 175 4553 
+L 175 4991 
+L 2513 4991 
+L 2513 4553 
+L 1588 3434 
+Q 1694 3322 1794 3216 
+L 1544 2997 
+L 2681 2997 
+L 2681 2578 
+Q 2581 2097 2369 1466 
+Q 2175 1534 1938 1609 
+Q 2094 2003 2213 2559 
+L 1588 2559 
+L 1588 -72 
+Q 1588 -784 888 -784 
+L 225 -784 
+Q 194 -559 138 -278 
+Q 450 -316 769 -316 
+Q 1119 -316 1119 84 
+L 1119 2559 
+L 113 2559 
+L 113 2997 
+L 1344 2997 
+Q 938 3484 531 3872 
+z
+M 2969 3716 
+L 4025 3716 
+L 4181 4572 
+L 2744 4572 
+L 2744 5009 
+L 6294 5009 
+L 6294 4572 
+L 4688 4572 
+L 4506 3716 
+L 6006 3716 
+L 6006 641 
+L 5550 641 
+L 5550 3284 
+L 3425 3284 
+L 3425 641 
+L 2969 641 
+L 2969 3716 
+z
+M 4244 3028 
+L 4706 3028 
+L 4706 2097 
+Q 4706 1366 4519 841 
+Q 5500 184 6306 -441 
+L 5963 -847 
+Q 5200 -197 4325 428 
+Q 4263 334 4200 247 
+Q 3694 -397 2613 -897 
+Q 2413 -641 2263 -484 
+Q 3381 -22 3831 572 
+Q 4244 1109 4244 2128 
+L 4244 3028 
+z
+" transform="scale(0.015625)"/>
+       <path id="MicrosoftYaHei-671f" d="M 3769 5066 
+L 5981 5066 
+L 5981 -3 
+Q 5981 -741 5281 -741 
+Q 4931 -741 4594 -722 
+Q 4569 -516 4519 -241 
+Q 4975 -284 5175 -284 
+Q 5519 -284 5519 59 
+L 5519 1372 
+L 4181 1372 
+Q 4113 3 3350 -903 
+Q 3181 -728 2975 -553 
+Q 3481 28 3619 653 
+Q 3769 1253 3769 2741 
+L 3769 5066 
+z
+M 125 1141 
+L 713 1141 
+L 713 4028 
+L 200 4028 
+L 200 4453 
+L 713 4453 
+L 713 5216 
+L 1175 5216 
+L 1175 4453 
+L 2475 4453 
+L 2475 5241 
+L 2938 5241 
+L 2938 4453 
+L 3444 4453 
+L 3444 4028 
+L 2938 4028 
+L 2938 1141 
+L 3438 1141 
+L 3438 716 
+L 125 716 
+L 125 1141 
+z
+M 4209 1784 
+L 5519 1784 
+L 5519 3009 
+L 4231 3009 
+Q 4238 2203 4209 1784 
+z
+M 5519 4641 
+L 4231 4641 
+L 4231 3422 
+L 5519 3422 
+L 5519 4641 
+z
+M 1175 1141 
+L 2475 1141 
+L 2475 1841 
+L 1175 1841 
+L 1175 1141 
+z
+M 1175 2241 
+L 2475 2241 
+L 2475 2934 
+L 1175 2934 
+L 1175 2241 
+z
+M 1175 3334 
+L 2475 3334 
+L 2475 4028 
+L 1175 4028 
+L 1175 3334 
+z
+M 1175 597 
+L 1556 297 
+Q 925 -384 406 -847 
+Q 275 -697 75 -516 
+Q 669 -9 1175 597 
+z
+M 1994 303 
+L 2294 609 
+Q 2731 284 3119 -47 
+L 2788 -403 
+Q 2438 -53 1994 303 
+z
+" transform="scale(0.015625)"/>
+       <path id="MicrosoftYaHei-98ce" d="M 1206 4466 
+L 1206 2709 
+Q 1206 1297 1056 572 
+Q 900 -178 450 -853 
+Q 200 -559 75 -422 
+Q 425 141 569 816 
+Q 700 1447 700 2684 
+L 700 4928 
+L 5325 4928 
+L 5325 1516 
+Q 5325 391 5469 -53 
+Q 5531 -197 5625 -197 
+Q 5725 -197 5756 22 
+Q 5806 353 5844 1078 
+Q 6131 966 6319 909 
+Q 6256 253 6188 -147 
+Q 6075 -766 5606 -766 
+Q 5256 -766 5025 -297 
+Q 4819 134 4819 1503 
+L 4819 4466 
+L 1206 4466 
+z
+M 1594 3734 
+L 1981 4022 
+Q 2497 3313 3038 2534 
+Q 3513 3309 3938 4147 
+L 4363 3941 
+Q 3897 2991 3344 2097 
+Q 3956 1206 4600 234 
+L 4163 -66 
+Q 3584 834 3050 1634 
+Q 2438 703 1731 -166 
+Q 1575 -28 1325 141 
+Q 2084 1053 2750 2078 
+Q 2141 2975 1594 3734 
+z
+" transform="scale(0.015625)"/>
+       <path id="MicrosoftYaHei-9669" d="M 2094 1572 
+Q 2288 372 1544 228 
+Q 1338 184 969 222 
+Q 919 447 850 672 
+L 850 -822 
+L 400 -822 
+L 400 4972 
+L 2156 4972 
+L 2156 4534 
+Q 1806 3403 1600 2797 
+Q 2000 2216 2094 1572 
+z
+M 2013 -128 
+L 4556 -128 
+Q 5069 1228 5369 2216 
+L 5888 2034 
+Q 5656 1372 5088 -128 
+L 6144 -128 
+L 6144 -591 
+L 2013 -591 
+L 2013 -128 
+z
+M 4463 5278 
+L 4381 5091 
+Q 5113 3859 6319 3203 
+Q 6113 2953 5975 2766 
+Q 4831 3547 4138 4647 
+Q 3438 3572 2250 2709 
+Q 2131 2872 1925 3103 
+Q 3288 4009 3956 5278 
+L 4463 5278 
+z
+M 1363 678 
+Q 1794 722 1638 1591 
+Q 1550 2078 1113 2728 
+Q 1388 3566 1663 4541 
+L 850 4541 
+L 850 722 
+Q 1125 653 1363 678 
+z
+M 2663 3003 
+L 5538 3003 
+L 5538 2553 
+L 2663 2553 
+L 2663 3003 
+z
+M 2381 1934 
+L 2806 2097 
+Q 3131 1253 3400 347 
+L 2913 191 
+Q 2681 1122 2381 1934 
+z
+M 3619 2166 
+L 4063 2303 
+Q 4356 1409 4531 666 
+L 4031 534 
+Q 3875 1391 3619 2166 
+z
+" transform="scale(0.015625)"/>
+       <path id="MicrosoftYaHei-4e09" d="M 575 4691 
+L 5813 4691 
+L 5813 4153 
+L 575 4153 
+L 575 4691 
+z
+M 188 166 
+L 6225 166 
+L 6225 -359 
+L 188 -359 
+L 188 166 
+z
+M 856 2547 
+L 5531 2547 
+L 5531 2016 
+L 856 2016 
+L 856 2547 
+z
+" transform="scale(0.015625)"/>
+       <path id="MicrosoftYaHei-7bee" d="M 138 -209 
+L 863 -209 
+L 863 1391 
+L 5556 1391 
+L 5556 -209 
+L 6281 -209 
+L 6281 -622 
+L 138 -622 
+L 138 -209 
+z
+M 1956 3516 
+Q 1744 3797 1438 4122 
+L 1744 4359 
+L 1256 4359 
+Q 881 3859 388 3434 
+Q 263 3584 75 3772 
+Q 881 4416 1300 5297 
+L 1813 5297 
+Q 1681 5009 1519 4747 
+L 3225 4747 
+L 3225 4359 
+L 1756 4359 
+Q 2075 4072 2313 3797 
+L 1956 3516 
+z
+M 3663 3709 
+L 4138 3584 
+Q 4031 3378 3919 3184 
+L 6075 3184 
+L 6075 2784 
+L 3681 2784 
+Q 3344 2247 2975 1828 
+Q 2731 2041 2600 2134 
+Q 3269 2816 3663 3709 
+z
+M 3975 5297 
+L 4494 5297 
+Q 4350 5009 4188 4747 
+L 6175 4747 
+L 6175 4359 
+L 3931 4359 
+Q 3656 3959 3338 3609 
+Q 3181 3759 2963 3909 
+Q 3631 4584 3975 5297 
+z
+M 5119 991 
+L 4125 991 
+L 4125 -209 
+L 5119 -209 
+L 5119 991 
+z
+M 2713 -209 
+L 3700 -209 
+L 3700 991 
+L 2713 991 
+L 2713 -209 
+z
+M 1300 -209 
+L 2288 -209 
+L 2288 991 
+L 1300 991 
+L 1300 -209 
+z
+M 2519 3597 
+L 2519 1591 
+L 2081 1591 
+L 2081 3597 
+L 2519 3597 
+z
+M 3919 2334 
+L 4156 2678 
+Q 4894 2316 5669 1884 
+L 5388 1491 
+Q 4675 1934 3919 2334 
+z
+M 806 3447 
+L 1244 3447 
+L 1244 1741 
+L 806 1741 
+L 806 3447 
+z
+M 5000 3459 
+Q 4763 3784 4488 4084 
+L 4813 4322 
+Q 5125 4022 5363 3734 
+L 5000 3459 
+z
+" transform="scale(0.015625)"/>
+       <path id="MicrosoftYaHei-5b50" d="M 125 2497 
+L 3031 2497 
+L 3031 3184 
+L 4825 4491 
+L 781 4491 
+L 781 4959 
+L 5656 4959 
+L 5656 4472 
+L 3563 2941 
+L 3563 2497 
+L 6300 2497 
+L 6300 2028 
+L 3563 2028 
+L 3563 59 
+Q 3563 -778 2688 -778 
+Q 2400 -778 1700 -766 
+Q 1675 -516 1625 -197 
+Q 2081 -253 2588 -259 
+Q 3031 -259 3031 191 
+L 3031 2028 
+L 125 2028 
+L 125 2497 
+z
+" transform="scale(0.015625)"/>
+      </defs>
+      <use xlink:href="#MicrosoftYaHei-540c"/>
+      <use xlink:href="#MicrosoftYaHei-9884" transform="translate(100 0)"/>
+      <use xlink:href="#MicrosoftYaHei-671f" transform="translate(200 0)"/>
+      <use xlink:href="#MicrosoftYaHei-98ce" transform="translate(300 0)"/>
+      <use xlink:href="#MicrosoftYaHei-9669" transform="translate(400 0)"/>
+      <use xlink:href="#MicrosoftYaHei-4e09" transform="translate(500 0)"/>
+      <use xlink:href="#MicrosoftYaHei-5e01" transform="translate(600 0)"/>
+      <use xlink:href="#MicrosoftYaHei-7bee" transform="translate(700 0)"/>
+      <use xlink:href="#MicrosoftYaHei-5b50" transform="translate(800 0)"/>
+     </g>
+    </g>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p2a978c75b4">
+   <rect x="36.554459" y="3.00024" width="478.845301" height="118.491786"/>
+  </clipPath>
+ </defs>
+</svg>
+</figure><h3>换来源、去掉市场风险</h3><p>以 Coinbase 计算，近期相对同风险篮子的年化优势，其 28 天分块 95% 区间为 -4.02% 至 +4.80%。改为永续同时多强空弱、按 BTC 敏感度配平，近期净 +426.75，反向 −729.85。</p><p class="caption">每周至少 18 个有效小时。不同交易所的小时末最后一笔并不同步，这些价格用于下周信号。<a href="https://docs.cdp.coinbase.com/api-reference/exchange-api/rest-api/products/get-product-candles">Coinbase 原生分时成交数据</a>　<a href="https://www.bitstamp.net/api/">Bitstamp 原生历史 OHLC</a></p></main><footer><span>2026 年 11 月 21 日　·　账户本金 10,000 USDT</span><span>5 / 7</span></footer></section><section class="sheet" id="p6"><header><span>BTC · ETH · DOGE　/　第十轮研究</span><span>前瞻盘口 · 两个交易所</span></header><main><h2 class="title">实际观察五十分钟，有几次机会能下单？</h2><p class="lead">11 月 21 日 14:59 UTC 先写好阈值，然后每 10 秒取一次币安和 Bybit 的公开永续盘口。入场用下一个合格快照，模拟吃掉相应深度，两分钟后退出。每条腿约 1,250 USDT，未向交易所发送订单。</p><table><thead><tr><th>币种</th><th>合格同步轮数 / 300</th><th>币安往返成本¹</th><th>Bybit 往返成本¹</th><th>强制跟随已平净额</th></tr></thead><tbody><tr><td>BTC</td><td>300</td><td>14.02</td><td>15.02</td><td><span class="neg">−67.56</span></td></tr><tr><td>ETH</td><td>300</td><td>16.06</td><td>17.06</td><td><span class="neg">−83.19</span></td></tr><tr><td>DOGE</td><td>300</td><td>23.81</td><td>24.81</td><td><span class="neg">−115.80</span></td></tr></tbody></table><h3>跨所价差与领先信号</h3><p>跨所两腿按当时深度成交、再按此前五分钟常态估计回归，或让滞后交易所追随约 30 秒的领先信号。在完整成本以上共有 0 次触发。放弃成本门槛后，118 笔交易得到完整平仓，已平净额 −266.55，另有 0 笔到样本结束仍未平仓。</p><h3>另用历史独立日期检验</h3><p>Bybit 12 个历史日期、36 个币日的订单流能以 71.03% 准确度判断下一次五秒中间价变动方向；其平均幅度仅 0.48 基点，按公开深度执行合计亏约 490。独立的四个月中日期也表明，币安、Bybit 的已披露强平交易无论顺势还是反转，扣成本后均亏损。</p><p class="note">¹ 表内单位为基点，包括往返手续费、跨买卖盘及额外不利滑点。仅限一个周六的五十分钟，无法据此估计全周、极端行情或其他手续费等级的机会频率。</p><p class="caption"><a href="https://developers.binance.com/docs/derivatives/usds-margined-futures/market-data/rest-api/Order-Book">币安官方盘口接口</a>　<a href="https://bybit-exchange.github.io/docs/v5/market/orderbook">Bybit 官方盘口接口</a></p></main><footer><span>2026 年 11 月 21 日　·　账户本金 10,000 USDT</span><span>6 / 7</span></footer></section><section class="sheet" id="p7"><header><span>BTC · ETH · DOGE　/　第十轮研究</span><span>研究结论 · 可复核情景</span></header><main><h2 class="title">怎样判断一项机会值得继续测试？</h2><p class="lead">交易频率、资金占用和账户间能否调拨，都会改变收益。以最有重复证据的少换手资金费策略为例，下表把同一个近期账户的成本、资金费和借款情景列在一起。</p><table><thead><tr><th>币安 · 自有资金</th><th>基础净收益</th><th>双倍费滑</th><th>正资金费减半</th><th>删最佳季</th></tr></thead><tbody><tr><td>20% 现货额度</td><td><span class="pos">+109.03</span></td><td><span class="pos">+101.92</span></td><td><span class="pos">+39.61</span></td><td><span class="pos">+73.69</span></td></tr><tr><td>35% 现货额度</td><td><span class="pos">+194.99</span></td><td><span class="pos">+184.37</span></td><td><span class="pos">+72.13</span></td><td><span class="pos">+133.62</span></td></tr><tr><td>45% 现货额度</td><td><span class="pos">+249.65</span></td><td><span class="pos">+235.23</span></td><td><span class="pos">+92.47</span></td><td><span class="pos">+171.76</span></td></tr></tbody></table><h3>能从证据得出什么</h3><p>同币现金对冲在两个交易所保留了小额绝对正收益。链上现货与美元溢价的回报更高，也承担明显方向风险。仅凭公告基差、周末补缺口、短时领先或强平成交，尚未找到能稳定覆盖交易成本的规则。</p><div class="filters screen"><label>交易所 <select id="venue"><option value="binance">币安</option><option value="bybit">Bybit</option></select></label><label>每币现货预算 <select id="share"><option value="0.2">20%</option><option value="0.35" selected>35%</option><option value="0.45">45%</option></select></label><label>费用 <select id="cost"><option value="1">基础</option><option value="2">双倍</option></select></label><label>资金费 <select id="coupon"><option value="1">历史结算</option><option value="0.5">正资金费减半</option></select></label></div><p id="output" class="screen" aria-live="polite"></p><button id="download" class="download screen">下载已回测的资金费情景 CSV</button><p class="note">下一次真正未见行情的链上观察已锁定。周一 11 月 23 日 01:00 UTC 起，独立链上账户的 ETH 目标为六分之一，另两币目标为零；在预设结束时间评估。</p><p class="caption"><a href="https://2424540049-a11y.github.io/btc-eth-doge-research/reference/forward-2026-11-23.json">原始前瞻记录</a>　<a href="https://www.binance.com/en/support/faq/detail/360033525031">币安资金费计算规则</a>　<a href="https://www.bybit.com/en/help-center/article/Introduction-to-Funding-Rate">Bybit 资金费计算规则</a></p></main><footer><span>2026 年 11 月 21 日　·　账户本金 10,000 USDT</span><span>7 / 7</span></footer></section><script>const rows=[{"exchange":"binance","alloc":0.2,"scale":1,"positive_factor":1.0,"net":109.02577958681924,"financed_spot":-30.00838688137918,"mdd_hourly_pct":0.1068636303625192},{"exchange":"binance","alloc":0.35,"scale":1,"positive_factor":1.0,"net":194.991972070432,"financed_spot":-50.195173288431306,"mdd_hourly_pct":0.1860102856949375},{"exchange":"binance","alloc":0.45,"scale":1,"positive_factor":1.0,"net":249.65416358336688,"financed_spot":-63.81085825712438,"mdd_hourly_pct":0.2374609276962425},{"exchange":"binance","alloc":0.2,"scale":2,"positive_factor":1.0,"net":101.9236975735198,"financed_spot":-37.22139924138318,"mdd_hourly_pct":0.1068492392759856},{"exchange":"binance","alloc":0.2,"scale":1,"positive_factor":0.5,"net":39.61451550854372,"financed_spot":-99.41965095965467,"mdd_hourly_pct":0.1089463979408233},{"exchange":"binance","alloc":0.35,"scale":2,"positive_factor":1.0,"net":184.36701688319815,"financed_spot":-61.0031599006964,"mdd_hourly_pct":0.1859850648999628},{"exchange":"binance","alloc":0.35,"scale":1,"positive_factor":0.5,"net":72.12752321783273,"financed_spot":-173.05962214103056,"mdd_hourly_pct":0.1901214974370124},{"exchange":"binance","alloc":0.45,"scale":2,"positive_factor":1.0,"net":235.23058954865155,"financed_spot":-78.51073824517164,"mdd_hourly_pct":0.2375624791372876},{"exchange":"binance","alloc":0.45,"scale":1,"positive_factor":0.5,"net":92.46932812965495,"financed_spot":-220.9956937108363,"mdd_hourly_pct":0.2430840859749317},{"exchange":"bybit","alloc":0.2,"scale":1,"positive_factor":1.0,"net":111.18081931162716,"financed_spot":-27.528025944773844,"mdd_hourly_pct":0.0765492215052399},{"exchange":"bybit","alloc":0.35,"scale":1,"positive_factor":1.0,"net":195.8415495103964,"financed_spot":-47.94308808829945,"mdd_hourly_pct":0.1419202034454225},{"exchange":"bybit","alloc":0.45,"scale":1,"positive_factor":1.0,"net":250.3309598728697,"financed_spot":-62.15170781045424,"mdd_hourly_pct":0.1814648795297802},{"exchange":"bybit","alloc":0.2,"scale":2,"positive_factor":1.0,"net":102.82034854315724,"financed_spot":-36.01077000884774,"mdd_hourly_pct":0.1044630204398711},{"exchange":"bybit","alloc":0.2,"scale":1,"positive_factor":0.5,"net":37.05827696460256,"financed_spot":-101.65056829179844,"mdd_hourly_pct":0.0769049692947776},{"exchange":"bybit","alloc":0.35,"scale":2,"positive_factor":1.0,"net":183.2215886952495,"financed_spot":-60.759659027192015,"mdd_hourly_pct":0.1830648315351402},{"exchange":"bybit","alloc":0.35,"scale":1,"positive_factor":0.5,"net":66.43302748452425,"financed_spot":-177.35161011417156,"mdd_hourly_pct":0.1430707490047256},{"exchange":"bybit","alloc":0.45,"scale":2,"positive_factor":1.0,"net":233.8649396399801,"financed_spot":-78.4690713861329,"mdd_hourly_pct":0.2342592318317238},{"exchange":"bybit","alloc":0.45,"scale":1,"positive_factor":0.5,"net":84.61723850068529,"financed_spot":-227.86542918263865,"mdd_hourly_pct":0.183335030675602}];
+function refresh(){
+  const k=Number(document.querySelector('#cost').value),h=Number(document.querySelector('#coupon').value);
+  const x=rows.find(r=>r.exchange===document.querySelector('#venue').value&&r.alloc===Number(document.querySelector('#share').value)&&r.scale===k&&r.positive_factor===h);
+  const fmt=new Intl.NumberFormat('zh-CN',{minimumFractionDigits:2,maximumFractionDigits:2,signDisplay:'always'});
+  document.querySelector('#output').textContent=x?'自有资金净收益 '+fmt.format(x.net)+' USDT　｜　实际占款计息后 '+fmt.format(x.financed_spot)+' USDT　｜　小时末回撤 '+x.mdd_hourly_pct.toFixed(2)+'%':'此联合压力情景尚无对应账户。可分别选择双倍费用或正资金费减半。';
+}
+document.querySelectorAll('select').forEach(el=>el.addEventListener('change',refresh));refresh();
+document.querySelector('#download').onclick=()=>{const a=document.createElement('a');const u=URL.createObjectURL(new Blob(['\uFEFF',"exchange,phase,quality,alloc,rule,guard,scale,positive_factor,closed_and_margin,net,marked,financed_spot,full_actual_borrow,full4,full12,funding,fees,slip,wins,quarters,ex_best,mdd_hourly_pct,adverse_ohlc_dd_bound_pct,lowest_margin,guards,missing_held_risk_hours,fills\r\nbinance,recent,minute,0.2,passive,flat,1,1.0,True,109.02577958681924,109.02577958681924,-30.00838688137918,-598.678330002222,-646.0427135638656,-2156.1796998652358,116.85802637443638,4.85635048942855,2.1127466074983485,8,8,73.69162768892647,0.1068636303625192,4.343660682821393,2363.643272699785,0,0,9\r\nbinance,recent,minute,0.35,passive,flat,1,1.0,True,194.991972070432,194.991972070432,-50.195173288431306,-512.7121375186092,-560.0765210802529,-2070.2135073816225,207.06841065683,7.388157729615365,3.4029324272706587,8,8,133.61655936708075,0.1860102856949375,7.993767479523184,1634.4529899532597,0,0,8\r\nbinance,recent,minute,0.45,passive,flat,1,1.0,True,249.65416358336688,249.65416358336688,-63.81085825712438,-458.0499460056743,-505.414329567318,-2015.551315868688,264.7571847274992,9.586064643807818,4.397667012485213,8,8,171.75796953920644,0.2374609276962425,10.18185380550365,1150.3770545450298,0,0,9\r\nbinance,recent,minute,0.2,passive,flat,2,1.0,True,101.9236975735198,101.9236975735198,-37.22139924138318,-605.7804120155214,-653.144795577165,-2163.2817818785347,116.809140255071,9.71319768889633,4.223447373691312,8,8,66.58721281974886,0.1068492392759856,4.340992524486708,2363.1137863992635,0,0,9\r\nbinance,recent,minute,0.2,passive,flat,1,0.5,True,39.61451550854372,39.61451550854372,-99.41965095965467,-668.0895940804975,-715.4539776421411,-2225.590963943511,47.44676229615789,4.85635048942855,2.1127466074983485,6,8,22.195949788075723,0.1089463979408233,4.361156858435367,2352.4145456687884,0,0,9\r\nbinance,recent,minute,0.35,passive,flat,2,1.0,True,184.36701688319815,184.36701688319815,-61.0031599006964,-523.337092705843,-570.7014762674867,-2080.8384625688564,206.99508147778192,14.776896507115158,6.802993726885864,8,8,123.08459923687678,0.1859850648999628,7.992352428762938,1633.5230292426984,0,0,8\r\nbinance,recent,minute,0.35,passive,flat,1,0.5,True,72.12752321783273,72.12752321783273,-173.05962214103056,-635.5765863712085,-682.9409699328521,-2193.077956234222,84.2039618042177,7.388157729615365,3.4029324272706587,6,8,41.89515407909403,0.1901214974370124,8.049932019228889,1614.7314693810583,0,0,8\r\nbinance,recent,minute,0.45,passive,flat,2,1.0,True,235.23058954865155,235.23058954865155,-78.51073824517164,-472.4735200403896,-519.8379036020333,-2029.974889903403,264.6594124887685,19.173906251366923,8.791629799067493,8,8,157.38760094073675,0.2375624791372876,10.18242189183798,1149.1836945580667,0,0,9\r\nbinance,recent,minute,0.45,passive,flat,1,0.5,True,92.46932812965495,92.46932812965495,-220.9956937108363,-615.2347814593862,-662.5991650210299,-2172.7361513224,107.57234927379008,9.586064643807818,4.397667012485213,6,8,54.151479897733225,0.2430840859749317,10.272621756893386,1125.0696697645162,0,0,9\r\nbybit,recent,hour,0.2,passive,flat,1,1.0,True,111.18081931162716,111.18081931162716,-27.528025944773844,-596.523290277414,-643.8876738390577,-2154.0246601404274,121.1973488941864,5.893202931604403,2.428643938333897,8,8,71.28873252378435,0.0765492215052399,4.132343381500947,2341.8574419020674,0,0,12\r\nbybit,recent,hour,0.35,passive,flat,1,1.0,True,195.8415495103964,195.8415495103964,-47.94308808829945,-511.8625600786448,-559.2269436402885,-2069.363929941658,211.37163742055645,8.736777972078908,3.8307830872395017,8,8,126.61747324991666,0.1419202034454225,7.638097710027891,1609.9807549194502,0,0,10\r\nbybit,recent,hour,0.45,passive,flat,1,1.0,True,250.3309598728697,250.3309598728697,-62.15170781045424,-457.3731497161715,-504.7375332778152,-2014.8745195791848,270.48414756343595,11.314413007127849,4.944732192948996,8,8,162.3064007514563,0.1814648795297802,9.74572686023506,1122.0629635977148,0,0,11\r\nbybit,recent,hour,0.2,passive,flat,2,1.0,True,102.82034854315724,102.82034854315724,-36.01077000884774,-604.883761045884,-652.2481446075276,-2162.3851309088973,121.15575988717907,11.788203132375886,4.856277730497369,8,8,62.94246191749562,0.1044630204398711,4.130756825296411,2341.300851068941,0,0,12\r\nbybit,recent,hour,0.2,passive,flat,1,0.5,True,37.05827696460256,37.05827696460256,-101.65056829179844,-670.6458326244386,-718.0102161860823,-2228.147202487452,47.07480654714036,5.893202931604403,2.428643938333897,6,8,18.118537880574426,0.0769049692947776,4.151547652879561,2329.8656229265093,0,0,12\r\nbybit,recent,hour,0.35,passive,flat,2,1.0,True,183.2215886952495,183.2215886952495,-60.759659027192015,-524.4825208937917,-571.8469044554354,-2081.983890756805,211.2884594065418,17.47488056422709,7.658905248737437,8,8,114.0309515815411,0.1830648315351402,7.636962878909104,1608.996992404816,0,0,10\r\nbybit,recent,hour,0.35,passive,flat,1,0.5,True,66.43302748452425,66.43302748452425,-177.35161011417156,-641.271082104517,-688.6354656661606,-2198.7724519675303,81.9631153947069,8.736777972078908,3.8307830872395017,6,8,33.58861351196083,0.1430707490047256,7.700019685817594,1588.8285541894195,0,0,10\r\nbybit,recent,hour,0.45,passive,flat,2,1.0,True,233.8649396399801,233.8649396399801,-78.4690713861329,-473.8391699490611,-521.2035535107048,-2031.3405398120744,270.24222879685146,22.602941066707245,9.875230146002256,8,8,145.8798993410669,0.2342592318317238,9.746206806582904,1120.7944199620747,0,0,12\r\nbybit,recent,hour,0.45,passive,flat,1,0.5,True,84.61723850068529,84.61723850068529,-227.86542918263865,-623.0868710883559,-670.4512546499996,-2180.588240951369,104.77042619127089,11.314413007127849,4.944732192948996,6,8,42.87211249799702,0.183335030675602,9.846164930133783,1094.803841698033,0,0,11\r\n"],{type:'text/csv;charset=utf-8'}));a.href=u;a.download='carry-capacity.csv';a.click();setTimeout(()=>URL.revokeObjectURL(u),5000);};
+if('serviceWorker' in navigator)navigator.serviceWorker.register('./sw.js').catch(()=>{});</script></body></html>
