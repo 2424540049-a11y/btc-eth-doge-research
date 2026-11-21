@@ -1,5 +1,5 @@
 self.RESEARCH_RELEASE = {
-  "version": "45bf2526bdbed3dd5bce06fb85d56ca3a441e460972d07c9da4c7a1e4cbe7b8b",
+  "version": "83b14cdd0d86f4affd8f62cd354038af75b9a667afebb8ecb21f2de9cbd2f79e",
   "files": {
     "app.js": "7be14736c504fc35c4c36463f15ef3335bf6ea2311dd8c8024c29c3967d15f1c",
     "basis.html": "bab9798157358288b1728432e9df6276a698f71ac65087835940aab144a6809e",
@@ -35,13 +35,14 @@ self.RESEARCH_RELEASE = {
     "reference/daily_balanced.json": "e3de7aed06a71a71d4d11beef8e1ced8375f2c0a4a18ad66c466372dc9cd6540",
     "reference/forward-2026-11-23.json": "92dfac7442f7d35def9004114b1f6a223e74629080ec1271cad50df93f4c6a48",
     "reference/four_hour_half.json": "801f490ac669c828710aa1a2ff6b9c3e245fa0f519c17b980bc182542a6d7eb0",
+    "reference/results-13.json": "b71e09c244f325d478e87918b0df05daa8aeddaeb75985b6e4e09ba21ce34b41",
     "reference/supply-pressure-2026-11-23.json": "b3425a70de79cda833ebc6e9d5bfd17402e5826869d6176897437a32dad22e9f",
     "returns7.html": "d12a9e1c31cca72dabf867dc6d450e2df1b4ebc18385fbbecc8bd43ef9f73185",
     "returns7.pdf": "d526bda287cfd8165cf33b184f85064645165994970a40d009a306db0c23359e",
     "robustness9.html": "44c26f346987d4ee18bbe3d3a461be38cebf8a979c29fba448d90328411d22df",
     "robustness9.pdf": "24d5fd0b8c77867f18121e7e465dee5c726e3a4cc93060a879cb9c1dd3a31941",
-    "strategy13.html": "7cc12f5c3baf3f0c1cb857b8029cd40616825c1ff0c5fb34735532afd6f68dc9",
-    "strategy13.pdf": "fe83e903b4e6ba14bf71cc080f3b91cf7d95830b4bd7ed6f9a28301460dddedf",
+    "strategy13.html": "b3015b0abe9ee139aaf3c5fc6c9d0b592e154cc85a7c4a0a2d0fd31e0f118d0c",
+    "strategy13.pdf": "c8f85ab0632f2e46acd06e51b9a722a75379beb8741a08409705c8c5cd941a23",
     "style.css": "d422f20ef2759c7d06ccb44f6a004d76e81e79c25353d16b80dfc3a734960614"
   }
 };
