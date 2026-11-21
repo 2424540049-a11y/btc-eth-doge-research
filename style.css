@@ -342,6 +342,95 @@ h1 {
   background: var(--muted);
   border-color: var(--muted);
 }
+.btn.install-entry {
+  color: var(--teal);
+  border-color: #a7c5bc;
+  gap: 7px;
+}
+.install-entry-icon {
+  width: 15px;
+  height: 15px;
+  border: 1.5px solid currentColor;
+  border-radius: 4px;
+  display: inline-grid;
+  place-items: center;
+  font: bold 12px/1 var(--sans);
+}
+.install-entry-icon::before {
+  content: "+";
+}
+.install-entry[data-install-state="installed"] .install-entry-icon::before,
+.install-entry[data-install-state="standalone"] .install-entry-icon::before {
+  content: "✓";
+}
+.install-dialog {
+  width: min(420px, calc(100% - 28px));
+  max-height: calc(100% - 32px);
+  max-height: calc(100dvh - 32px);
+  padding: 22px;
+  overflow: auto;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  box-shadow: 0 16px 52px #122e3038;
+  background: var(--panel);
+  color: var(--ink);
+  line-height: 1.65;
+}
+.install-dialog::backdrop {
+  background: #142c2f70;
+}
+.install-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+.install-heading h2 {
+  font-size: 20px;
+}
+.install-close {
+  min-width: 40px;
+  min-height: 40px;
+  padding: 0;
+  font-size: 21px;
+  line-height: 1;
+}
+#install-intro {
+  color: var(--muted);
+}
+#install-steps {
+  margin: 16px 0 0;
+  padding-inline-start: 1.6em;
+}
+#install-steps li + li {
+  margin-top: 8px;
+}
+#install-steps li::marker {
+  color: var(--teal);
+  font-weight: 650;
+}
+#install-status {
+  margin-top: 14px;
+  color: var(--teal);
+}
+#install-confirm {
+  margin-top: 18px;
+  min-height: 44px;
+}
+.install-offline {
+  display: grid;
+  justify-items: start;
+  gap: 10px;
+  margin-top: 22px;
+  padding-top: 16px;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 13px;
+}
+.install-offline button {
+  min-height: 44px;
+}
 .seg {
   display: inline-flex;
   align-items: center;
@@ -989,6 +1078,35 @@ tbody tr:hover {
   .topright {
     gap: 6px;
     font-size: 10px;
+  }
+  .top {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 0 8px;
+    align-items: center;
+  }
+  .top h1,
+  .top #asof {
+    grid-column: 1;
+  }
+  .topright {
+    display: contents;
+  }
+  .top #asof {
+    grid-row: 2;
+    overflow-wrap: anywhere;
+  }
+  .top #install-app {
+    grid-column: 2;
+    grid-row: 1 / span 2;
+    min-height: 44px;
+  }
+  .install-dialog {
+    padding: 18px;
+  }
+  .install-close {
+    min-width: 44px;
+    min-height: 44px;
   }
   .localstate {
     display: none;

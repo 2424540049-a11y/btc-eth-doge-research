@@ -4,9 +4,16 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <meta name="color-scheme" content="light" />
+    <meta name="theme-color" content="#152929" />
+    <meta name="apple-mobile-web-app-title" content="策略研究台" />
+    <meta name="mobile-web-app-capable" content="yes" />
     <title>策略研究台 · 行情研究</title>
-    <link rel="icon" href="data:," />
+    <link rel="manifest" href="./manifest.webmanifest" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./icons/favicon-32.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="./icons/apple-touch-icon.png" />
     <link rel="stylesheet" href="./style.css" />
+    <script defer src="./online/install.js"></script>
+    <script type="module" src="./online/pwa.js"></script>
     <script type="module">
       try {
         await import("./charts.js");
@@ -48,6 +55,9 @@
           <h1 id="page-title">行情研究</h1>
           <div class="topright">
             <span id="asof" aria-live="polite"></span>
+            <button type="button" id="install-app" class="btn install-entry" aria-haspopup="dialog" aria-controls="install-dialog" hidden>
+              <span class="install-entry-icon" aria-hidden="true"></span><span id="install-label">安装应用</span>
+            </button>
           </div>
         </header>
         <div id="init-status" class="notice" role="status">正在加载行情快照…</div>
@@ -303,5 +313,19 @@
         <noscript>在浏览器中启用 JavaScript 后即可查看行情并运行回测。</noscript>
       </main>
     </div>
+    <dialog id="install-dialog" class="install-dialog" aria-labelledby="install-title" aria-describedby="install-intro">
+      <div class="install-heading">
+        <h2 id="install-title">安装策略研究台</h2>
+        <button type="button" class="btn install-close" id="install-close" aria-label="关闭安装说明" autofocus>×</button>
+      </div>
+      <p id="install-intro"></p>
+      <ol id="install-steps" hidden></ol>
+      <p id="install-status" role="status" hidden></p>
+      <button type="button" class="btn primary" id="install-confirm" hidden>继续安装</button>
+      <div class="install-offline">
+        <p data-offline-status role="status">联网时可保存约 12 MB 的历史数据，供离线回测使用。</p>
+        <button type="button" class="btn" data-prepare-offline>保存离线数据</button>
+      </div>
+    </dialog>
   </body>
 </html>

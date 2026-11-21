@@ -33,6 +33,17 @@ async function manifest() {
 }
 
 export async function refreshData() {
+  if (globalThis.navigator?.serviceWorker?.controller) {
+    const current = await manifest();
+    const url = new URL("manifest.json?latest=1", dataRoot);
+    const latest = JSON.parse(new TextDecoder().decode(await readBytes(url, "no-store")));
+    if (latest.version !== current.version) {
+      const registration = await navigator.serviceWorker.ready;
+      await registration.update();
+      throw new Error("网站已发布新版行情。请关闭所有研究台窗口，再重新打开以载入新版。");
+    }
+    return current.meta;
+  }
   manifestPromise = undefined;
   return (await manifest()).meta;
 }
