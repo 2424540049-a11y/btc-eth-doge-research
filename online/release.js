@@ -1,7 +1,9 @@
 self.RESEARCH_RELEASE = {
-  "version": "59e08079fb921f78fe7d62a6c39b5d1a7e7d0999c0fc7b4af9b276888779a0ee",
+  "version": "26a165a2c8dbb3beabfb0091a452c773bf8ed13c946c3cd29c0600d10fe39f67",
   "files": {
-    "app.js": "a9e66b765934bb6f0fc62f12980da9f6d1b1803e6d1b96e2f0542f572f01cc1a",
+    "app.js": "7be14736c504fc35c4c36463f15ef3335bf6ea2311dd8c8024c29c3967d15f1c",
+    "basis.html": "52c0125b2256388a02460d5205149fc599e10ca48c0fa7b4c2258e06de376cd0",
+    "basis.pdf": "5fa16055aa208309c203f28e95571f4ff21884536c7f6401cff3dcc7319cc82a",
     "charts.js": "23e46a666709ab7e51028aea3ae1ad0818095f0bc8bfd37e4b51e40dca5604ea",
     "data/manifest.json": "b1c85a4fe7896d66ce5f538eb695c145b2a115921f9500ae12b42c5ca8942c6f",
     "icons/app-192.png": "d4c0e74296fc8dc8e8dc12c5a116cf00ffb9418a7949dc63103100d72dbee3f5",
@@ -10,7 +12,7 @@ self.RESEARCH_RELEASE = {
     "icons/apple-touch-icon.png": "afeea60530c0e5035e82e719dc6f1ecb166770625e108f86e320f20ef2bf92fc",
     "icons/favicon-32.png": "5ca221c8416fe004dbb3818aacb5b6aede7101f918c821615cfaaef340bfb9e9",
     "icons/favicon.ico": "27cf3deaaccf35c73504ed29a4526c5a508b7ad933543ee2a9065d851d53f6b2",
-    "index.html": "209dea198123555a00e014b3f8b82c72c294efe6bbbff39e98cc77b9319dc51a",
+    "index.html": "0bab99d81b6db22ead1089778cca3c0b9451b23eb890429c8edfb4922f56d072",
     "manifest.webmanifest": "aae3747161cf4b5f93f34c8d210cb62e32f9764754cc36efbabb768bb3edce48",
     "online/api.js": "dfdf4e2feaa20fa6454c5bea1b8b091553eb76f2d534223ff2616df47893869e",
     "online/data.js": "b2785c07c6258357b0895fe33fec83b70ef50b5221b2375612be5b6d89fef5d6",
@@ -21,6 +23,6 @@ self.RESEARCH_RELEASE = {
     "online/worker.js": "eca324e5a63c5ac1859a464fa7f53a26e537d1cfb181804a3c4a46befe6719f7",
     "reference/daily_balanced.json": "e3de7aed06a71a71d4d11beef8e1ced8375f2c0a4a18ad66c466372dc9cd6540",
     "reference/four_hour_half.json": "801f490ac669c828710aa1a2ff6b9c3e245fa0f519c17b980bc182542a6d7eb0",
-    "style.css": "3245a6af19d4f0550e4e682ee9981dc2c851b7d7f9c8fd8c5c0a84867da6a8f3"
+    "style.css": "d422f20ef2759c7d06ccb44f6a004d76e81e79c25353d16b80dfc3a734960614"
   }
 };

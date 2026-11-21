@@ -125,6 +125,7 @@ button:not(:disabled):active {
   margin-top: 7px;
 }
 .navlink {
+  text-decoration: none;
   background: none;
   border: 1px solid transparent;
   display: flex;

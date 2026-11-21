@@ -97,7 +97,7 @@ function setPage(page, changeHash = true) {
   if (!Object.hasOwn(titles, page)) page = "market";
   state.page = page;
   document.querySelectorAll(".page").forEach((el) => show(el, el.id === "page-" + page));
-  document.querySelectorAll(".navlink").forEach((b) => {
+  document.querySelectorAll(".navlink[data-page]").forEach((b) => {
     const on = b.dataset.page === page;
     b.classList.toggle("active", on);
     if (on) b.setAttribute("aria-current", "page");
@@ -115,7 +115,7 @@ function setPage(page, changeHash = true) {
   });
 }
 document
-  .querySelectorAll(".navlink")
+  .querySelectorAll(".navlink[data-page]")
   .forEach((b) => b.addEventListener("click", () => setPage(b.dataset.page)));
 window.addEventListener("hashchange", () => setPage(location.hash.slice(1), false));
 function barLabel(time) {
