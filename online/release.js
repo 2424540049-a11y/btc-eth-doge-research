@@ -1,9 +1,9 @@
 self.RESEARCH_RELEASE = {
-  "version": "2c366c76204095eb359b4393bd4e9ef2c2be53d9e6812ad0fc56c36e828f78ad",
+  "version": "8e4038c5a1aad76666ef3b34c2c71b3bdf590f4b4ee5e71e3c7f1645d872fc80",
   "files": {
     "app.js": "7be14736c504fc35c4c36463f15ef3335bf6ea2311dd8c8024c29c3967d15f1c",
     "basis.html": "87f236d3cdb0786a3a48162688e4b4adc2bb342bc2b4720daa39b04000979317",
-    "basis.pdf": "a192c9c3256e4cfe58545ec1bc1bf590312d4a60bf5d57d4292663d0c50bcca7",
+    "basis.pdf": "de4f204a152b59b89134cbf0130152f74d455ba00330cd61141123a544c3fea3",
     "charts.js": "23e46a666709ab7e51028aea3ae1ad0818095f0bc8bfd37e4b51e40dca5604ea",
     "data/manifest.json": "b1c85a4fe7896d66ce5f538eb695c145b2a115921f9500ae12b42c5ca8942c6f",
     "icons/app-192.png": "d4c0e74296fc8dc8e8dc12c5a116cf00ffb9418a7949dc63103100d72dbee3f5",
