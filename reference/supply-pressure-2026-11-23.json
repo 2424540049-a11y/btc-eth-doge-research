@@ -1,0 +1,119 @@
+{
+  "frozen_utc": "2026-11-21T16:09:43.110060+00:00",
+  "unit": "USDT",
+  "status": "prospective paper protocol, no orders sent",
+  "weekly_start": "2026-11-23T01:00:00Z",
+  "weekly_review_end": "2026-11-30T00:00:00Z",
+  "supply": {
+    "native_rules": "Compare two Ethereum token totalSupply 4 weeks apart; both rising assigns one sixth cash capital to each of BTC ETH DOGE, otherwise all cash.",
+    "cutoff_height": 26452577,
+    "cutoff_hash": "0xe1cba20c5c98f0d183888f2e5900b0a94a01ef5dfcace1a6ce0f5d0def173681",
+    "cutoff_seconds": 1795132799,
+    "reference_height": 26251600,
+    "reference_hash": "0x931a7582b743fd6b599f6999210ac488d4c03d24fae67492c36a22e5f31da0ab",
+    "reference_seconds": 1792713599,
+    "decimals": 6,
+    "values": [
+      {
+        "asset": "USDT",
+        "late_units": "84296691994493958",
+        "early_units": "88301265725970534",
+        "four_week_growth": -0.04535126080643237
+      },
+      {
+        "asset": "USDC",
+        "late_units": "44553537085753535",
+        "early_units": "48116456091575296",
+        "four_week_growth": -0.07404782677761657
+      }
+    ],
+    "target": {
+      "BTC": 0,
+      "ETH": 0,
+      "DOGE": 0
+    }
+  },
+  "pressure": {
+    "rules": "Separate source accounts (10,000 capital, 2,000 total planned gross), weekly next-hour execution with native participation. Use last 60 completed daily returns as of Monday 00 UTC for beta weights. If beta invalid/minimum/volume prevents fill, report actual result; final USD amounts and future gains currently unknown.",
+    "source": {
+      "Bitstamp": {
+        "coins": [
+          {
+            "asset": "BTC",
+            "hours": 24,
+            "premium_bp": -0.2708703217358829,
+            "prior12_median_bp": -0.21441604919946583,
+            "residual_bp": -0.05645427253641705
+          },
+          {
+            "asset": "ETH",
+            "hours": 24,
+            "premium_bp": -0.053086997109843576,
+            "prior12_median_bp": 0.012786890423277748,
+            "residual_bp": -0.06587388753312132
+          },
+          {
+            "asset": "DOGE",
+            "hours": 24,
+            "premium_bp": -0.542312219658466,
+            "prior12_median_bp": -0.5904622516144612,
+            "residual_bp": 0.04815003195599521
+          }
+        ],
+        "long_short_if_eligible": [
+          "DOGE",
+          "ETH"
+        ],
+        "source_hours_digest": "c82a6264cacb6e6b49d579a285b4b5b0de59938767f3c849f4d485fbd4d88fbe"
+      },
+      "Coinbase": {
+        "coins": [
+          {
+            "asset": "BTC",
+            "hours": 24,
+            "premium_bp": -0.5586756080964306,
+            "prior12_median_bp": -0.3068221579956653,
+            "residual_bp": -0.25185345010076526
+          },
+          {
+            "asset": "ETH",
+            "hours": 24,
+            "premium_bp": 0.14936044797606174,
+            "prior12_median_bp": 0.0081663941646238,
+            "residual_bp": 0.14119405381143793
+          },
+          {
+            "asset": "DOGE",
+            "hours": 24,
+            "premium_bp": 0.7552806910393735,
+            "prior12_median_bp": -0.2354957940268702,
+            "residual_bp": 0.9907764850662437
+          }
+        ],
+        "long_short_if_eligible": [
+          "DOGE",
+          "BTC"
+        ],
+        "source_hours_digest": "d4b7d7238ccb41a19a8d8bcdd5d496a6cf51dc046d05b5ea45fe0c7d4027c9d5"
+      }
+    },
+    "agreement_pair": null
+  },
+  "monthly": {
+    "decision_utc": "2026-12-01T00:00:00Z",
+    "earliest_order_window": "2026-12-01T01:00:00Z",
+    "target_end": "2027-03-01T00:00:00Z",
+    "terminal_start": "2027-02-28T12:00:00Z",
+    "accounts": [
+      "equal independent 35%/35%/35%",
+      "independent 35% BTC,35% ETH,20% DOGE",
+      "cash zero baseline"
+    ],
+    "capital_each": 10000,
+    "venues": [
+      "Binance",
+      "Bybit"
+    ],
+    "plan": "Buy spot and sell the same base-asset quantity with separate allocated cash per coin. Quantities determined by November 30 final fully closed hour. At most 0.1% signed hourly volume per leg (Bybit half total approximate); trade within 12 hours with spot 10bp and futures 5/5.5bp and adverse 2/3/6bp respectively. Observe held short notional relative to its planned capital; flatten permanently after an hour closes beyond 1.75x initial planned nominal or margin surplus below 25% of current short (1% maintenance). Earliest eligible guard order window two hours after beginning of triggering bar. No reentry, no borrowing in primary wallet. Report missed fills, unpayable positions, order dust, actual funding cash and actual/proxy financing in separate scenarios. This tests a single future inception; no automatic future execution."
+  }
+}

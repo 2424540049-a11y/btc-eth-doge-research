@@ -9,7 +9,7 @@ SITE = Path(__file__).resolve().parents[1]
 def build():
     paths = [
         SITE / name for name in
-        ("index.html", "app.js", "charts.js", "style.css", "manifest.webmanifest", "data/manifest.json", "basis.html", "basis.pdf", "basis6.html", "basis6.pdf", "returns7.html", "returns7.pdf", "opportunities8.html", "opportunities8.pdf", "robustness9.html", "robustness9.pdf", "opportunities10.html", "opportunities10.pdf")
+        ("index.html", "app.js", "charts.js", "style.css", "manifest.webmanifest", "data/manifest.json", "basis.html", "basis.pdf", "basis6.html", "basis6.pdf", "returns7.html", "returns7.pdf", "opportunities8.html", "opportunities8.pdf", "robustness9.html", "robustness9.pdf", "opportunities10.html", "opportunities10.pdf", "income11.html", "income11.pdf")
     ]
     paths.extend(path for path in (SITE / "online").glob("*.js") if path.name != "release.js")
     paths.extend((SITE / "icons").glob("*"))
