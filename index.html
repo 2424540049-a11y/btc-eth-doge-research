@@ -1,0 +1,307 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="color-scheme" content="light" />
+    <title>策略研究台 · 行情研究</title>
+    <link rel="icon" href="data:," />
+    <link rel="stylesheet" href="./style.css" />
+    <script type="module">
+      try {
+        await import("./charts.js");
+        const { onlineFetch } = await import("./online/api.js");
+        window.onlineFetch = onlineFetch;
+        await import("./app.js");
+      } catch {
+        document.getElementById("init-status").hidden = true;
+        const notice = document.getElementById("global-error");
+        notice.textContent = "研究台加载失败。请检查网络连接，或刷新页面重试。";
+        notice.hidden = false;
+      }
+    </script>
+  </head>
+  <body>
+    <div class="shell">
+      <aside class="side">
+        <div class="brand">
+          <span class="brandmark" aria-hidden="true"><i></i><i></i><i></i></span><span>策略研究台</span>
+        </div>
+        <nav aria-label="工作区">
+          <button class="navlink active" data-page="market">
+            <span data-icon="chart"></span><span>行情研究</span>
+          </button>
+          <button class="navlink" data-page="backtest">
+            <span data-icon="flask"></span><span>策略回测</span>
+          </button>
+          <button class="navlink" data-page="quality">
+            <span data-icon="database"></span><span>数据管理</span>
+          </button>
+        </nav>
+        <div class="sidebottom">
+          <span class="sourcelabel">数据来源</span><strong>Binance</strong
+          ><span class="sidefoot">UTC 时间 · USDT 计价</span>
+        </div>
+      </aside>
+      <main>
+        <header class="top">
+          <h1 id="page-title">行情研究</h1>
+          <div class="topright">
+            <span id="asof" aria-live="polite"></span>
+          </div>
+        </header>
+        <div id="init-status" class="notice" role="status">正在加载行情快照…</div>
+        <div id="global-error" class="notice error" hidden role="alert"></div>
+        <div id="export-status" class="notice export-status" hidden role="status">
+          <span id="export-message"></span
+          ><button id="close-export" type="button" class="iconbtn" aria-label="收起导出通知" title="收起">
+            ×
+          </button>
+        </div>
+        <section id="page-market" class="page">
+          <div class="section-top">
+            <h2>市场概览</h2>
+            <div class="seg" id="market-menu" aria-label="市场">
+              <button type="button" data-market="perp" class="selected">永续合约</button
+              ><button type="button" data-market="spot">现货</button
+              ><button type="button" data-market="mark">标记价格</button>
+            </div>
+          </div>
+          <div class="assets" id="assets" aria-label="选择币种"></div>
+          <section class="panel market-panel">
+            <div class="panelhead">
+              <div class="titleline">
+                <h2 id="symbol-title">BTC / USDT</h2>
+                <span class="instrument" id="instrument">永续合约</span>
+              </div>
+              <button class="btn compact" id="export-market">
+                <span data-icon="download"></span><span id="export-market-label">导出 K 线 CSV</span>
+              </button>
+            </div>
+            <div class="charttools">
+              <div class="toolset">
+                <div class="seg intervals" id="interval-menu" aria-label="K线周期">
+                  <button data-interval="1h">1 小时</button><button data-interval="4h">4 小时</button
+                  ><button data-interval="1d" class="selected">日线</button
+                  ><button data-interval="1w">周线</button>
+                </div>
+                <span class="vline"></span
+                ><label class="indicator"
+                  ><input type="checkbox" id="ma20" checked /><i class="key ochre"></i>MA20</label
+                ><label class="indicator"
+                  ><input type="checkbox" id="ma60" /><i class="key blue"></i>MA60</label
+                >
+              </div>
+              <label class="sr" for="range">图表区间</label
+              ><select id="range" class="range-select">
+                <option value="7">近 7 天</option>
+                <option value="30">近 30 天</option>
+                <option value="90" selected>近 90 天</option>
+                <option value="365">近 1 年</option>
+                <option value="custom">自定义日期</option>
+              </select>
+            </div>
+            <form id="custom-range" class="customrange" hidden>
+              <label>开始<input type="date" id="market-start" required /></label
+              ><label>结束<input type="date" id="market-end" required /></label
+              ><button class="btn compact" type="submit">应用</button>
+            </form>
+            <div id="ohlc" class="ohlc" aria-live="off"></div>
+            <div class="canvasbox">
+              <canvas
+                id="market-chart"
+                tabindex="0"
+                aria-label="K线图，可使用左右方向键逐根查看，上下方向键缩放"
+              ></canvas>
+              <div id="chart-status" class="chart-status" role="status"></div>
+            </div>
+            <div class="chartfooter">
+              <span id="chart-count"></span
+              ><span class="chart-actions"
+                ><span class="gesture">滚轮缩放 · 拖动平移</span
+                ><button class="iconbtn" id="zoom-out" title="缩小" aria-label="缩小">−</button
+                ><button class="iconbtn" id="zoom-in" title="放大" aria-label="放大">+</button
+                ><button class="textbtn" id="reset-chart">复位</button></span
+              >
+            </div>
+          </section>
+          <section class="panel">
+            <div class="panelhead">
+              <div class="seg tabseg" id="records-tabs">
+                <button data-record="candles" class="selected">K 线明细</button
+                ><button data-record="funding">资金费率</button>
+              </div>
+              <span class="quiet" id="records-count"></span>
+            </div>
+            <div id="records-area"></div>
+            <div id="records-pager" class="pager"></div>
+          </section>
+        </section>
+        <section id="page-backtest" class="page" hidden>
+          <form id="back-form" class="panel formpanel">
+            <div class="panelhead">
+              <h2>回测设置</h2>
+              <span class="quiet">虚拟账户 · UTC 日期</span>
+            </div>
+            <div class="formgrid">
+              <label class="double">策略<select id="strategy" name="strategy" required></select></label>
+              <label
+                >交易币种<select id="back-symbol" name="symbol" disabled>
+                  <option>BTC</option>
+                  <option>ETH</option>
+                  <option>DOGE</option></select
+                ><span id="universe" class="universe">BTC / ETH / DOGE</span></label
+              >
+              <label
+                >起始本金（USDT）<input
+                  type="number"
+                  name="initial"
+                  id="initial"
+                  value="10000"
+                  min="100"
+                  max="1000000000"
+                  step="any"
+                  required
+              /></label>
+              <label>开始日期<input type="date" id="back-start" name="start" required /></label>
+              <label>结束日期<input type="date" id="back-end" name="end" required /></label>
+              <label
+                >交易成本倍数<input
+                  type="number"
+                  id="cost"
+                  name="cost_multiplier"
+                  min="0"
+                  max="10"
+                  step="any"
+                  value="1"
+                  required
+              /></label>
+              <label
+                >目标仓位倍率<input
+                  type="number"
+                  id="scale"
+                  name="position_scale"
+                  min="0.1"
+                  max="4"
+                  step="any"
+                  value="1"
+                  required
+              /></label>
+              <label id="rotation-fields" hidden
+                >轮动回看天数<input type="number" id="lookback" value="30" min="10" max="180" step="1"
+              /></label>
+              <label class="ema-field" hidden
+                >快速 EMA 天数<input type="number" id="fast-days" value="20" min="2" max="180" step="1"
+              /></label>
+              <label class="ema-field" hidden
+                >慢速 EMA 天数<input type="number" id="slow-days" value="60" min="2" max="180" step="1"
+              /></label>
+              <label class="ema-field" hidden
+                >交易方向<select id="ema-mode">
+                  <option value="long_cash">做多或空仓</option>
+                  <option value="long_short">做多或做空</option>
+                </select></label
+              >
+            </div>
+            <div class="formbottom">
+              <span id="strategy-desc" class="quiet"></span
+              ><button id="run-backtest" class="btn primary" type="submit">
+                <span data-icon="play"></span>运行回测
+              </button>
+            </div>
+          </form>
+          <div id="back-status" class="notice" role="status" hidden></div>
+          <div class="panel saved-panel">
+            <label for="saved-runs">实验记录</label
+            ><select id="saved-runs" aria-label="实验记录">
+              <option value="">暂无已保存实验</option></select
+            ><button type="button" class="btn compact" id="load-saved" disabled>打开实验</button>
+            <small class="storage-note">个人实验保存在此浏览器中</small>
+          </div>
+          <section id="back-empty" class="panel empty-desk">
+            <span class="emptyicon" data-icon="flask"></span>
+            <h2>尚未运行回测</h2>
+            <p>选择策略和日期，运行后查看净值、回撤和每笔模拟成交。</p>
+          </section>
+          <div id="back-results" hidden>
+            <div class="section-top">
+              <h2>回测结果</h2>
+              <div class="inline">
+                <button id="save-run" class="btn compact">保存实验</button
+                ><button id="export-run" class="btn compact">
+                  <span data-icon="download"></span>导出结果 JSON
+                </button>
+              </div>
+            </div>
+            <div class="run-summary" id="run-summary"></div>
+            <div class="metrics" id="metrics"></div>
+            <section class="panel">
+              <div class="panelhead">
+                <h2>资金曲线</h2>
+                <div class="inline">
+                  <label class="compare" id="compare-wrap" hidden
+                    ><input id="compare" type="checkbox" />对比上次回测</label
+                  ><button class="btn compact" id="export-equity">
+                    <span data-icon="download"></span>净值 CSV
+                  </button>
+                </div>
+              </div>
+              <div class="subtext" id="equity-note"></div>
+              <div class="equitybox">
+                <canvas id="equity-chart" aria-label="策略累计净收益和日末回撤"></canvas>
+              </div>
+              <div class="chartfooter" id="equity-caption"></div>
+            </section>
+            <section class="panel">
+              <div class="panelhead">
+                <h2>模拟成交</h2>
+                <button class="btn compact" id="export-trades">
+                  <span data-icon="download"></span>成交 CSV
+                </button>
+              </div>
+              <div id="trades-area"></div>
+              <div id="trades-pager" class="pager"></div>
+            </section>
+            <details id="notes-panel" class="panel notes">
+              <summary>回测口径</summary>
+              <ul id="run-notes"></ul>
+            </details>
+          </div>
+        </section>
+        <section id="page-quality" class="page" hidden>
+          <section class="panel">
+            <div class="panelhead">
+              <div class="titleline"><h2>历史行情快照</h2></div>
+              <button id="update" class="btn primary"><span data-icon="refresh"></span>检查快照版本</button>
+            </div>
+            <div id="update-status" class="subtext" role="status"></div>
+            <div id="quality-area"></div>
+          </section>
+          <section class="panel">
+            <div class="panelhead">
+              <h2>已记录的数据缺口</h2>
+              <span class="quiet" id="gaps-count"></span>
+            </div>
+            <div id="gaps-area"></div>
+            <div class="pager" id="gaps-pager"></div>
+          </section>
+          <details class="panel notes">
+            <summary id="shortened-title">提前收盘的小时 K 线</summary>
+            <p class="subtext">小时图保留交易所发布的原始记录。较长周期的 K 线会跳过包含此类小时的周期。</p>
+            <div id="shortened-area"></div>
+            <div class="pager" id="shortened-pager"></div>
+          </details>
+          <details class="panel notes">
+            <summary id="fundgap-title">资金费结算间隔</summary>
+            <p class="subtext">
+              列出数据库标记的结算间隔异常。间隔内的真实费率未知，导出仅包含已取得的实际结算记录。
+            </p>
+            <div id="fundgap-area"></div>
+            <div class="pager" id="fundgap-pager"></div>
+          </details>
+        </section>
+        <noscript>在浏览器中启用 JavaScript 后即可查看行情并运行回测。</noscript>
+      </main>
+    </div>
+  </body>
+</html>
