@@ -1,9 +1,11 @@
 self.RESEARCH_RELEASE = {
-  "version": "8e4038c5a1aad76666ef3b34c2c71b3bdf590f4b4ee5e71e3c7f1645d872fc80",
+  "version": "ef89bebde49265d368a7392c09bceca07cddf67129233c43c2205efc903a7f11",
   "files": {
     "app.js": "7be14736c504fc35c4c36463f15ef3335bf6ea2311dd8c8024c29c3967d15f1c",
-    "basis.html": "87f236d3cdb0786a3a48162688e4b4adc2bb342bc2b4720daa39b04000979317",
+    "basis.html": "bab9798157358288b1728432e9df6276a698f71ac65087835940aab144a6809e",
     "basis.pdf": "de4f204a152b59b89134cbf0130152f74d455ba00330cd61141123a544c3fea3",
+    "basis6.html": "37b758d0710cf1ea8e7f65d98e4b86e0f788da3e8db1c62ccfd9750f7d6ce668",
+    "basis6.pdf": "b2592cf471b61577238a052ed15aa8cd6766016ebe21272ad59a598fa6405054",
     "charts.js": "23e46a666709ab7e51028aea3ae1ad0818095f0bc8bfd37e4b51e40dca5604ea",
     "data/manifest.json": "b1c85a4fe7896d66ce5f538eb695c145b2a115921f9500ae12b42c5ca8942c6f",
     "icons/app-192.png": "d4c0e74296fc8dc8e8dc12c5a116cf00ffb9418a7949dc63103100d72dbee3f5",
@@ -12,7 +14,7 @@ self.RESEARCH_RELEASE = {
     "icons/apple-touch-icon.png": "afeea60530c0e5035e82e719dc6f1ecb166770625e108f86e320f20ef2bf92fc",
     "icons/favicon-32.png": "5ca221c8416fe004dbb3818aacb5b6aede7101f918c821615cfaaef340bfb9e9",
     "icons/favicon.ico": "27cf3deaaccf35c73504ed29a4526c5a508b7ad933543ee2a9065d851d53f6b2",
-    "index.html": "0bab99d81b6db22ead1089778cca3c0b9451b23eb890429c8edfb4922f56d072",
+    "index.html": "aa0be5794f28145b82ceacf73791271db13a89d783fe6f612296d86d0ab7c3dd",
     "manifest.webmanifest": "aae3747161cf4b5f93f34c8d210cb62e32f9764754cc36efbabb768bb3edce48",
     "online/api.js": "dfdf4e2feaa20fa6454c5bea1b8b091553eb76f2d534223ff2616df47893869e",
     "online/data.js": "b2785c07c6258357b0895fe33fec83b70ef50b5221b2375612be5b6d89fef5d6",

@@ -100,8 +100,8 @@ async function marketResponse(request) {
   return response;
 }
 
-async function reportRange(range) {
-  const full = await fromShell("basis.pdf");
+async function reportRange(path, range) {
+  const full = await fromShell(path);
   const bytes = await full.arrayBuffer();
   const match = /^bytes=(\d*)-(\d*)$/.exec(range);
   if (!match) return new Response(bytes, {headers: {"Content-Type": "application/pdf"}});
@@ -121,7 +121,8 @@ self.addEventListener("fetch", event => {
   const url = new URL(request.url);
   url.hash = "";
   if (request.headers.has("range")) {
-    if (url.href === urlOf("basis.pdf")) event.respondWith(reportRange(request.headers.get("range")));
+    const path = shellPaths.get(url.href);
+    if (path === "basis.pdf" || path === "basis6.pdf") event.respondWith(reportRange(path, request.headers.get("range")));
     return;
   }
   if (request.mode === "navigate" && (url.pathname === new URL(base).pathname || url.pathname === new URL("index.html", base).pathname)) {
