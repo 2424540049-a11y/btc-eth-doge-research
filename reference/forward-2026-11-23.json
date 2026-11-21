@@ -1,0 +1,62 @@
+{
+  "frozen": "2026-11-21T15:24:48.483619+00:00",
+  "week_utc": "2026-11-23T00:00:00+00:00",
+  "window_end_utc": "2026-11-30T00:00:00Z",
+  "execution_earliest": "2026-11-23T01:00:00Z",
+  "onchain": [
+    {
+      "coin": "BTC",
+      "tx_ratio": 0.909576774113288,
+      "fee_ratio": 1.0052864135362194,
+      "spot_target_fraction": 0,
+      "latest_day": "2026-11-20",
+      "source_sha256": "21b59e8a7e89f9818b77c4485d047b6f9868d9fe99a85105eb5ea111a73fa37b",
+      "gathered": "2026-11-21T14:55:12.448109+00:00"
+    },
+    {
+      "coin": "ETH",
+      "tx_ratio": 1.0005659540242076,
+      "fee_ratio": 1.020781883572407,
+      "spot_target_fraction": 0.16666666666666666,
+      "latest_day": "2026-11-20",
+      "source_sha256": "58f7d82d35088c53d1bd77ee9778b96696bd7effeaaa420e7b5f8f1696bbd992",
+      "gathered": "2026-11-21T14:55:12.440161+00:00"
+    },
+    {
+      "coin": "DOGE",
+      "tx_ratio": 0.9300239675323321,
+      "fee_ratio": 0.9634558942190288,
+      "spot_target_fraction": 0,
+      "latest_day": "2026-11-20",
+      "source_sha256": "6967c556ca7969c388df6fac7bb27b7f16f15717ad596e6634fb6843a65bbe5b",
+      "gathered": "2026-11-21T14:55:12.398504+00:00"
+    }
+  ],
+  "etf": [
+    {
+      "coin": "BTC",
+      "status": "verified",
+      "last_date": "2026-11-19",
+      "flow_last_millions": -582.3,
+      "trailing_five_millions": -1306.1999999999998,
+      "previous60_median_millions": 6.5,
+      "spot_target_fraction": 0,
+      "sha256": "f41df74d20506bab106525c1d5a91906a51ba907d69eebac810ec418424e554f",
+      "capture_utc": "20261121054028",
+      "url": "https://web.archive.org/web/20261121054028id_/https://farside.co.uk/bitcoin-etf-flow-all-data/"
+    },
+    {
+      "coin": "ETH",
+      "status": "verified",
+      "last_date": "2026-11-19",
+      "flow_last_millions": -131.2,
+      "trailing_five_millions": -206.2,
+      "previous60_median_millions": -33.65,
+      "spot_target_fraction": 0,
+      "sha256": "3966f6860f7255430b9b7f847f57aac1bd1782526ad3f3755b8f98f58dfeaa63",
+      "capture_utc": "20261121010548",
+      "url": "https://web.archive.org/web/20261121010548id_/https://farside.co.uk/ethereum-etf-flow-all-data/"
+    }
+  ],
+  "notes": "Forward research snapshot frozen on Saturday before any Monday price or realized PnL. No live orders. Use only documented already-closed days. Future provider revisions are separate. ETF and network accounts are independent, no pooled trade instruction. Exchange crowding for Sunday midday is not yet observable."
+}
