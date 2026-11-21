@@ -1,0 +1,2871 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#173f35"><title>第十二轮收益机会与风险结论</title><link rel="manifest" href="./manifest.webmanifest"><link rel="apple-touch-icon" href="./icons/app-192.png"><style>:root{color-scheme:light;--ink:#183430;--muted:#4a625d;--line:#cfded7;--green:#13634e;--red:#923d32;--paper:white}
+*{box-sizing:border-box}body{margin:0;background:#e9efeb;color:var(--ink);font:16px/1.65 "Microsoft YaHei","PingFang SC",sans-serif}a{color:#075f51;text-underline-offset:3px}nav{background:#173f35;color:white}nav>div{max-width:930px;margin:auto;padding:12px 24px;display:flex;gap:20px;flex-wrap:wrap}nav a{font-size:14px;color:white}.sheet{max-width:930px;margin:24px auto;padding:36px 46px 24px;background:var(--paper);border:1px solid var(--line)}header{display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line);padding-bottom:9px;color:var(--green);font-size:13px;letter-spacing:.05em}h1,h2,h3{margin:0;line-height:1.35}h1{font-size:40px;letter-spacing:-.045em}h2{font-size:30px;letter-spacing:-.025em}h3{font-size:17px;margin:18px 0 5px}.title{margin:23px 0 12px}.lead{color:var(--muted);font-size:18px;margin:0 0 18px}p{margin:10px 0}table{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums;margin:12px 0}th,td{text-align:right;padding:7px 9px;border-bottom:1px solid var(--line)}th{background:#edf4ef;font-size:.91em;color:#36584e}td:first-child,th:first-child{text-align:left}.neg{color:var(--red)}.pos{color:var(--green)}.note{border-left:3px solid #418772;background:#edf4ef;padding:10px 14px}.caption{font-size:13px;color:var(--muted)}.metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:19px 0}.metric{border-top:3px solid #729c87;padding:12px 4px}.metric strong,.metric small{display:block}.metric strong{font-size:30px;line-height:1.25}.metric small{margin-top:6px;color:var(--muted)}footer{border-top:1px solid var(--line);padding-top:9px;margin-top:23px;color:var(--muted);display:flex;justify-content:space-between;gap:12px;font-size:12px}label{font-size:14px}select{font:inherit;background:white;border:1px solid #8aa49a;color:var(--ink);border-radius:4px;padding:3px}.filters{display:flex;gap:12px;flex-wrap:wrap;margin:10px 0}.chart{width:100%;height:auto;display:block}.chartwrap{padding:5px 0}button{cursor:pointer}ul{padding-left:22px}li+li{margin-top:5px}
+@media(max-width:650px){.sheet{margin:10px 0;padding:22px 15px 16px;border-left:0;border-right:0}nav>div{padding:10px 15px;gap:15px}h1{font-size:32px}h2{font-size:25px}.lead{font-size:16px}.metrics{gap:5px}.metric strong{font-size:21px}.metric small{font-size:12px}table{font-size:13px}th,td{padding:7px 3px}header{font-size:11px}footer{font-size:11px}.chartwrap{margin:0 -4px}.caption{overflow-wrap:anywhere}}
+@page{size:A4;margin:0}
+@media print{body{background:white;font-size:11pt;line-height:1.6;-webkit-print-color-adjust:exact;print-color-adjust:exact}.screen{display:none!important}.sheet{height:297mm;width:210mm;max-width:none;margin:0;padding:16mm 16mm 12mm;border:0;display:flex;flex-direction:column;break-after:page}.sheet:last-of-type{break-after:auto}header{font-size:9pt}footer{margin-top:auto;font-size:8pt}.title{margin:8mm 0 4mm}h1{font-size:31pt}h2{font-size:24pt}h3{font-size:13pt;margin-top:5mm}.lead{font-size:13pt;margin-bottom:5mm}.caption{font-size:9pt}th,td{padding:2mm 2.8mm}nav{display:none}a{color:var(--green)}.note{padding:3mm 4mm}.metric strong{font-size:24pt}.metrics{margin:5mm 0}}
+.printonly{display:none}@media print{.printonly{display:block}}
+.download{padding:4px 0;color:var(--green);font:inherit;font-size:13px;background:none;border:0;text-decoration:underline;text-underline-offset:3px}
+@media print{#p2 th,#p2 td{padding:1.1mm 2.8mm}#p2 h3{margin-top:3.5mm}#p2 table{margin:2mm 0}#p2 p{margin:2mm 0}}
+
+.plot{margin:9px 0}.plot svg{display:block;width:100%;height:auto}.sheet{overflow-wrap:break-word}.filters{align-items:center}@media print{.plot{margin:2mm 0}.plot svg{height:47mm}th,td{padding:1.5mm 2.1mm}.lead{margin-bottom:4mm}.note{margin-bottom:1mm}}</style></head><body><nav><div><a href="./">研究台首页</a><a href="./income11.html">第十一轮资金费研究</a><a href="./opportunities12.pdf">下载本轮 PDF</a></div></nav><section class="sheet" id="p1"><header><span>BTC · ETH · DOGE　/　第十二轮研究</span><span>收益判断 · 首选复核</span></header><main><h1 class="title">自有资金配对持仓，三个时期各赚多少？</h1><p class="lead">每段从 10,000 USDT 独立开户，等分给 BTC、ETH、DOGE。每币的钱包计划用 35% 买现货，同时卖空等量 USDT 永续，余款作该币的合约准备金。买不到的数量留空。</p><table><thead><tr><th>交易所和时期</th><th>自有本金净额</th><th>费用滑点翻倍、正资金费减半</th><th>现货占款付历史利息</th><th>借款保本年率¹</th></tr></thead><tbody><tr><td>币安 2021–22</td><td><span class="pos">+591.53</span></td><td><span class="pos">+182.14</span></td><td><span class="pos">+388.87</span></td><td>17.76%</td></tr><tr><td>币安 2023–24</td><td><span class="pos">+530.79</span></td><td><span class="pos">+161.01</span></td><td><span class="pos">+193.44</span></td><td>8.76%</td></tr><tr><td>币安 2025 起</td><td><span class="pos">+196.43</span></td><td><span class="pos">+62.97</span></td><td><span class="neg">−48.56</span></td><td>3.01%</td></tr><tr><td>Bybit 2025 起</td><td><span class="pos">+195.84</span></td><td><span class="pos">+53.87</span></td><td><span class="neg">−47.94</span></td><td>3.01%</td></tr></tbody></table><h3>最值得继续跟踪的条件</h3><p>币安近期净赚 196.43，相当于约 23 个月累计 1.96%。双重压力下净赚 62.97，八个季度里五个盈利，剔除最佳季度后仅余 32.83。Bybit 近期用自己的成交量和结算记录测得相近数量级。</p><h3>哪些历史信息可以下单使用</h3><p>每季度复核，按可成交数量建双腿。已持空头名义超过剩余实际开仓成本的 1.75 倍，或触及保证金条件，读完当小时标记并再等一小时才开始配对退出。账户独立，不能把其他币的盈利临时调过来。</p><p class="note">¹ 将实际借入的现货金额乘以占用天数，再求恰好抵销本段利润的单利年率。币安早期利息参照 Aave 历史利率，其余用历史小时融资代理。表中固定季度首日。改在季度第 22 日复核，35% 档在 2021 年出现连续九个无订单变化的负权益分钟。近期截至 2026 年 11 月 20 日。该退出规则是在复查 2021 年爆仓后制定，早期属于回溯试验。</p><p class="caption"><a href="https://github.com/binance/binance-public-data">币安原始历史成交与行情</a>　<a href="https://bybit-exchange.github.io/docs/v5/market/history-fund-rate">Bybit 实际资金费记录</a></p></main><footer><span>2026 年 11 月 22 日　·　金额以 USDT 计</span><span>1 / 7</span></footer></section><section class="sheet" id="p2"><header><span>BTC · ETH · DOGE　/　第十二轮研究</span><span>资金占用 · 收益来源</span></header><main><h2 class="title">利率超过多少，赚到的资金费会被吃掉？</h2><p class="lead">把每笔正、负资金费分开，再按真实现货借款批次计算本金占用的天数。表格与网页计算器均以已成交数量为基础。</p><table><thead><tr><th>币安 35% 档</th><th>正资金费</th><th>负资金费</th><th>正资金费全失时净额</th><th>占用 USDT·年</th><th>历史等效借息</th></tr></thead><tbody><tr><td>2021–22</td><td><span class="pos">+710.51</span></td><td><span class="neg">−34.77</span></td><td><span class="neg">−118.98</span></td><td>3,331</td><td>6.08%</td></tr><tr><td>2023–24</td><td><span class="pos">+615.17</span></td><td><span class="neg">−20.75</span></td><td><span class="neg">−84.38</span></td><td>6,062</td><td>5.57%</td></tr><tr><td>2025 起</td><td><span class="pos">+245.63</span></td><td><span class="neg">−38.64</span></td><td><span class="neg">−49.20</span></td><td>6,535</td><td>3.75%</td></tr></tbody></table><h3>近期收益从哪里来</h3><p>按原成交路径，收到正资金费 245.63，实际负资金费支出 38.64。若正资金费全部消失，连同基差变化、手续费和滑点，最终亏 49.20。自有资金要保留原正资金费的 20.03% 才能保本；若按历史利率为现货融资，需要原正资金费的 119.77%。</p><h3>同时遇到两项压力时</h3><p>正资金费减半、费滑加倍后重新运行账户，近期的借款保本年率进一步降至 0.96%。在该组实际订单下再付历史借息，净亏 181.98。</p><p class="note">可在网页更改利率、正资金费保留比例、场所和配置。计算器固定原成交路径，显示收入对假设的敏感度；极端费率改变保证金或成交顺序时仍需重跑。</p><figure class="plot"><svg role="img" aria-label="近期净收益随现货借息变化" xmlns:xlink="http://www.w3.org/1999/xlink" width="504pt" height="129.6pt" viewBox="0 0 504 129.6" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.10.7, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 129.6 
+L 504 129.6 
+L 504 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 41.538912 97.784291 
+L 500.99976 97.784291 
+L 500.99976 3.00024 
+L 41.538912 3.00024 
+z
+" style="fill: #ffffff"/>
+   </g>
+   <g id="matplotlib.axis_1">
+    <g id="xtick_1">
+     <g id="line2d_1">
+      <defs>
+       <path id="mca81a9832d" d="M 0 0 
+L 0 3.5 
+" style="stroke: #000000; stroke-width: 0.8"/>
+      </defs>
+      <g>
+       <use xlink:href="#mca81a9832d" x="62.423496" y="97.784291" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_1">
+      <!-- 0 -->
+      <g transform="translate(59.931269 111.578979) scale(0.085 -0.085)">
+       <defs>
+        <path id="MicrosoftYaHei-30" d="M 284 2325 
+Q 284 3606 709 4264 
+Q 1134 4922 1941 4922 
+Q 3478 4922 3478 2441 
+Q 3478 1216 3045 567 
+Q 2613 -81 1831 -81 
+Q 1094 -81 689 534 
+Q 284 1150 284 2325 
+z
+M 909 2353 
+Q 909 425 1888 425 
+Q 2850 425 2850 2384 
+Q 2850 4413 1906 4413 
+Q 909 4413 909 2353 
+z
+" transform="scale(0.015625)"/>
+       </defs>
+       <use xlink:href="#MicrosoftYaHei-30"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_2">
+     <g id="line2d_2">
+      <g>
+       <use xlink:href="#mca81a9832d" x="114.634956" y="97.784291" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_2">
+      <!-- 1 -->
+      <g transform="translate(112.142729 111.578979) scale(0.085 -0.085)">
+       <defs>
+        <path id="MicrosoftYaHei-31" d="M 1781 0 
+L 1781 4141 
+Q 1638 3997 1295 3819 
+Q 953 3641 663 3569 
+L 663 4169 
+Q 1047 4275 1484 4508 
+Q 1922 4741 2156 4947 
+L 2388 4947 
+L 2388 0 
+L 1781 0 
+z
+" transform="scale(0.015625)"/>
+       </defs>
+       <use xlink:href="#MicrosoftYaHei-31"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_3">
+     <g id="line2d_3">
+      <g>
+       <use xlink:href="#mca81a9832d" x="166.846416" y="97.784291" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_3">
+      <!-- 2 -->
+      <g transform="translate(164.354189 111.578979) scale(0.085 -0.085)">
+       <defs>
+        <path id="MicrosoftYaHei-32" d="M 2666 3572 
+Q 2666 3963 2419 4186 
+Q 2172 4409 1747 4409 
+Q 1447 4409 1140 4256 
+Q 834 4103 569 3819 
+L 569 4413 
+Q 806 4659 1107 4790 
+Q 1409 4922 1816 4922 
+Q 2472 4922 2872 4570 
+Q 3272 4219 3272 3619 
+Q 3272 3084 3026 2693 
+Q 2781 2303 2188 1894 
+Q 1581 1475 1376 1294 
+Q 1172 1113 1090 947 
+Q 1009 781 1009 544 
+L 3416 544 
+L 3416 0 
+L 372 0 
+L 372 241 
+Q 372 659 486 951 
+Q 600 1244 862 1520 
+Q 1125 1797 1681 2184 
+Q 2250 2584 2458 2886 
+Q 2666 3188 2666 3572 
+z
+" transform="scale(0.015625)"/>
+       </defs>
+       <use xlink:href="#MicrosoftYaHei-32"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_4">
+     <g id="line2d_4">
+      <g>
+       <use xlink:href="#mca81a9832d" x="219.057876" y="97.784291" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_4">
+      <!-- 3 -->
+      <g transform="translate(216.565649 111.578979) scale(0.085 -0.085)">
+       <defs>
+        <path id="MicrosoftYaHei-33" d="M 447 809 
+Q 944 425 1569 425 
+Q 2069 425 2361 670 
+Q 2653 916 2653 1328 
+Q 2653 2247 1338 2247 
+L 934 2247 
+L 934 2753 
+L 1319 2753 
+Q 2484 2753 2484 3616 
+Q 2484 4413 1594 4413 
+Q 1084 4413 634 4069 
+L 634 4647 
+Q 1109 4922 1744 4922 
+Q 2363 4922 2738 4598 
+Q 3113 4275 3113 3759 
+Q 3113 2809 2144 2538 
+L 2144 2525 
+Q 2669 2469 2973 2155 
+Q 3278 1841 3278 1372 
+Q 3278 719 2808 319 
+Q 2338 -81 1556 -81 
+Q 869 -81 447 175 
+L 447 809 
+z
+" transform="scale(0.015625)"/>
+       </defs>
+       <use xlink:href="#MicrosoftYaHei-33"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_5">
+     <g id="line2d_5">
+      <g>
+       <use xlink:href="#mca81a9832d" x="271.269336" y="97.784291" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_5">
+      <!-- 4 -->
+      <g transform="translate(268.777109 111.578979) scale(0.085 -0.085)">
+       <defs>
+        <path id="MicrosoftYaHei-34" d="M 2906 4841 
+L 2906 1644 
+L 3631 1644 
+L 3631 1138 
+L 2906 1138 
+L 2906 0 
+L 2313 0 
+L 2313 1138 
+L 53 1138 
+L 53 1616 
+Q 656 2294 1265 3178 
+Q 1875 4063 2272 4841 
+L 2906 4841 
+z
+M 741 1644 
+L 2313 1644 
+L 2313 3950 
+Q 1988 3366 1616 2817 
+Q 1244 2269 741 1644 
+z
+" transform="scale(0.015625)"/>
+       </defs>
+       <use xlink:href="#MicrosoftYaHei-34"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_6">
+     <g id="line2d_6">
+      <g>
+       <use xlink:href="#mca81a9832d" x="323.480796" y="97.784291" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_6">
+      <!-- 5 -->
+      <g transform="translate(320.988569 111.578979) scale(0.085 -0.085)">
+       <defs>
+        <path id="MicrosoftYaHei-35" d="M 3294 1494 
+Q 3294 784 2823 350 
+Q 2353 -84 1559 -84 
+Q 878 -84 544 119 
+L 544 744 
+Q 1034 425 1544 425 
+Q 2050 425 2361 704 
+Q 2672 984 2672 1447 
+Q 2672 1909 2348 2167 
+Q 2025 2425 1434 2425 
+Q 978 2425 613 2384 
+L 791 4841 
+L 3053 4841 
+L 3053 4303 
+L 1306 4303 
+L 1206 2931 
+L 1647 2950 
+Q 2416 2950 2855 2567 
+Q 3294 2184 3294 1494 
+z
+" transform="scale(0.015625)"/>
+       </defs>
+       <use xlink:href="#MicrosoftYaHei-35"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_7">
+     <g id="line2d_7">
+      <g>
+       <use xlink:href="#mca81a9832d" x="375.692256" y="97.784291" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_7">
+      <!-- 6 -->
+      <g transform="translate(373.200029 111.578979) scale(0.085 -0.085)">
+       <defs>
+        <path id="MicrosoftYaHei-36" d="M 3181 4219 
+Q 2803 4413 2391 4413 
+Q 1763 4413 1381 3866 
+Q 1000 3319 994 2372 
+L 1009 2372 
+Q 1353 3038 2106 3038 
+Q 2734 3038 3109 2628 
+Q 3484 2219 3484 1541 
+Q 3484 831 3051 375 
+Q 2619 -81 1947 -81 
+Q 1209 -81 789 495 
+Q 369 1072 369 2131 
+Q 369 3413 920 4167 
+Q 1472 4922 2372 4922 
+Q 2888 4922 3181 4781 
+L 3181 4219 
+z
+M 1031 1584 
+Q 1031 1106 1286 765 
+Q 1541 425 1963 425 
+Q 2363 425 2613 719 
+Q 2863 1013 2863 1475 
+Q 2863 1975 2627 2253 
+Q 2391 2531 1956 2531 
+Q 1544 2531 1287 2250 
+Q 1031 1969 1031 1584 
+z
+" transform="scale(0.015625)"/>
+       </defs>
+       <use xlink:href="#MicrosoftYaHei-36"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_8">
+     <g id="line2d_8">
+      <g>
+       <use xlink:href="#mca81a9832d" x="427.903716" y="97.784291" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_8">
+      <!-- 7 -->
+      <g transform="translate(425.411489 111.578979) scale(0.085 -0.085)">
+       <defs>
+        <path id="MicrosoftYaHei-37" d="M 3422 4463 
+Q 2659 3131 2223 1998 
+Q 1788 866 1684 0 
+L 1047 0 
+Q 1163 853 1594 1947 
+Q 2025 3041 2747 4300 
+L 347 4300 
+L 347 4841 
+L 3422 4841 
+L 3422 4463 
+z
+" transform="scale(0.015625)"/>
+       </defs>
+       <use xlink:href="#MicrosoftYaHei-37"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_9">
+     <g id="line2d_9">
+      <g>
+       <use xlink:href="#mca81a9832d" x="480.115176" y="97.784291" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_9">
+      <!-- 8 -->
+      <g transform="translate(477.622949 111.578979) scale(0.085 -0.085)">
+       <defs>
+        <path id="MicrosoftYaHei-38" d="M 306 1350 
+Q 306 1769 556 2122 
+Q 806 2475 1200 2625 
+Q 884 2803 700 3081 
+Q 516 3359 516 3684 
+Q 516 4028 692 4312 
+Q 869 4597 1183 4759 
+Q 1497 4922 1875 4922 
+Q 2256 4922 2572 4761 
+Q 2888 4600 3063 4315 
+Q 3238 4031 3238 3684 
+Q 3238 3366 3058 3086 
+Q 2878 2806 2559 2625 
+Q 2953 2472 3200 2119 
+Q 3447 1766 3447 1350 
+Q 3447 938 3250 611 
+Q 3053 284 2690 103 
+Q 2328 -78 1875 -78 
+Q 1425 -78 1065 103 
+Q 706 284 506 612 
+Q 306 941 306 1350 
+z
+M 906 1378 
+Q 906 947 1172 687 
+Q 1438 428 1878 428 
+Q 2309 428 2582 692 
+Q 2856 956 2856 1378 
+Q 2856 1778 2579 2051 
+Q 2303 2325 1878 2325 
+Q 1456 2325 1181 2058 
+Q 906 1791 906 1378 
+z
+M 1081 3634 
+Q 1081 3309 1312 3076 
+Q 1544 2844 1878 2844 
+Q 2206 2844 2445 3078 
+Q 2684 3313 2684 3634 
+Q 2684 3963 2454 4191 
+Q 2225 4419 1878 4419 
+Q 1534 4419 1307 4195 
+Q 1081 3972 1081 3634 
+z
+" transform="scale(0.015625)"/>
+       </defs>
+       <use xlink:href="#MicrosoftYaHei-38"/>
+      </g>
+     </g>
+    </g>
+    <g id="text_10">
+     <!-- 实际现货占款的单利年率（%） -->
+     <g transform="translate(212.238164 124.486713) scale(0.085 -0.085)">
+      <defs>
+       <path id="MicrosoftYaHei-5b9e" d="M 113 -397 
+Q 2419 34 3081 972 
+L 213 972 
+L 213 1434 
+L 3313 1434 
+Q 3525 2084 3506 3703 
+L 4031 3703 
+Q 4031 2097 3856 1434 
+L 6225 1434 
+L 6225 972 
+L 3681 972 
+Q 3631 872 3563 759 
+Q 4900 197 6181 -403 
+L 5906 -878 
+Q 4569 -197 3263 391 
+Q 2413 -441 413 -891 
+Q 269 -616 113 -397 
+z
+M 331 4422 
+L 3194 4422 
+Q 3038 4703 2775 5078 
+L 3231 5334 
+Q 3438 5059 3731 4609 
+L 3388 4422 
+L 6063 4422 
+L 6063 3303 
+L 5563 3303 
+L 5563 3959 
+L 831 3959 
+L 831 3303 
+L 331 3303 
+L 331 4422 
+z
+M 1100 2734 
+Q 1819 2409 2450 2053 
+L 2181 1622 
+Q 1556 2003 863 2334 
+L 1100 2734 
+z
+M 1663 3691 
+Q 2388 3341 2981 2984 
+L 2700 2559 
+Q 2119 2934 1419 3322 
+L 1663 3691 
+z
+" transform="scale(0.015625)"/>
+       <path id="MicrosoftYaHei-9645" d="M 2256 1678 
+Q 2419 503 1656 334 
+Q 1413 284 1025 328 
+Q 975 584 888 834 
+Q 1219 753 1469 784 
+Q 1906 834 1763 1678 
+Q 1675 2166 1169 2828 
+Q 1425 3591 1681 4491 
+L 850 4491 
+L 850 -841 
+L 375 -841 
+L 375 4953 
+L 2200 4953 
+L 2200 4503 
+Q 1913 3572 1694 2884 
+Q 2194 2203 2256 1678 
+z
+M 2150 3228 
+L 6225 3228 
+L 6225 2766 
+L 4425 2766 
+L 4425 16 
+Q 4425 -747 3688 -747 
+Q 3394 -747 2938 -741 
+Q 2881 -403 2838 -209 
+Q 3313 -259 3575 -259 
+Q 3938 -259 3938 122 
+L 3938 2766 
+L 2150 2766 
+L 2150 3228 
+z
+M 2488 4803 
+L 5888 4803 
+L 5888 4341 
+L 2488 4341 
+L 2488 4803 
+z
+M 2969 2097 
+L 3431 1928 
+Q 2988 747 2481 -222 
+Q 2206 -72 2038 -3 
+Q 2594 1003 2969 2097 
+z
+M 4900 1872 
+L 5331 2084 
+Q 5844 1041 6300 53 
+L 5844 -166 
+Q 5494 641 4900 1872 
+z
+" transform="scale(0.015625)"/>
+       <path id="MicrosoftYaHei-73b0" d="M 3900 4141 
+L 4388 4141 
+L 4388 3091 
+Q 4388 2288 4250 1678 
+L 4663 1678 
+L 4663 103 
+Q 4663 -228 5025 -228 
+L 5325 -228 
+Q 5700 -228 5738 109 
+Q 5775 397 5800 928 
+Q 6013 841 6313 734 
+Q 6263 184 6213 -91 
+Q 6119 -666 5394 -666 
+L 4931 -666 
+Q 4188 -666 4188 41 
+L 4188 1425 
+Q 4059 981 3850 653 
+Q 3319 -203 2094 -834 
+Q 1931 -603 1756 -422 
+Q 2975 166 3450 941 
+Q 3900 1641 3900 3053 
+L 3900 4141 
+z
+M 2588 5034 
+L 5781 5034 
+L 5781 1284 
+L 5294 1284 
+L 5294 4572 
+L 3075 4572 
+L 3075 1197 
+L 2588 1197 
+L 2588 5034 
+z
+M 81 384 
+Q 531 506 1025 647 
+L 1025 2466 
+L 200 2466 
+L 200 2916 
+L 1025 2916 
+L 1025 4366 
+L 150 4366 
+L 150 4816 
+L 2400 4816 
+L 2400 4366 
+L 1513 4366 
+L 1513 2916 
+L 2313 2916 
+L 2313 2466 
+L 1513 2466 
+L 1513 791 
+Q 1956 925 2431 1072 
+Q 2444 834 2475 603 
+Q 1400 272 256 -97 
+L 81 384 
+z
+" transform="scale(0.015625)"/>
+       <path id="MicrosoftYaHei-8d27" d="M 2038 3772 
+Q 2744 3941 3381 4147 
+L 3381 5297 
+L 3869 5297 
+L 3869 4316 
+Q 4794 4653 5544 5084 
+L 5838 4666 
+Q 4888 4203 3869 3822 
+L 3869 3547 
+Q 3869 3128 4269 3128 
+L 5231 3128 
+Q 5644 3128 5700 3491 
+Q 5744 3759 5769 4153 
+Q 6000 4053 6256 3972 
+Q 6206 3559 6150 3278 
+Q 6038 2691 5288 2691 
+L 4175 2691 
+Q 3381 2691 3381 3466 
+L 3381 3647 
+Q 2831 3459 2269 3297 
+L 2038 3772 
+z
+M 981 2303 
+L 5494 2303 
+L 5494 216 
+L 5006 216 
+L 5006 1866 
+L 1469 1866 
+L 1469 216 
+L 981 216 
+L 981 2303 
+z
+M 169 3584 
+Q 1269 4384 1850 5372 
+L 2300 5116 
+Q 2006 4678 1644 4266 
+L 1644 2541 
+L 1181 2541 
+L 1181 3784 
+Q 831 3447 431 3134 
+Q 313 3359 169 3584 
+z
+M 2994 1578 
+L 3481 1578 
+Q 3488 847 3425 603 
+Q 4706 166 6069 -372 
+L 5844 -859 
+Q 4469 -266 3263 159 
+Q 2781 -666 556 -884 
+Q 463 -678 313 -409 
+Q 2463 -247 2856 447 
+Q 3006 691 2994 1578 
+z
+" transform="scale(0.015625)"/>
+       <path id="MicrosoftYaHei-5360" d="M 863 2434 
+L 2775 2434 
+L 2775 5259 
+L 3288 5259 
+L 3288 4209 
+L 6150 4209 
+L 6150 3747 
+L 3288 3747 
+L 3288 2434 
+L 5525 2434 
+L 5525 -841 
+L 5025 -841 
+L 5025 -453 
+L 1363 -453 
+L 1363 -853 
+L 863 -853 
+L 863 2434 
+z
+M 5025 1984 
+L 1363 1984 
+L 1363 -9 
+L 5025 -9 
+L 5025 1984 
+z
+" transform="scale(0.015625)"/>
+       <path id="MicrosoftYaHei-6b3e" d="M 4288 3622 
+L 4750 3622 
+Q 4744 3147 4734 2756 
+Q 5034 506 6319 -428 
+Q 6081 -634 5931 -809 
+Q 4953 -44 4569 1584 
+Q 4253 159 3069 -853 
+Q 2931 -691 2706 -509 
+Q 4063 578 4231 2178 
+Q 4294 2766 4288 3622 
+z
+M 338 3684 
+L 1506 3684 
+L 1506 4303 
+L 125 4303 
+L 125 4703 
+L 1506 4703 
+L 1506 5334 
+L 1969 5334 
+L 1969 4703 
+L 3344 4703 
+L 3344 4303 
+L 1969 4303 
+L 1969 3684 
+L 3031 3684 
+L 3031 3284 
+L 338 3284 
+L 338 3684 
+z
+M 3063 2922 
+Q 3575 4059 3769 5341 
+L 4231 5259 
+Q 4144 4788 4034 4347 
+L 6131 4347 
+L 6131 3916 
+Q 5963 3378 5731 2747 
+Q 5556 2853 5294 2928 
+Q 5500 3422 5650 3909 
+L 3916 3909 
+Q 3728 3275 3488 2709 
+Q 3263 2834 3063 2922 
+z
+M 144 1803 
+L 3319 1803 
+L 3319 1403 
+L 1981 1403 
+L 1981 28 
+Q 1981 -684 1275 -684 
+Q 944 -684 700 -678 
+Q 663 -428 606 -197 
+Q 863 -234 1150 -234 
+Q 1519 -234 1519 147 
+L 1519 1403 
+L 144 1403 
+L 144 1803 
+z
+M 463 2747 
+L 2975 2747 
+L 2975 2347 
+L 463 2347 
+L 463 2747 
+z
+M 81 41 
+Q 419 522 738 1203 
+L 1138 1003 
+Q 788 353 431 -178 
+Q 288 -66 81 41 
+z
+M 2263 991 
+L 2625 1184 
+Q 2925 759 3163 309 
+L 2769 91 
+Q 2525 591 2263 991 
+z
+" transform="scale(0.015625)"/>
+       <path id="MicrosoftYaHei-7684" d="M 356 4284 
+L 988 4284 
+Q 1219 4853 1369 5322 
+L 1894 5172 
+Q 1697 4694 1513 4284 
+L 2763 4284 
+L 2763 -691 
+L 2263 -691 
+L 2263 -203 
+L 856 -203 
+L 856 -734 
+L 356 -734 
+L 356 4284 
+z
+M 2856 3003 
+Q 3444 3934 3850 5322 
+L 4375 5191 
+Q 4216 4719 4050 4303 
+L 6063 4303 
+Q 5988 1091 5938 259 
+Q 5894 -722 4906 -722 
+Q 4338 -722 3750 -684 
+Q 3713 -372 3650 -128 
+L 3669 -128 
+Q 4294 -216 4813 -216 
+Q 5381 -216 5425 384 
+Q 5494 1316 5525 3834 
+L 3850 3834 
+Q 3578 3231 3288 2772 
+Q 3119 2891 2856 3003 
+z
+M 856 266 
+L 2263 266 
+L 2263 1847 
+L 856 1847 
+L 856 266 
+z
+M 2263 3816 
+L 856 3816 
+L 856 2297 
+L 2263 2297 
+L 2263 3816 
+z
+M 3406 2578 
+L 3788 2859 
+Q 4481 2041 4894 1441 
+L 4431 1116 
+Q 3988 1841 3406 2578 
+z
+" transform="scale(0.015625)"/>
+       <path id="MicrosoftYaHei-5355" d="M 125 909 
+L 2956 909 
+L 2956 1616 
+L 1225 1616 
+L 1225 1322 
+L 750 1322 
+L 750 4353 
+L 2047 4353 
+Q 1747 4703 1400 5072 
+L 1756 5366 
+Q 2219 4922 2569 4547 
+L 2338 4353 
+L 3803 4353 
+Q 4147 4809 4500 5347 
+L 5000 5078 
+Q 4678 4688 4378 4353 
+L 5656 4353 
+L 5656 1322 
+L 5181 1322 
+L 5181 1616 
+L 3444 1616 
+L 3444 909 
+L 6275 909 
+L 6275 459 
+L 3444 459 
+L 3444 -859 
+L 2956 -859 
+L 2956 459 
+L 125 459 
+L 125 909 
+z
+M 3444 2053 
+L 5181 2053 
+L 5181 2778 
+L 3444 2778 
+L 3444 2053 
+z
+M 1225 2053 
+L 2956 2053 
+L 2956 2778 
+L 1225 2778 
+L 1225 2053 
+z
+M 5181 3916 
+L 3444 3916 
+L 3444 3203 
+L 5181 3203 
+L 5181 3916 
+z
+M 1225 3203 
+L 2956 3203 
+L 2956 3916 
+L 1225 3916 
+L 1225 3203 
+z
+" transform="scale(0.015625)"/>
+       <path id="MicrosoftYaHei-5229" d="M 75 741 
+Q 913 1653 1488 2997 
+L 106 2997 
+L 106 3453 
+L 1606 3453 
+L 1606 4391 
+Q 963 4328 331 4272 
+Q 288 4503 206 4747 
+Q 1706 4866 3269 5066 
+L 3394 4591 
+Q 2731 4509 2081 4441 
+L 2081 3453 
+L 3500 3453 
+L 3500 2997 
+L 2081 2997 
+L 2081 2159 
+L 2356 2422 
+Q 2944 1922 3525 1347 
+L 3144 959 
+Q 2763 1403 2081 2053 
+L 2081 -828 
+L 1606 -828 
+L 1606 2297 
+Q 1069 1084 325 178 
+Q 156 584 75 741 
+z
+M 5444 5197 
+L 5938 5197 
+L 5938 -9 
+Q 5938 -803 5138 -797 
+Q 4881 -797 4306 -791 
+Q 4269 -534 4213 -228 
+Q 4719 -284 4981 -284 
+Q 5444 -291 5444 184 
+L 5444 5197 
+z
+M 3963 4572 
+L 4438 4572 
+L 4438 622 
+L 3963 622 
+L 3963 4572 
+z
+" transform="scale(0.015625)"/>
+       <path id="MicrosoftYaHei-5e74" d="M 119 1278 
+L 1125 1278 
+L 1125 3066 
+L 3338 3066 
+L 3338 4178 
+L 1500 4178 
+Q 1078 3419 556 2778 
+Q 394 2953 169 3128 
+Q 1056 4128 1500 5372 
+L 2013 5228 
+Q 1881 4919 1738 4628 
+L 6038 4628 
+L 6038 4178 
+L 3844 4178 
+L 3844 3066 
+L 5931 3066 
+L 5931 2628 
+L 3844 2628 
+L 3844 1278 
+L 6319 1278 
+L 6319 828 
+L 3844 828 
+L 3844 -859 
+L 3338 -859 
+L 3338 828 
+L 119 828 
+L 119 1278 
+z
+M 1619 1278 
+L 3338 1278 
+L 3338 2628 
+L 1619 2628 
+L 1619 1278 
+z
+" transform="scale(0.015625)"/>
+       <path id="MicrosoftYaHei-7387" d="M 2525 2009 
+Q 2622 2016 3928 2081 
+Q 3772 2300 3625 2491 
+L 3963 2703 
+Q 4413 2203 4794 1653 
+L 4394 1403 
+Q 4284 1569 4178 1725 
+Q 2991 1659 2213 1597 
+Q 2075 1584 1881 1541 
+L 1725 1966 
+Q 1913 2028 2006 2084 
+Q 2534 2441 3050 2913 
+Q 2597 2894 2275 2866 
+Q 2144 2847 1988 2809 
+L 1800 3191 
+Q 1956 3247 2088 3366 
+Q 2509 3722 2875 4228 
+L 231 4228 
+L 231 4666 
+L 3031 4666 
+Q 2878 4944 2744 5153 
+L 3194 5372 
+Q 3438 5000 3616 4666 
+L 6175 4666 
+L 6175 4228 
+L 3053 4228 
+L 3350 4072 
+Q 2844 3553 2494 3247 
+Q 2850 3256 3425 3269 
+Q 3675 3519 3925 3797 
+L 4356 3547 
+Q 3363 2603 2525 2009 
+z
+M 144 991 
+L 2994 991 
+L 2994 1541 
+L 3488 1541 
+L 3488 991 
+L 6275 991 
+L 6275 553 
+L 3488 553 
+L 3488 -853 
+L 2994 -853 
+L 2994 553 
+L 144 553 
+L 144 991 
+z
+M 1719 2672 
+L 1944 2303 
+Q 1200 1866 425 1409 
+L 163 1828 
+Q 813 2134 1719 2672 
+z
+M 4856 2678 
+Q 5750 2172 6250 1816 
+L 5975 1409 
+Q 5331 1909 4600 2341 
+L 4856 2678 
+z
+M 5994 3591 
+Q 5519 3178 4963 2809 
+L 4644 3141 
+Q 5244 3534 5638 3928 
+L 5994 3591 
+z
+M 363 3634 
+L 681 3941 
+Q 1200 3528 1588 3159 
+L 1238 2816 
+Q 875 3197 363 3634 
+z
+" transform="scale(0.015625)"/>
+       <path id="MicrosoftYaHei-ff08" d="M 5288 -1100 
+Q 4172 119 4172 1850 
+Q 4172 3603 5288 4838 
+L 5825 4838 
+Q 4716 3572 4716 1856 
+Q 4716 166 5819 -1100 
+L 5288 -1100 
+z
+" transform="scale(0.015625)"/>
+       <path id="MicrosoftYaHei-25" d="M 272 3619 
+Q 272 4213 589 4563 
+Q 906 4913 1444 4913 
+Q 1959 4913 2248 4591 
+Q 2538 4269 2538 3694 
+Q 2538 3122 2219 2765 
+Q 1900 2409 1372 2409 
+Q 872 2409 572 2740 
+Q 272 3072 272 3619 
+z
+M 753 3650 
+Q 753 3247 928 3028 
+Q 1103 2809 1406 2809 
+Q 1719 2809 1889 3036 
+Q 2059 3263 2059 3675 
+Q 2059 4078 1892 4298 
+Q 1725 4519 1422 4519 
+Q 1113 4519 933 4289 
+Q 753 4059 753 3650 
+z
+M 4647 4841 
+L 1538 -31 
+L 1016 -31 
+L 4125 4841 
+L 4647 4841 
+z
+M 3172 1134 
+Q 3172 1728 3489 2083 
+Q 3806 2438 4341 2438 
+Q 4853 2438 5143 2114 
+Q 5434 1791 5434 1203 
+Q 5434 634 5112 279 
+Q 4791 -75 4272 -75 
+Q 3769 -75 3470 261 
+Q 3172 597 3172 1134 
+z
+M 3650 1163 
+Q 3650 769 3825 548 
+Q 4000 328 4303 328 
+Q 4616 328 4786 556 
+Q 4956 784 4956 1194 
+Q 4956 1600 4786 1815 
+Q 4616 2031 4319 2031 
+Q 4000 2031 3825 1801 
+Q 3650 1572 3650 1163 
+z
+" transform="scale(0.015625)"/>
+       <path id="MicrosoftYaHei-ff09" d="M 1113 -1100 
+L 575 -1100 
+Q 1684 163 1684 1888 
+Q 1684 3581 581 4838 
+L 1113 4838 
+Q 2222 3628 2222 1888 
+Q 2222 128 1113 -1100 
+z
+" transform="scale(0.015625)"/>
+      </defs>
+      <use xlink:href="#MicrosoftYaHei-5b9e"/>
+      <use xlink:href="#MicrosoftYaHei-9645" transform="translate(100 0)"/>
+      <use xlink:href="#MicrosoftYaHei-73b0" transform="translate(200 0)"/>
+      <use xlink:href="#MicrosoftYaHei-8d27" transform="translate(300 0)"/>
+      <use xlink:href="#MicrosoftYaHei-5360" transform="translate(400 0)"/>
+      <use xlink:href="#MicrosoftYaHei-6b3e" transform="translate(500 0)"/>
+      <use xlink:href="#MicrosoftYaHei-7684" transform="translate(600 0)"/>
+      <use xlink:href="#MicrosoftYaHei-5355" transform="translate(700 0)"/>
+      <use xlink:href="#MicrosoftYaHei-5229" transform="translate(800 0)"/>
+      <use xlink:href="#MicrosoftYaHei-5e74" transform="translate(900 0)"/>
+      <use xlink:href="#MicrosoftYaHei-7387" transform="translate(1000 0)"/>
+      <use xlink:href="#MicrosoftYaHei-ff08" transform="translate(1100 0)"/>
+      <use xlink:href="#MicrosoftYaHei-25" transform="translate(1200 0)"/>
+      <use xlink:href="#MicrosoftYaHei-ff09" transform="translate(1288.964844 0)"/>
+     </g>
+    </g>
+   </g>
+   <g id="matplotlib.axis_2">
+    <g id="ytick_1">
+     <g id="line2d_10">
+      <path d="M 41.538912 85.632193 
+L 500.99976 85.632193 
+" clip-path="url(#p71bec6054d)" style="fill: none; stroke: #dde7df; stroke-width: 0.65; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_11">
+      <defs>
+       <path id="me1cf4213bc" d="M 0 0 
+L -3.5 0 
+" style="stroke: #000000; stroke-width: 0.8"/>
+      </defs>
+      <g>
+       <use xlink:href="#me1cf4213bc" x="41.538912" y="85.632193" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_11">
+      <!-- -400 -->
+      <g transform="translate(15.907974 89.029537) scale(0.085 -0.085)">
+       <defs>
+        <path id="MicrosoftYaHei-2d" d="M 2328 1681 
+L 488 1681 
+L 488 2153 
+L 2328 2153 
+L 2328 1681 
+z
+" transform="scale(0.015625)"/>
+       </defs>
+       <use xlink:href="#MicrosoftYaHei-2d"/>
+       <use xlink:href="#MicrosoftYaHei-34" transform="translate(43.261719 0)"/>
+       <use xlink:href="#MicrosoftYaHei-30" transform="translate(101.904297 0)"/>
+       <use xlink:href="#MicrosoftYaHei-30" transform="translate(160.546875 0)"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_2">
+     <g id="line2d_12">
+      <path d="M 41.538912 59.368263 
+L 500.99976 59.368263 
+" clip-path="url(#p71bec6054d)" style="fill: none; stroke: #dde7df; stroke-width: 0.65; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_13">
+      <g>
+       <use xlink:href="#me1cf4213bc" x="41.538912" y="59.368263" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_12">
+      <!-- -200 -->
+      <g transform="translate(15.907974 62.765607) scale(0.085 -0.085)">
+       <use xlink:href="#MicrosoftYaHei-2d"/>
+       <use xlink:href="#MicrosoftYaHei-32" transform="translate(43.261719 0)"/>
+       <use xlink:href="#MicrosoftYaHei-30" transform="translate(101.904297 0)"/>
+       <use xlink:href="#MicrosoftYaHei-30" transform="translate(160.546875 0)"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_3">
+     <g id="line2d_14">
+      <path d="M 41.538912 33.104333 
+L 500.99976 33.104333 
+" clip-path="url(#p71bec6054d)" style="fill: none; stroke: #dde7df; stroke-width: 0.65; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_15">
+      <g>
+       <use xlink:href="#me1cf4213bc" x="41.538912" y="33.104333" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_13">
+      <!-- 0 -->
+      <g transform="translate(29.554459 36.501677) scale(0.085 -0.085)">
+       <use xlink:href="#MicrosoftYaHei-30"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_4">
+     <g id="line2d_16">
+      <path d="M 41.538912 6.840403 
+L 500.99976 6.840403 
+" clip-path="url(#p71bec6054d)" style="fill: none; stroke: #dde7df; stroke-width: 0.65; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_17">
+      <g>
+       <use xlink:href="#me1cf4213bc" x="41.538912" y="6.840403" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_14">
+      <!-- 200 -->
+      <g transform="translate(19.585553 10.237747) scale(0.085 -0.085)">
+       <use xlink:href="#MicrosoftYaHei-32"/>
+       <use xlink:href="#MicrosoftYaHei-30" transform="translate(58.642578 0)"/>
+       <use xlink:href="#MicrosoftYaHei-30" transform="translate(117.285156 0)"/>
+      </g>
+     </g>
+    </g>
+    <g id="text_15">
+     <!-- 整个账户净额（USDT） -->
+     <g transform="translate(9.794928 95.484766) rotate(-90) scale(0.085 -0.085)">
+      <defs>
+       <path id="MicrosoftYaHei-6574" d="M 138 -234 
+L 1263 -234 
+L 1263 891 
+L 1713 891 
+L 1713 -234 
+L 3025 -234 
+L 3025 1178 
+L 550 1178 
+L 550 1578 
+L 5800 1578 
+L 5800 1178 
+L 3475 1178 
+L 3475 697 
+L 5525 697 
+L 5525 297 
+L 3475 297 
+L 3475 -234 
+L 6256 -234 
+L 6256 -634 
+L 138 -634 
+L 138 -234 
+z
+M 25 2003 
+Q 825 2334 1481 2916 
+L 913 2916 
+L 913 2759 
+L 506 2759 
+L 506 4109 
+L 1650 4109 
+L 1650 4491 
+L 250 4491 
+L 250 4866 
+L 1650 4866 
+L 1650 5291 
+L 2069 5291 
+L 2069 4866 
+L 3425 4866 
+L 3425 4491 
+L 2069 4491 
+L 2069 4109 
+L 3213 4109 
+L 3213 2759 
+L 2806 2759 
+L 2806 2916 
+L 2069 2916 
+L 2069 2541 
+L 2225 2747 
+Q 2781 2484 3288 2216 
+L 3075 1872 
+Q 2550 2184 2069 2397 
+L 2069 1722 
+L 1650 1722 
+L 1650 2647 
+Q 1075 2078 288 1647 
+Q 175 1803 25 2003 
+z
+M 3363 2078 
+Q 4050 2341 4519 2716 
+Q 4144 3134 3938 3716 
+Q 3788 3447 3631 3197 
+L 3256 3459 
+Q 3850 4253 4163 5322 
+L 4600 5191 
+Q 4481 4872 4356 4572 
+L 6263 4572 
+L 6263 4172 
+L 5850 4172 
+Q 5644 3316 5181 2741 
+Q 5638 2428 6325 2247 
+Q 6169 2047 6013 1778 
+Q 5319 2034 4844 2403 
+Q 4363 1984 3650 1678 
+Q 3525 1859 3363 2078 
+z
+M 5400 4172 
+L 4219 4172 
+Q 4394 3484 4838 3022 
+Q 5244 3503 5400 4172 
+z
+M 2806 3266 
+L 2806 3759 
+L 2069 3759 
+L 2069 3266 
+L 2806 3266 
+z
+M 913 3266 
+L 1650 3266 
+L 1650 3759 
+L 913 3759 
+L 913 3266 
+z
+" transform="scale(0.015625)"/>
+       <path id="MicrosoftYaHei-4e2a" d="M 2913 3028 
+L 3481 3028 
+L 3481 -841 
+L 2913 -841 
+L 2913 3028 
+z
+M 3600 5178 
+L 3506 5034 
+Q 4519 3366 6319 2647 
+Q 6125 2341 5988 2084 
+Q 4150 3047 3206 4566 
+Q 2281 3122 400 1997 
+Q 263 2222 81 2491 
+Q 2031 3572 2981 5178 
+L 3600 5178 
+z
+" transform="scale(0.015625)"/>
+       <path id="MicrosoftYaHei-8d26" d="M 2875 2816 
+L 3350 2816 
+L 3350 5241 
+L 3813 5241 
+L 3813 2816 
+L 6250 2816 
+L 6250 2359 
+L 4781 2359 
+Q 5100 603 6369 -172 
+Q 6144 -416 6000 -609 
+Q 4669 409 4350 2359 
+L 3813 2359 
+L 3813 -66 
+Q 4194 128 4681 409 
+Q 4706 147 4750 -72 
+Q 3844 -572 3413 -884 
+L 3119 -466 
+Q 3350 -272 3350 97 
+L 3350 2359 
+L 2875 2359 
+L 2875 2816 
+z
+M 438 5041 
+L 2625 5041 
+L 2625 1078 
+L 2175 1078 
+L 2175 4584 
+L 888 4584 
+L 888 1041 
+L 438 1041 
+L 438 5041 
+z
+M 1306 4028 
+L 1756 4028 
+L 1756 2697 
+Q 1756 1503 1600 841 
+L 1800 1003 
+Q 2469 291 2913 -222 
+L 2513 -559 
+Q 2113 -34 1538 622 
+Q 1319 -103 456 -853 
+Q 288 -634 113 -459 
+Q 825 66 1075 678 
+Q 1306 1241 1306 2516 
+L 1306 4028 
+z
+M 5656 5047 
+L 6044 4747 
+Q 5219 3847 4369 3116 
+Q 4231 3284 4050 3453 
+Q 4925 4184 5656 5047 
+z
+" transform="scale(0.015625)"/>
+       <path id="MicrosoftYaHei-6237" d="M 2725 5116 
+L 3175 5384 
+Q 3475 5028 3769 4609 
+L 3463 4416 
+L 5794 4416 
+L 5794 1647 
+L 5294 1647 
+L 5294 1972 
+L 1347 1972 
+Q 1263 172 419 -903 
+Q 250 -697 56 -491 
+Q 856 484 856 2434 
+L 856 4416 
+L 3241 4416 
+Q 3013 4766 2725 5116 
+z
+M 1356 3966 
+L 1356 2422 
+L 5294 2422 
+L 5294 3966 
+L 1356 3966 
+z
+" transform="scale(0.015625)"/>
+       <path id="MicrosoftYaHei-51c0" d="M 2013 1278 
+L 3575 1278 
+L 3575 1947 
+L 1706 1947 
+L 1706 2397 
+L 3575 2397 
+L 3575 3059 
+L 2125 3059 
+L 2125 3297 
+Q 2009 3178 1894 3066 
+Q 1788 3178 1556 3416 
+Q 2350 4166 3050 5353 
+L 3525 5228 
+Q 3400 5000 3266 4784 
+L 5144 4784 
+L 5144 4366 
+L 4419 3497 
+L 5700 3497 
+L 5700 2397 
+L 6269 2397 
+L 6269 1947 
+L 5700 1947 
+L 5700 584 
+L 5225 584 
+L 5225 841 
+L 4063 841 
+L 4063 3 
+Q 4063 -766 3275 -772 
+Q 2863 -772 2488 -772 
+Q 2444 -503 2388 -253 
+Q 2781 -297 3163 -297 
+Q 3575 -297 3575 116 
+L 3575 841 
+L 2013 841 
+L 2013 1278 
+z
+M 4538 4353 
+L 2984 4353 
+Q 2669 3897 2309 3497 
+L 3847 3497 
+L 4538 4353 
+z
+M 925 2334 
+Q 1150 2222 1394 2122 
+Q 1063 991 713 -241 
+L 206 -47 
+Q 638 1159 925 2334 
+z
+M 4063 1278 
+L 5225 1278 
+L 5225 1947 
+L 4063 1947 
+L 4063 1278 
+z
+M 663 4891 
+Q 1063 4203 1406 3509 
+Q 1150 3372 938 3272 
+Q 619 3991 256 4678 
+L 663 4891 
+z
+M 5225 3059 
+L 4063 3059 
+L 4063 2397 
+L 5225 2397 
+L 5225 3059 
+z
+" transform="scale(0.015625)"/>
+       <path id="MicrosoftYaHei-989d" d="M 863 2484 
+L 1094 2834 
+Q 1463 2653 1794 2491 
+Q 2119 2809 2344 3203 
+L 1125 3203 
+Q 794 2659 419 2247 
+Q 281 2397 125 2547 
+Q 719 3172 1100 4072 
+L 1513 3934 
+Q 1425 3747 1331 3578 
+L 2844 3578 
+L 2844 3222 
+Q 2588 2703 2194 2291 
+Q 2738 2016 3194 1778 
+L 2938 1372 
+Q 2406 1678 1850 1978 
+Q 1381 1597 763 1322 
+L 2756 1322 
+L 2756 -684 
+L 2344 -684 
+L 2344 -416 
+L 1063 -416 
+L 1063 -734 
+L 650 -734 
+L 650 1272 
+Q 463 1197 269 1128 
+Q 188 1297 63 1509 
+Q 869 1766 1444 2191 
+Q 1156 2334 863 2484 
+z
+M 3369 3728 
+L 4281 3728 
+L 4425 4516 
+L 3244 4516 
+L 3244 4941 
+L 6231 4941 
+L 6231 4516 
+L 4906 4516 
+L 4738 3728 
+L 6038 3728 
+L 6038 591 
+L 5600 591 
+L 5600 3303 
+L 3806 3303 
+L 3806 591 
+L 3369 591 
+L 3369 3728 
+z
+M 4481 2916 
+L 4931 2916 
+Q 4944 1322 4788 709 
+Q 5688 78 6356 -453 
+L 6044 -853 
+Q 5438 -303 4619 291 
+Q 4231 -416 3169 -916 
+Q 3044 -734 2869 -516 
+Q 4019 -3 4294 716 
+Q 4519 1216 4481 2916 
+z
+M 250 4591 
+L 1538 4591 
+Q 1413 4872 1244 5172 
+L 1650 5347 
+Q 1881 4916 2031 4591 
+L 3138 4591 
+L 3138 3709 
+L 2713 3709 
+L 2713 4216 
+L 675 4216 
+L 675 3709 
+L 250 3709 
+L 250 4591 
+z
+M 2344 934 
+L 1063 934 
+L 1063 -28 
+L 2344 -28 
+L 2344 934 
+z
+" transform="scale(0.015625)"/>
+       <path id="MicrosoftYaHei-55" d="M 4213 1972 
+Q 4213 -81 2350 -81 
+Q 566 -81 566 1900 
+L 566 4841 
+L 1191 4841 
+L 1191 1928 
+Q 1191 475 2409 475 
+Q 3588 475 3588 1881 
+L 3588 4841 
+L 4213 4841 
+L 4213 1972 
+z
+" transform="scale(0.015625)"/>
+       <path id="MicrosoftYaHei-53" d="M 400 909 
+Q 622 716 994 591 
+Q 1366 466 1700 466 
+Q 2719 466 2719 1191 
+Q 2719 1394 2609 1556 
+Q 2500 1719 2309 1844 
+Q 2119 1969 1594 2228 
+Q 866 2591 634 2902 
+Q 403 3213 403 3613 
+Q 403 4216 887 4569 
+Q 1372 4922 2109 4922 
+Q 2831 4922 3169 4747 
+L 3169 4066 
+Q 2731 4369 2063 4369 
+Q 1619 4369 1339 4183 
+Q 1059 3997 1059 3666 
+Q 1059 3372 1253 3187 
+Q 1447 3003 2094 2684 
+Q 2806 2344 3090 2003 
+Q 3375 1663 3375 1238 
+Q 3375 600 2912 259 
+Q 2450 -81 1628 -81 
+Q 1341 -81 958 -1 
+Q 575 78 400 197 
+L 400 909 
+z
+" transform="scale(0.015625)"/>
+       <path id="MicrosoftYaHei-44" d="M 625 0 
+L 625 4841 
+L 2006 4841 
+Q 3106 4841 3836 4200 
+Q 4566 3559 4566 2481 
+Q 4566 1356 3836 678 
+Q 3106 0 1956 0 
+L 625 0 
+z
+M 1250 4284 
+L 1250 553 
+L 1953 553 
+Q 2875 553 3392 1056 
+Q 3909 1559 3909 2466 
+Q 3909 3372 3378 3828 
+Q 2847 4284 1981 4284 
+L 1250 4284 
+z
+" transform="scale(0.015625)"/>
+       <path id="MicrosoftYaHei-54" d="M 3550 4284 
+L 2153 4284 
+L 2153 0 
+L 1525 0 
+L 1525 4284 
+L 134 4284 
+L 134 4841 
+L 3550 4841 
+L 3550 4284 
+z
+" transform="scale(0.015625)"/>
+      </defs>
+      <use xlink:href="#MicrosoftYaHei-6574"/>
+      <use xlink:href="#MicrosoftYaHei-4e2a" transform="translate(100 0)"/>
+      <use xlink:href="#MicrosoftYaHei-8d26" transform="translate(200 0)"/>
+      <use xlink:href="#MicrosoftYaHei-6237" transform="translate(300 0)"/>
+      <use xlink:href="#MicrosoftYaHei-51c0" transform="translate(400 0)"/>
+      <use xlink:href="#MicrosoftYaHei-989d" transform="translate(500 0)"/>
+      <use xlink:href="#MicrosoftYaHei-ff08" transform="translate(600 0)"/>
+      <use xlink:href="#MicrosoftYaHei-55" transform="translate(700 0)"/>
+      <use xlink:href="#MicrosoftYaHei-53" transform="translate(774.658203 0)"/>
+      <use xlink:href="#MicrosoftYaHei-44" transform="translate(832.373047 0)"/>
+      <use xlink:href="#MicrosoftYaHei-54" transform="translate(903.669922 0)"/>
+      <use xlink:href="#MicrosoftYaHei-ff09" transform="translate(960.994141 0)"/>
+     </g>
+    </g>
+   </g>
+   <g id="line2d_18">
+    <path d="M 62.423496 7.308606 
+L 67.644642 8.166801 
+L 72.865788 9.024995 
+L 78.086934 9.88319 
+L 83.30808 10.741384 
+L 88.529226 11.599579 
+L 93.750372 12.457774 
+L 98.971518 13.315968 
+L 104.192664 14.174163 
+L 109.41381 15.032357 
+L 114.634956 15.890552 
+L 119.856102 16.748747 
+L 125.077248 17.606941 
+L 130.298394 18.465136 
+L 135.51954 19.323331 
+L 140.740686 20.181525 
+L 145.961832 21.03972 
+L 151.182978 21.897914 
+L 156.404124 22.756109 
+L 161.62527 23.614304 
+L 166.846416 24.472498 
+L 172.067562 25.330693 
+L 177.288708 26.188887 
+L 182.509854 27.047082 
+L 187.731 27.905277 
+L 192.952146 28.763471 
+L 198.173292 29.621666 
+L 203.394438 30.479861 
+L 208.615584 31.338055 
+L 213.83673 32.19625 
+L 219.057876 33.054444 
+L 224.279022 33.912639 
+L 229.500168 34.770834 
+L 234.721314 35.629028 
+L 239.94246 36.487223 
+L 245.163606 37.345417 
+L 250.384752 38.203612 
+L 255.605898 39.061807 
+L 260.827044 39.920001 
+L 266.04819 40.778196 
+L 271.269336 41.63639 
+L 276.490482 42.494585 
+L 281.711628 43.35278 
+L 286.932774 44.210974 
+L 292.15392 45.069169 
+L 297.375066 45.927364 
+L 302.596212 46.785558 
+L 307.817358 47.643753 
+L 313.038504 48.501947 
+L 318.25965 49.360142 
+L 323.480796 50.218337 
+L 328.701942 51.076531 
+L 333.923088 51.934726 
+L 339.144234 52.79292 
+L 344.36538 53.651115 
+L 349.586526 54.50931 
+L 354.807672 55.367504 
+L 360.028818 56.225699 
+L 365.249964 57.083894 
+L 370.47111 57.942088 
+L 375.692256 58.800283 
+L 380.913402 59.658477 
+L 386.134548 60.516672 
+L 391.355694 61.374867 
+L 396.57684 62.233061 
+L 401.797986 63.091256 
+L 407.019132 63.94945 
+L 412.240278 64.807645 
+L 417.461424 65.66584 
+L 422.68257 66.524034 
+L 427.903716 67.382229 
+L 433.124862 68.240423 
+L 438.346008 69.098618 
+L 443.567154 69.956813 
+L 448.7883 70.815007 
+L 454.009446 71.673202 
+L 459.230592 72.531397 
+L 464.451738 73.389591 
+L 469.672884 74.247786 
+L 474.89403 75.10598 
+L 480.115176 75.964175 
+" clip-path="url(#p71bec6054d)" style="fill: none; stroke: #10664f; stroke-width: 1.7; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_19">
+    <path d="M 62.423496 24.835761 
+L 67.644642 25.693763 
+L 72.865788 26.551765 
+L 78.086934 27.409767 
+L 83.30808 28.267769 
+L 88.529226 29.125772 
+L 93.750372 29.983774 
+L 98.971518 30.841776 
+L 104.192664 31.699778 
+L 109.41381 32.55778 
+L 114.634956 33.415782 
+L 119.856102 34.273784 
+L 125.077248 35.131786 
+L 130.298394 35.989788 
+L 135.51954 36.84779 
+L 140.740686 37.705792 
+L 145.961832 38.563794 
+L 151.182978 39.421796 
+L 156.404124 40.279798 
+L 161.62527 41.1378 
+L 166.846416 41.995802 
+L 172.067562 42.853804 
+L 177.288708 43.711806 
+L 182.509854 44.569808 
+L 187.731 45.42781 
+L 192.952146 46.285813 
+L 198.173292 47.143815 
+L 203.394438 48.001817 
+L 208.615584 48.859819 
+L 213.83673 49.717821 
+L 219.057876 50.575823 
+L 224.279022 51.433825 
+L 229.500168 52.291827 
+L 234.721314 53.149829 
+L 239.94246 54.007831 
+L 245.163606 54.865833 
+L 250.384752 55.723835 
+L 255.605898 56.581837 
+L 260.827044 57.439839 
+L 266.04819 58.297841 
+L 271.269336 59.155843 
+L 276.490482 60.013845 
+L 281.711628 60.871847 
+L 286.932774 61.729849 
+L 292.15392 62.587851 
+L 297.375066 63.445854 
+L 302.596212 64.303856 
+L 307.817358 65.161858 
+L 313.038504 66.01986 
+L 318.25965 66.877862 
+L 323.480796 67.735864 
+L 328.701942 68.593866 
+L 333.923088 69.451868 
+L 339.144234 70.30987 
+L 344.36538 71.167872 
+L 349.586526 72.025874 
+L 354.807672 72.883876 
+L 360.028818 73.741878 
+L 365.249964 74.59988 
+L 370.47111 75.457882 
+L 375.692256 76.315884 
+L 380.913402 77.173886 
+L 386.134548 78.031888 
+L 391.355694 78.88989 
+L 396.57684 79.747892 
+L 401.797986 80.605895 
+L 407.019132 81.463897 
+L 412.240278 82.321899 
+L 417.461424 83.179901 
+L 422.68257 84.037903 
+L 427.903716 84.895905 
+L 433.124862 85.753907 
+L 438.346008 86.611909 
+L 443.567154 87.469911 
+L 448.7883 88.327913 
+L 454.009446 89.185915 
+L 459.230592 90.043917 
+L 464.451738 90.901919 
+L 469.672884 91.759921 
+L 474.89403 92.617923 
+L 480.115176 93.475925 
+" clip-path="url(#p71bec6054d)" style="fill: none; stroke: #a35c31; stroke-width: 1.7; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_20">
+    <path d="M 41.538912 33.104333 
+L 500.99976 33.104333 
+" clip-path="url(#p71bec6054d)" style="fill: none; stroke: #667a74; stroke-width: 0.7; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_21">
+    <path d="M 258.158004 97.784291 
+L 258.158004 3.00024 
+" clip-path="url(#p71bec6054d)" style="fill: none; stroke-dasharray: 0.85,1.4025; stroke-dashoffset: 0; stroke: #7b8390; stroke-width: 0.85"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 41.538912 97.784291 
+L 41.538912 3.00024 
+" style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 41.538912 97.784291 
+L 500.99976 97.784291 
+" style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="PathCollection_1">
+    <defs>
+     <path id="m7913cd4f12" d="M 0 1.936492 
+C 0.513564 1.936492 1.006162 1.732451 1.369306 1.369306 
+C 1.732451 1.006162 1.936492 0.513564 1.936492 0 
+C 1.936492 -0.513564 1.732451 -1.006162 1.369306 -1.369306 
+C 1.006162 -1.732451 0.513564 -1.936492 0 -1.936492 
+C -0.513564 -1.936492 -1.006162 -1.732451 -1.369306 -1.369306 
+C -1.732451 -1.006162 -1.936492 -0.513564 -1.936492 0 
+C -1.936492 0.513564 -1.732451 1.006162 -1.369306 1.369306 
+C -1.006162 1.732451 -0.513564 1.936492 0 1.936492 
+z
+" style="stroke: #10664f"/>
+    </defs>
+    <g clip-path="url(#p71bec6054d)">
+     <use xlink:href="#m7913cd4f12" x="219.361391" y="33.104333" style="fill: #10664f; stroke: #10664f"/>
+    </g>
+   </g>
+   <g id="PathCollection_2">
+    <defs>
+     <path id="mc946ebf6c7" d="M 0 1.936492 
+C 0.513564 1.936492 1.006162 1.732451 1.369306 1.369306 
+C 1.732451 1.006162 1.936492 0.513564 1.936492 0 
+C 1.936492 -0.513564 1.732451 -1.006162 1.369306 -1.369306 
+C 1.006162 -1.732451 0.513564 -1.936492 0 -1.936492 
+C -0.513564 -1.936492 -1.006162 -1.732451 -1.369306 -1.369306 
+C -1.732451 -1.006162 -1.936492 -0.513564 -1.936492 0 
+C -1.936492 0.513564 -1.732451 1.006162 -1.369306 1.369306 
+C -1.006162 1.732451 -0.513564 1.936492 0 1.936492 
+z
+" style="stroke: #a35c31"/>
+    </defs>
+    <g clip-path="url(#p71bec6054d)">
+     <use xlink:href="#mc946ebf6c7" x="112.739715" y="33.104333" style="fill: #a35c31; stroke: #a35c31"/>
+    </g>
+   </g>
+   <g id="legend_1">
+    <g id="line2d_22">
+     <path d="M 239.89976 12.445865 
+L 246.89976 12.445865 
+L 253.89976 12.445865 
+" style="fill: none; stroke: #10664f; stroke-width: 1.7; stroke-linecap: square"/>
+    </g>
+    <g id="text_16">
+     <!-- 历史费率与成本 -->
+     <g transform="translate(259.49976 14.895865) scale(0.07 -0.07)">
+      <defs>
+       <path id="MicrosoftYaHei-5386" d="M 1669 3084 
+L 3028 3084 
+Q 3044 3650 3044 4222 
+L 3569 4222 
+Q 3563 3650 3547 3084 
+L 5800 3084 
+Q 5725 1422 5656 341 
+Q 5556 -616 4688 -634 
+Q 4219 -634 3588 -603 
+Q 3556 -366 3494 -41 
+Q 4113 -109 4588 -109 
+Q 5088 -103 5156 466 
+Q 5225 1366 5269 2603 
+L 3531 2603 
+Q 3478 1334 3138 691 
+Q 2681 -166 1513 -847 
+Q 1338 -641 1144 -422 
+Q 2294 284 2644 947 
+Q 2969 1528 3013 2603 
+L 1669 2603 
+L 1669 3084 
+z
+M 1325 2766 
+Q 1319 1384 1144 647 
+Q 963 -116 456 -841 
+Q 300 -628 81 -416 
+Q 506 197 650 816 
+Q 794 1416 794 2653 
+L 794 4916 
+L 6244 4916 
+L 6244 4434 
+L 1325 4434 
+L 1325 2766 
+z
+" transform="scale(0.015625)"/>
+       <path id="MicrosoftYaHei-53f2" d="M 1331 1953 
+Q 1813 1213 2519 750 
+Q 2881 1275 2953 2047 
+L 725 2047 
+L 725 4472 
+L 2969 4472 
+L 2969 5291 
+L 3469 5291 
+L 3469 4472 
+L 5713 4472 
+L 5713 1722 
+L 5225 1722 
+L 5225 2047 
+L 3459 2047 
+Q 3394 1144 2969 494 
+Q 4241 -119 6313 -228 
+Q 6206 -441 6094 -741 
+Q 3928 -578 2638 91 
+Q 1881 -634 369 -872 
+Q 281 -678 113 -416 
+Q 1506 -213 2181 369 
+Q 1434 888 944 1697 
+L 1331 1953 
+z
+M 5225 4022 
+L 3469 4022 
+L 3469 2497 
+L 5225 2497 
+L 5225 4022 
+z
+M 1213 2497 
+L 2969 2497 
+L 2969 4022 
+L 1213 4022 
+L 1213 2497 
+z
+" transform="scale(0.015625)"/>
+       <path id="MicrosoftYaHei-8d39" d="M 525 4753 
+L 2319 4753 
+Q 2331 5034 2331 5278 
+L 2781 5278 
+Q 2781 5034 2769 4753 
+L 3856 4753 
+L 3856 5278 
+L 4306 5278 
+L 4306 4753 
+L 5813 4753 
+L 5813 3328 
+L 5363 3328 
+L 5363 3484 
+L 4306 3484 
+L 4306 2922 
+L 6094 2922 
+Q 6081 2472 6025 2153 
+Q 5956 1716 5463 1716 
+Q 5388 1716 5275 1716 
+L 5275 191 
+L 4825 191 
+L 4825 1466 
+L 1688 1466 
+L 1688 116 
+L 1238 116 
+L 1238 1466 
+Q 856 1297 369 1153 
+Q 288 1334 100 1584 
+Q 1525 1891 1981 2559 
+L 606 2559 
+L 806 3847 
+L 2294 3847 
+Q 2313 4091 2313 4391 
+L 525 4391 
+L 525 4753 
+z
+M 4744 2153 
+Q 5094 2116 5325 2116 
+Q 5575 2116 5613 2303 
+Q 5638 2441 5644 2559 
+L 4306 2559 
+L 4306 1947 
+L 3856 1947 
+L 3856 2559 
+L 2513 2559 
+Q 2344 2178 1925 1866 
+L 4831 1866 
+Q 4800 1984 4744 2153 
+z
+M 3031 1116 
+L 3475 1116 
+Q 3475 716 3388 409 
+Q 4813 -9 5975 -422 
+L 5744 -872 
+Q 4481 -403 3231 9 
+Q 2844 -622 669 -878 
+Q 550 -578 456 -428 
+Q 1900 -291 2625 53 
+Q 3044 259 3031 1116 
+z
+M 2631 2922 
+L 3856 2922 
+L 3856 3484 
+L 2719 3484 
+Q 2688 3153 2631 2922 
+z
+M 1113 2922 
+L 2156 2922 
+Q 2225 3141 2263 3484 
+L 1188 3484 
+L 1113 2922 
+z
+M 2744 3847 
+L 3856 3847 
+L 3856 4391 
+L 2763 4391 
+Q 2763 4097 2744 3847 
+z
+M 5363 4391 
+L 4306 4391 
+L 4306 3847 
+L 5363 3847 
+L 5363 4391 
+z
+" transform="scale(0.015625)"/>
+       <path id="MicrosoftYaHei-4e0e" d="M 1163 2384 
+L 1163 2859 
+L 1413 5328 
+L 1931 5328 
+L 1834 4334 
+L 6269 4334 
+L 6269 3859 
+L 1791 3859 
+L 1694 2859 
+L 5813 2859 
+Q 5738 1547 5644 416 
+Q 5556 -247 5263 -478 
+Q 4981 -703 4322 -703 
+Q 3706 -697 2900 -678 
+Q 2863 -466 2794 -134 
+Q 3744 -203 4213 -209 
+Q 5050 -266 5125 447 
+Q 5206 1278 5263 2384 
+L 1163 2384 
+z
+M 106 1409 
+L 4738 1409 
+L 4738 934 
+L 106 934 
+L 106 1409 
+z
+" transform="scale(0.015625)"/>
+       <path id="MicrosoftYaHei-6210" d="M 2750 -347 
+Q 3472 138 4038 781 
+Q 3675 1703 3609 3759 
+L 1250 3759 
+L 1250 2809 
+L 3050 2809 
+Q 3013 1616 2950 803 
+Q 2875 -59 2113 -59 
+Q 1856 -59 1431 -34 
+Q 1394 197 1331 484 
+Q 1769 422 2063 422 
+Q 2425 422 2469 922 
+Q 2519 1497 2544 2347 
+L 1247 2347 
+Q 1197 175 369 -866 
+Q 213 -653 44 -434 
+Q 750 503 750 2528 
+L 750 4222 
+L 3591 4222 
+Q 3569 4716 3550 5291 
+L 4069 5291 
+Q 4066 4850 4084 4222 
+L 6238 4222 
+L 6238 3759 
+L 4100 3759 
+Q 4163 2078 4409 1247 
+Q 5016 2069 5406 3109 
+L 5900 2903 
+Q 5363 1631 4609 691 
+Q 5069 -244 5506 -244 
+Q 5666 -244 5750 47 
+Q 5838 503 5888 984 
+Q 6156 878 6363 809 
+Q 6269 141 6156 -284 
+Q 6038 -741 5631 -778 
+Q 5250 -803 4900 -522 
+Q 4522 -231 4256 278 
+Q 3728 -291 3106 -722 
+Q 2944 -534 2750 -347 
+z
+M 4544 4984 
+L 4806 5309 
+Q 5331 5009 5788 4684 
+L 5488 4309 
+Q 5038 4666 4544 4984 
+z
+" transform="scale(0.015625)"/>
+       <path id="MicrosoftYaHei-672c" d="M 6281 803 
+Q 6119 641 5856 366 
+Q 4344 1531 3444 3353 
+L 3444 878 
+L 4875 878 
+L 4875 441 
+L 3444 441 
+L 3444 -841 
+L 2956 -841 
+L 2956 441 
+L 1475 441 
+L 1475 878 
+L 2956 878 
+L 2956 3353 
+Q 2159 1766 513 291 
+Q 269 522 100 666 
+Q 1878 2125 2759 3753 
+L 238 3753 
+L 238 4216 
+L 2956 4216 
+L 2956 5341 
+L 3444 5341 
+L 3444 4216 
+L 6163 4216 
+L 6163 3753 
+L 3622 3753 
+Q 4616 1884 6281 803 
+z
+" transform="scale(0.015625)"/>
+      </defs>
+      <use xlink:href="#MicrosoftYaHei-5386"/>
+      <use xlink:href="#MicrosoftYaHei-53f2" transform="translate(100 0)"/>
+      <use xlink:href="#MicrosoftYaHei-8d39" transform="translate(200 0)"/>
+      <use xlink:href="#MicrosoftYaHei-7387" transform="translate(300 0)"/>
+      <use xlink:href="#MicrosoftYaHei-4e0e" transform="translate(400 0)"/>
+      <use xlink:href="#MicrosoftYaHei-6210" transform="translate(500 0)"/>
+      <use xlink:href="#MicrosoftYaHei-672c" transform="translate(600 0)"/>
+     </g>
+    </g>
+    <g id="line2d_23">
+     <path d="M 322.49976 12.445865 
+L 329.49976 12.445865 
+L 336.49976 12.445865 
+" style="fill: none; stroke: #a35c31; stroke-width: 1.7; stroke-linecap: square"/>
+    </g>
+    <g id="text_17">
+     <!-- 正资金费减半、费滑翻倍 -->
+     <g transform="translate(342.09976 14.895865) scale(0.07 -0.07)">
+      <defs>
+       <path id="MicrosoftYaHei-6b63" d="M 88 66 
+L 1106 66 
+L 1106 3416 
+L 1644 3416 
+L 1644 66 
+L 3231 66 
+L 3231 4309 
+L 375 4309 
+L 375 4797 
+L 6063 4797 
+L 6063 4309 
+L 3769 4309 
+L 3769 2672 
+L 5850 2672 
+L 5850 2191 
+L 3769 2191 
+L 3769 66 
+L 6313 66 
+L 6313 -422 
+L 88 -422 
+L 88 66 
+z
+" transform="scale(0.015625)"/>
+       <path id="MicrosoftYaHei-8d44" d="M 1831 2716 
+Q 3706 3197 3863 4341 
+L 2863 4341 
+Q 2638 3878 2363 3509 
+Q 2163 3647 1944 3778 
+Q 2531 4472 2775 5384 
+L 3244 5272 
+Q 3150 4997 3050 4753 
+L 6013 4753 
+L 6013 4359 
+L 5588 3509 
+Q 5375 3609 5131 3703 
+L 5463 4341 
+L 4350 4341 
+Q 4300 4141 4238 3953 
+Q 4775 3066 6256 2722 
+Q 6081 2484 5944 2266 
+Q 4613 2691 4044 3516 
+Q 3613 2766 2150 2303 
+Q 2025 2491 1831 2716 
+z
+M 1025 2278 
+L 5369 2278 
+L 5369 241 
+L 4881 241 
+L 4881 1841 
+L 1513 1841 
+L 1513 241 
+L 1025 241 
+L 1025 2278 
+z
+M 1744 3922 
+Q 1856 3678 1988 3478 
+Q 1244 2922 438 2272 
+L 113 2697 
+Q 994 3303 1744 3922 
+z
+M 631 5278 
+Q 1169 4941 1675 4578 
+L 1356 4191 
+Q 906 4547 356 4934 
+L 631 5278 
+z
+M 3444 1603 
+Q 3438 928 3350 566 
+Q 4775 103 6069 -397 
+L 5806 -853 
+Q 4625 -366 3175 153 
+Q 2756 -591 506 -878 
+Q 394 -641 238 -391 
+Q 2306 -209 2738 384 
+Q 2969 697 2956 1603 
+L 3444 1603 
+z
+" transform="scale(0.015625)"/>
+       <path id="MicrosoftYaHei-91d1" d="M 300 -141 
+L 2950 -141 
+L 2950 1384 
+L 713 1384 
+L 713 1841 
+L 2950 1841 
+L 2950 2716 
+L 1325 2716 
+L 1325 3153 
+Q 881 2872 363 2591 
+Q 231 2828 50 3059 
+Q 2131 4034 2994 5297 
+L 3675 5297 
+L 3531 5122 
+Q 4525 3853 6344 3147 
+Q 6175 2909 6013 2647 
+Q 5525 2853 5069 3141 
+L 5069 2716 
+L 3450 2716 
+L 3450 1841 
+L 5675 1841 
+L 5675 1384 
+L 3450 1384 
+L 3450 -141 
+L 6113 -141 
+L 6113 -603 
+L 300 -603 
+L 300 -141 
+z
+M 3206 4766 
+Q 2563 3953 1350 3172 
+L 5019 3172 
+Q 4044 3791 3206 4766 
+z
+M 4094 284 
+Q 4600 809 4950 1309 
+L 5388 1028 
+Q 4950 484 4469 -16 
+L 4094 284 
+z
+M 1000 1003 
+L 1369 1297 
+Q 1825 834 2263 334 
+L 1838 -3 
+Q 1463 491 1000 1003 
+z
+" transform="scale(0.015625)"/>
+       <path id="MicrosoftYaHei-51cf" d="M 3406 -484 
+Q 4103 84 4628 878 
+Q 4381 1866 4347 3872 
+L 2269 3872 
+L 2269 2278 
+Q 2269 366 1381 -809 
+Q 1150 -566 1000 -466 
+Q 1831 584 1831 2303 
+L 1831 4297 
+L 4338 4297 
+Q 4331 4800 4331 5278 
+L 4788 5278 
+Q 4788 4803 4791 4297 
+L 6300 4297 
+L 6300 3872 
+L 4794 3872 
+Q 4806 2363 4972 1453 
+Q 5403 2256 5688 3253 
+L 6138 3097 
+Q 5716 1794 5122 813 
+Q 5281 250 5488 -47 
+Q 5688 -291 5763 53 
+Q 5831 422 5881 953 
+Q 6175 847 6344 797 
+Q 6256 134 6150 -297 
+Q 6013 -791 5700 -784 
+Q 5431 -791 5194 -478 
+Q 4959 -128 4797 316 
+Q 4347 -313 3813 -784 
+Q 3619 -616 3406 -484 
+z
+M 2656 2347 
+L 4069 2347 
+L 4069 509 
+L 3069 509 
+L 3069 122 
+L 2656 122 
+L 2656 2347 
+z
+M 131 16 
+Q 519 1059 925 2609 
+Q 1163 2497 1388 2409 
+Q 1106 1403 638 -153 
+L 131 16 
+z
+M 244 4541 
+L 631 4809 
+Q 1069 4303 1506 3728 
+L 1075 3416 
+Q 563 4153 244 4541 
+z
+M 3656 897 
+L 3656 1959 
+L 3069 1959 
+L 3069 897 
+L 3656 897 
+z
+M 2544 3316 
+L 4088 3316 
+L 4088 2916 
+L 2544 2916 
+L 2544 3316 
+z
+M 5050 5041 
+L 5369 5291 
+Q 5681 4978 5963 4666 
+L 5606 4384 
+Q 5350 4709 5050 5041 
+z
+" transform="scale(0.015625)"/>
+       <path id="MicrosoftYaHei-534a" d="M 125 1484 
+L 2931 1484 
+L 2931 2572 
+L 381 2572 
+L 381 3047 
+L 2931 3047 
+L 2931 5316 
+L 3463 5316 
+L 3463 3047 
+L 6025 3047 
+L 6025 2572 
+L 3463 2572 
+L 3463 1484 
+L 6275 1484 
+L 6275 1009 
+L 3463 1009 
+L 3463 -822 
+L 2931 -822 
+L 2931 1009 
+L 125 1009 
+L 125 1484 
+z
+M 4200 3709 
+Q 4750 4222 5363 4959 
+L 5800 4609 
+Q 5194 3928 4575 3359 
+L 4200 3709 
+z
+M 600 4641 
+L 969 4947 
+Q 1550 4397 2156 3728 
+L 1725 3359 
+Q 1081 4159 600 4641 
+z
+" transform="scale(0.015625)"/>
+       <path id="MicrosoftYaHei-3001" d="M 1931 -413 
+L 1556 -791 
+Q 1028 -216 397 306 
+L 728 650 
+Q 1506 22 1931 -413 
+z
+" transform="scale(0.015625)"/>
+       <path id="MicrosoftYaHei-6ed1" d="M 2738 -791 
+L 2263 -791 
+L 2263 2378 
+L 5494 2378 
+L 5494 -22 
+Q 5494 -728 4813 -734 
+Q 4456 -741 4025 -734 
+Q 3994 -534 3931 -272 
+Q 4294 -316 4619 -316 
+Q 5019 -316 5019 9 
+L 5019 303 
+L 2738 303 
+L 2738 -791 
+z
+M 1713 3253 
+L 2306 3253 
+L 2306 5078 
+L 5475 5078 
+L 5475 3253 
+L 6063 3253 
+L 6063 2297 
+L 5594 2297 
+L 5594 2853 
+L 2181 2853 
+L 2181 2284 
+L 1713 2284 
+L 1713 3253 
+z
+M 5025 4678 
+L 2756 4678 
+L 2756 4178 
+L 4238 4178 
+L 4238 3253 
+L 5025 3253 
+L 5025 4678 
+z
+M 850 1816 
+Q 1106 1716 1363 1628 
+Q 1100 541 788 -784 
+L 238 -622 
+Q 588 541 850 1816 
+z
+M 2738 691 
+L 5019 691 
+L 5019 1141 
+L 2738 1141 
+L 2738 691 
+z
+M 5019 1978 
+L 2738 1978 
+L 2738 1528 
+L 5019 1528 
+L 5019 1978 
+z
+M 719 5241 
+Q 1256 4822 1738 4378 
+L 1381 4003 
+Q 931 4453 394 4909 
+L 719 5241 
+z
+M 388 3697 
+Q 988 3247 1400 2891 
+L 1056 2497 
+Q 581 2941 81 3328 
+L 388 3697 
+z
+M 3794 3791 
+L 2756 3791 
+L 2756 3253 
+L 3794 3253 
+L 3794 3791 
+z
+" transform="scale(0.015625)"/>
+       <path id="MicrosoftYaHei-7ffb" d="M 456 1916 
+L 2956 1916 
+L 2956 -784 
+L 2569 -784 
+L 2569 -503 
+L 844 -503 
+L 844 -784 
+L 456 -784 
+L 456 1916 
+z
+M 5544 4428 
+L 4625 4428 
+L 4625 4853 
+L 5956 4853 
+L 5956 -84 
+Q 5956 -747 5269 -747 
+Q 5000 -747 4700 -734 
+Q 4675 -534 4631 -284 
+Q 4963 -334 5219 -334 
+Q 5544 -334 5544 22 
+L 5544 1678 
+Q 5275 1384 4856 941 
+Q 4688 1109 4556 1234 
+Q 5088 1741 5544 2209 
+L 5544 4428 
+z
+M 213 3509 
+L 1513 3509 
+L 1513 4616 
+Q 963 4591 419 4572 
+Q 369 4759 319 4953 
+Q 1544 4953 2888 5066 
+L 2988 4697 
+Q 2444 4659 1900 4634 
+L 1900 3509 
+L 3125 3509 
+L 3125 3147 
+L 1900 3147 
+L 1900 2841 
+L 2050 3009 
+Q 2838 2603 3269 2347 
+L 3044 2028 
+Q 2556 2341 1900 2703 
+L 1900 2016 
+L 1513 2016 
+L 1513 2928 
+Q 1075 2422 300 1972 
+Q 194 2134 31 2322 
+Q 800 2641 1325 3147 
+L 213 3147 
+L 213 3509 
+z
+M 4056 4428 
+L 3213 4428 
+L 3213 4853 
+L 4456 4853 
+L 4456 -59 
+Q 4456 -747 3800 -747 
+Q 3538 -747 3244 -734 
+Q 3219 -534 3175 -278 
+Q 3444 -334 3750 -328 
+Q 4056 -328 4056 9 
+L 4056 1516 
+Q 3700 1166 3338 828 
+Q 3181 997 3050 1141 
+Q 3500 1522 4056 2047 
+L 4056 4428 
+z
+M 3188 3716 
+L 3519 3797 
+Q 3713 3109 3875 2459 
+L 3525 2359 
+Q 3356 3134 3188 3716 
+z
+M 4694 3772 
+L 5025 3859 
+Q 5206 3222 5350 2572 
+L 4981 2466 
+Q 4869 3128 4694 3772 
+z
+M 1881 -128 
+L 2569 -128 
+L 2569 534 
+L 1881 534 
+L 1881 -128 
+z
+M 844 -128 
+L 1525 -128 
+L 1525 534 
+L 844 534 
+L 844 -128 
+z
+M 2569 1541 
+L 1881 1541 
+L 1881 884 
+L 2569 884 
+L 2569 1541 
+z
+M 844 884 
+L 1525 884 
+L 1525 1541 
+L 844 1541 
+L 844 884 
+z
+M 2175 3853 
+Q 2481 4159 2750 4509 
+L 3056 4266 
+Q 2819 3966 2469 3609 
+Q 2344 3728 2175 3853 
+z
+M 406 4266 
+L 706 4472 
+Q 1019 4122 1219 3834 
+L 888 3597 
+Q 644 3978 406 4266 
+z
+" transform="scale(0.015625)"/>
+       <path id="MicrosoftYaHei-500d" d="M 2338 1709 
+L 5750 1709 
+L 5750 -816 
+L 5275 -816 
+L 5275 -409 
+L 2813 -409 
+L 2813 -816 
+L 2338 -816 
+L 2338 1709 
+z
+M 56 2278 
+Q 919 3516 1394 5303 
+L 1875 5166 
+Q 1619 4331 1300 3603 
+L 1300 -822 
+L 838 -822 
+L 838 2669 
+Q 566 2178 263 1753 
+Q 169 2016 56 2278 
+z
+M 5275 1278 
+L 2813 1278 
+L 2813 9 
+L 5275 9 
+L 5275 1278 
+z
+M 1775 2766 
+L 4850 2766 
+L 4506 2959 
+Q 4875 3447 5125 3953 
+L 5588 3728 
+Q 5297 3253 4947 2766 
+L 6313 2766 
+L 6313 2328 
+L 1775 2328 
+L 1775 2766 
+z
+M 2006 4409 
+L 3984 4409 
+Q 3769 4778 3506 5141 
+L 3925 5384 
+Q 4206 5009 4444 4622 
+L 4072 4409 
+L 6094 4409 
+L 6094 3972 
+L 2006 3972 
+L 2006 4409 
+z
+M 2525 3716 
+L 2925 3959 
+Q 3288 3459 3556 3041 
+L 3131 2772 
+Q 2825 3309 2525 3716 
+z
+" transform="scale(0.015625)"/>
+      </defs>
+      <use xlink:href="#MicrosoftYaHei-6b63"/>
+      <use xlink:href="#MicrosoftYaHei-8d44" transform="translate(100 0)"/>
+      <use xlink:href="#MicrosoftYaHei-91d1" transform="translate(200 0)"/>
+      <use xlink:href="#MicrosoftYaHei-8d39" transform="translate(300 0)"/>
+      <use xlink:href="#MicrosoftYaHei-51cf" transform="translate(400 0)"/>
+      <use xlink:href="#MicrosoftYaHei-534a" transform="translate(500 0)"/>
+      <use xlink:href="#MicrosoftYaHei-3001" transform="translate(600 0)"/>
+      <use xlink:href="#MicrosoftYaHei-8d39" transform="translate(700 0)"/>
+      <use xlink:href="#MicrosoftYaHei-6ed1" transform="translate(800 0)"/>
+      <use xlink:href="#MicrosoftYaHei-7ffb" transform="translate(900 0)"/>
+      <use xlink:href="#MicrosoftYaHei-500d" transform="translate(1000 0)"/>
+     </g>
+    </g>
+    <g id="line2d_24">
+     <path d="M 433.09976 12.445865 
+L 440.09976 12.445865 
+L 447.09976 12.445865 
+" style="fill: none; stroke-dasharray: 0.85,1.4025; stroke-dashoffset: 0; stroke: #7b8390; stroke-width: 0.85"/>
+    </g>
+    <g id="text_18">
+     <!-- 历史等效借息 -->
+     <g transform="translate(452.69976 14.895865) scale(0.07 -0.07)">
+      <defs>
+       <path id="MicrosoftYaHei-7b49" d="M 125 2303 
+L 2913 2303 
+L 2913 2922 
+L 563 2922 
+L 563 3328 
+L 2913 3328 
+L 2913 3822 
+L 3400 3822 
+L 3400 3328 
+L 5850 3328 
+L 5850 2922 
+L 3400 2922 
+L 3400 2303 
+L 6288 2303 
+L 6288 1884 
+L 125 1884 
+L 125 2303 
+z
+M 338 1272 
+L 4250 1272 
+L 4250 1766 
+L 4738 1766 
+L 4738 1272 
+L 6075 1272 
+L 6075 853 
+L 4738 853 
+L 4738 22 
+Q 4738 -766 3925 -766 
+Q 3450 -766 2969 -759 
+Q 2938 -534 2875 -228 
+Q 3375 -278 3794 -278 
+Q 4250 -278 4250 91 
+L 4250 853 
+L 338 853 
+L 338 1272 
+z
+M 1294 5347 
+L 1831 5347 
+Q 1688 5041 1513 4759 
+L 3325 4759 
+L 3325 4372 
+L 1244 4372 
+Q 875 3878 388 3459 
+Q 263 3609 75 3797 
+Q 856 4428 1294 5347 
+z
+M 3969 5347 
+L 4506 5347 
+Q 4366 5038 4213 4759 
+L 6225 4759 
+L 6225 4372 
+L 3984 4372 
+Q 3772 4038 3538 3759 
+Q 3275 3947 3119 4009 
+Q 3663 4597 3969 5347 
+z
+M 1500 491 
+L 1831 809 
+Q 2256 447 2700 28 
+L 2338 -316 
+Q 2000 41 1500 491 
+z
+M 2019 3441 
+Q 1781 3753 1500 4078 
+L 1825 4309 
+Q 2125 4022 2388 3722 
+L 2019 3441 
+z
+M 4744 3441 
+Q 4625 3628 4238 4078 
+L 4563 4309 
+Q 4900 3984 5113 3722 
+L 4744 3441 
+z
+" transform="scale(0.015625)"/>
+       <path id="MicrosoftYaHei-6548" d="M 4088 5334 
+L 4581 5253 
+Q 4453 4653 4259 4122 
+L 6269 4122 
+L 6269 3697 
+L 5838 3697 
+Q 5672 1869 5050 841 
+Q 5572 128 6388 -347 
+Q 6188 -622 6050 -841 
+Q 5250 -313 4728 391 
+Q 4153 -328 3300 -891 
+Q 3163 -709 2944 -497 
+Q 3872 125 4428 853 
+Q 3897 1797 3753 3025 
+Q 3603 2766 3431 2528 
+Q 3300 2716 3119 2928 
+Q 3844 3941 4088 5334 
+z
+M 694 1909 
+L 1031 2203 
+Q 1456 1800 1863 1394 
+Q 2138 1847 2350 2378 
+L 2800 2141 
+Q 2538 1550 2209 1047 
+Q 2659 591 3088 134 
+L 2669 -222 
+Q 2275 225 1913 625 
+Q 1250 -238 356 -809 
+Q 238 -641 31 -397 
+Q 947 128 1584 981 
+Q 1113 1491 694 1909 
+z
+M 5344 3697 
+L 4125 3697 
+Q 4222 2322 4741 1338 
+Q 5263 2306 5344 3697 
+z
+M 175 4297 
+L 3325 4297 
+L 3325 3872 
+L 175 3872 
+L 175 4297 
+z
+M 1063 3628 
+L 1475 3372 
+Q 963 2641 413 1953 
+Q 256 2084 44 2241 
+Q 506 2797 1063 3628 
+z
+M 2344 3609 
+Q 2744 3197 3263 2591 
+L 2894 2278 
+Q 2506 2759 2006 3341 
+L 2344 3609 
+z
+M 1306 5141 
+L 1731 5359 
+Q 1988 4953 2206 4547 
+L 1769 4322 
+Q 1544 4772 1306 5141 
+z
+" transform="scale(0.015625)"/>
+       <path id="MicrosoftYaHei-501f" d="M 2319 2166 
+L 5681 2166 
+L 5681 -809 
+L 5206 -809 
+L 5206 -478 
+L 2794 -478 
+L 2794 -809 
+L 2319 -809 
+L 2319 2166 
+z
+M 1838 3109 
+L 2894 3109 
+L 2894 3997 
+L 2088 3997 
+L 2088 4422 
+L 2894 4422 
+L 2894 5284 
+L 3369 5284 
+L 3369 4422 
+L 4613 4422 
+L 4613 5284 
+L 5088 5284 
+L 5088 4422 
+L 6038 4422 
+L 6038 3997 
+L 5088 3997 
+L 5088 3109 
+L 6263 3109 
+L 6263 2684 
+L 1838 2684 
+L 1838 3109 
+z
+M 106 2453 
+Q 1063 3841 1513 5309 
+L 2000 5141 
+Q 1716 4359 1400 3697 
+L 1400 -809 
+L 925 -809 
+L 925 2803 
+Q 628 2303 306 1891 
+Q 200 2228 106 2453 
+z
+M 5206 1741 
+L 2794 1741 
+L 2794 1047 
+L 5206 1047 
+L 5206 1741 
+z
+M 2794 -53 
+L 5206 -53 
+L 5206 634 
+L 2794 634 
+L 2794 -53 
+z
+M 3369 3109 
+L 4613 3109 
+L 4613 3997 
+L 3369 3997 
+L 3369 3109 
+z
+" transform="scale(0.015625)"/>
+       <path id="MicrosoftYaHei-606f" d="M 913 4709 
+L 2441 4709 
+Q 2575 5044 2663 5353 
+L 3150 5222 
+Q 3047 4956 2934 4709 
+L 5425 4709 
+L 5425 1297 
+L 4944 1297 
+L 4944 1491 
+L 1394 1491 
+L 1394 1297 
+L 913 1297 
+L 913 4709 
+z
+M 1569 1059 
+L 2044 1059 
+L 2044 141 
+Q 2044 -247 2456 -247 
+L 3844 -247 
+Q 4344 -247 4425 97 
+Q 4488 322 4550 778 
+Q 4781 684 5038 597 
+Q 4963 166 4888 -97 
+Q 4744 -691 3956 -691 
+L 2381 -691 
+Q 1569 -691 1569 84 
+L 1569 1059 
+z
+M 1394 2841 
+L 4944 2841 
+L 4944 3366 
+L 1394 3366 
+L 1394 2841 
+z
+M 1394 1916 
+L 4944 1916 
+L 4944 2441 
+L 1394 2441 
+L 1394 1916 
+z
+M 4944 4284 
+L 1394 4284 
+L 1394 3766 
+L 4944 3766 
+L 4944 4284 
+z
+M 638 1122 
+L 1094 966 
+Q 819 216 519 -403 
+Q 319 -316 56 -222 
+Q 363 322 638 1122 
+z
+M 5119 922 
+L 5481 1203 
+Q 5925 722 6388 147 
+L 5988 -159 
+Q 5563 416 5119 922 
+z
+M 2663 1128 
+L 3000 1416 
+Q 3381 1066 3838 578 
+L 3456 253 
+Q 2994 797 2663 1128 
+z
+" transform="scale(0.015625)"/>
+      </defs>
+      <use xlink:href="#MicrosoftYaHei-5386"/>
+      <use xlink:href="#MicrosoftYaHei-53f2" transform="translate(100 0)"/>
+      <use xlink:href="#MicrosoftYaHei-7b49" transform="translate(200 0)"/>
+      <use xlink:href="#MicrosoftYaHei-6548" transform="translate(300 0)"/>
+      <use xlink:href="#MicrosoftYaHei-501f" transform="translate(400 0)"/>
+      <use xlink:href="#MicrosoftYaHei-606f" transform="translate(500 0)"/>
+     </g>
+    </g>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p71bec6054d">
+   <rect x="41.538912" y="3.00024" width="459.460848" height="94.784051"/>
+  </clipPath>
+ </defs>
+</svg>
+</figure><div class="filters screen"><label>场所 <select id="venue"><option value="binance">币安</option><option value="bybit">Bybit</option></select></label><label>区间 <select id="phase"><option value="recent">2025 年起</option><option value="middle">2023–24</option><option value="early">2021–22</option></select></label><label>各币配置 <select id="alloc"><option value=".2">20%</option><option value=".35" selected>35%</option><option value=".45">45%</option></select></label><label>年借息 % <input id="rate" type="number" value="0" min="0" max="100" step=".25"></label><label>保留正资金费 <select id="keep"><option value="100">100%</option><option value="75">75%</option><option value="50">50%</option><option value="25">25%</option><option value="0">0%</option></select></label></div><p id="out" class="screen" aria-live="polite"></p><button class="screen download" id="dl">下载全部融资分界账本 CSV</button><p class="caption">实际小时借款利率是融资成本代理。真实账户能否借到、授信上限和利率取决于交易场所及账户条件。</p></main><footer><span>2026 年 11 月 22 日　·　金额以 USDT 计</span><span>2 / 7</span></footer></section><section class="sheet" id="p3"><header><span>BTC · ETH · DOGE　/　第十二轮研究</span><span>风险路径 · 两次历史冲击</span></header><main><h2 class="title">现货对冲了方向，空头账户仍可能先耗尽</h2><p class="lead">2021 年初 DOGE 成交量有限。原计划 20%、35%、45% 三档，第一天实际都只成交 134,414 DOGE。把待成交计划也算进风险预算，使后两档的止损来不及执行。</p><table><thead><tr><th>每币现货额度</th><th>近期自有净额</th><th>全期分钟收盘回撤</th><th>闪崩一小时已见回撤</th><th>六路报价覆盖秒数</th></tr></thead><tbody><tr><td>20%</td><td><span class="pos">+109.47</span></td><td>0.299%</td><td>1.97%</td><td>2,782 / 3,600</td></tr><tr><td>35%</td><td><span class="pos">+196.43</span></td><td>0.528%</td><td>3.41%</td><td>2,782 / 3,600</td></tr><tr><td>45%</td><td><span class="pos">+252.17</span></td><td>0.674%</td><td>4.34%</td><td>2,782 / 3,600</td></tr></tbody></table><h3>改用实际成交成本</h3><p>原 45% 和 35% 档在 2021 年 1 月 28 日 15:02、15:15 UTC 的分钟最高标记下，空头钱包权益已经为负，配对平仓最早 16:00 才能启动。用真实剩余开仓成本触发后，按 2.5% 维持保证金复核，早期 35% 档最小余量 131.51，45% 档只余 17.58。</p><h3>2025 年 10 月 10 日的秒级检查</h3><p>同时读取三个币的现货成交和永续标记，仅在全部报价距观察点五秒以内估值。35% 档短时回撤达 3.41%，已超过近期整段累计收益。六路报价并非时时齐全，最长缺口超过一分钟；表格是已能观察到的回撤。</p><p class="note">改用季度第 8 日复核，2021–22 年 35% 档赚 690.67，但小时最薄保证金余量仅 19.79。第 22 日方案在 1 月 28 日有九个持仓不变的分钟确认权益为负。第 15 日方案的保守小时压力余量为 −401.17；该上界含小时内正在减仓的时段，单凭这个数不能断定爆仓。</p><p class="caption"><a href="https://data.binance.vision/">币安现货与衍生品公共档案</a></p></main><footer><span>2026 年 11 月 22 日　·　金额以 USDT 计</span><span>3 / 7</span></footer></section><section class="sheet" id="p4"><header><span>BTC · ETH · DOGE　/　第十二轮研究</span><span>韩国需求 · 海外多空</span></header><main><h2 class="title">两地同时出现极端相对溢价，跟随有收益吗？</h2><p class="lead">对齐 Upbit、Bithumb 和币安的同一 UTC 交易日。两家韩国场所相对同一海外币对的偏离必须同向，分别超过 50 个基点和各自前 120 天的 97.5% 分位数。下一小时起在海外多强空弱，持有 72 小时。</p><table><thead><tr><th>信号日 UTC</th><th>多头</th><th>空头</th><th>币安逐笔事件净额</th></tr></thead><tbody><tr><td>2022-09-11</td><td>BTC</td><td>ETH</td><td><span class="pos">+14.76</span></td></tr><tr><td>2023-12-02</td><td>DOGE</td><td>BTC</td><td><span class="pos">+23.20</span></td></tr><tr><td>2026-03-07</td><td>BTC</td><td>DOGE</td><td><span class="pos">+13.76</span></td></tr><tr><td>2026-04-04</td><td>ETH</td><td>DOGE</td><td><span class="pos">+29.71</span></td></tr><tr><td>2026-07-16</td><td>BTC</td><td>DOGE</td><td><span class="pos">+16.92</span></td></tr></tbody></table><h3>五次的合计与对照</h3><p>每一万保证金使用两千总名义，按历史 BTC 敏感度配双腿。币安合计 +98.37，双倍费用和滑点后 +80.79；去最好一笔 +68.65。最近三次币安 +60.40、Bybit +61.95，两个场所共享信号日期。</p><h3>五次全赢仍不足以支持稳定性</h3><p>保留相同币对及星期几，改在历史可比较日期交易，币安有 6.57% 的对照获得至少同样收益，Bybit 为 12.46%。新增 157,628 条 Upbit 原生小时记录，改在 06、12、18 UTC 观察，并剔除原五次事件前后 72 小时，只剩十次真正分开的事件。仅四次盈利，币安合计 +9.48，双倍成本 −25.96，去最好一笔 −42.95。</p><p class="caption"><a href="https://docs.upbit.com/kr/reference/list-candles-days">Upbit 官方蜡烛时间与无成交规则</a>　<a href="https://apidocs.bithumb.com/">Bithumb 官方行情接口</a></p></main><footer><span>2026 年 11 月 22 日　·　金额以 USDT 计</span><span>4 / 7</span></footer></section><section class="sheet" id="p5"><header><span>BTC · ETH · DOGE　/　第十二轮研究</span><span>链上信号 · 可独立核实</span></header><main><h2 class="title">稳定币增发与 DOGE 暴涨，收益分别来自哪里？</h2><p class="lead">每周在同一以太坊原始区块读取 USDC、USDT 供应量和已识别金库余额。两种发行量连续四周净增长的判断采用周末已知信息，下周将半仓等分买三币。判定比较的是两端余额。</p><table><thead><tr><th>2025 年起 · 供应口径</th><th>净额</th><th>去最好季度</th><th>日末最大回撤</th></tr></thead><tbody><tr><td>两合约总发行</td><td><span class="pos">+246.15</span></td><td><span class="neg">−1,403.15</span></td><td>19.0%</td></tr><tr><td>扣除已识别发行者金库</td><td><span class="neg">−1,222.11</span></td><td><span class="neg">−2,635.15</span></td><td>19.7%</td></tr><tr><td>只看 USDT 外部余额</td><td><span class="neg">−726.48</span></td><td><span class="neg">−2,219.26</span></td><td>22.3%</td></tr><tr><td>只看 USDC 外部余额</td><td><span class="neg">−1,794.96</span></td><td><span class="neg">−3,115.70</span></td><td>29.9%</td></tr><tr><td>第三方历史全球流通量</td><td><span class="pos">+1,168.32</span></td><td><span class="neg">−629.53</span></td><td>23.3%</td></tr></tbody></table><h3>地址、区块和观察时点</h3><p>372 个周度区块均保存了原始调用与区块哈希，发行者金库地址在 2024 年已公开。只扣除可核实地址后，近期收益从 +246.15 转为 −1,222.11。全球流通量来自现有历史版本，当时公布值尚缺整段独立存档。</p><h3>独立的链上活跃度模型</h3><p>补回 2021 年 4 月 12 日一周的真实已知信息后，该周增加 7,803.56，其中 98.75% 来自 DOGE。后续复利使期末余额增加约 15,019。换用 Kraken 美元现货，同一周依然赚约 5,599；它证实价格变化，却只代表同一轮行情。</p><p class="note">要求只用前一周早已公开且能严格判定的链上输入，完整样本赚 5,595.90，同风险三币对照赚 12,242.49。2026 年的 25 个缺口周也已确认三币方向，BTC 入选 14 周，DOGE 一周，ETH 零周。</p><p class="caption"><a href="https://github.com/DefiLlama/peggedassets-server/commit/206ee390d0bca93de421f40ef15e14df9b099250">金库地址历史版本</a>　<a href="https://github.com/coinmetrics/data">Coin Metrics 原始历史</a></p></main><footer><span>2026 年 11 月 22 日　·　金额以 USDT 计</span><span>5 / 7</span></footer></section><section class="sheet" id="p6"><header><span>BTC · ETH · DOGE　/　第十二轮研究</span><span>前瞻盘口 · 同币现货与永续</span></header><main><h2 class="title">真实可见的基差，够支付四次成交吗？</h2><p class="lead">预先固定 120 轮、每 10 秒一组，实时捕获两所的三币现货和永续盘口。按实际深度比较现在开仓和过去三分钟可见的平仓基差，交易决策与模拟成交至少相隔一次观察。下表为每腿约一千 USDT，单位为基点。</p><table><thead><tr><th>市场</th><th>有效判断数</th><th>正向最大偏离</th><th>反向库存最大偏离</th><th>四腿成本门槛</th><th>双向过线数</th></tr></thead><tbody><tr><td>Binance BTC</td><td>87</td><td>1.33</td><td>1.24</td><td>38</td><td>0</td></tr><tr><td>Binance DOGE</td><td>89</td><td>-1.82</td><td>-0.97</td><td>54</td><td>0</td></tr><tr><td>Binance ETH</td><td>80</td><td>1.01</td><td>1.14</td><td>42</td><td>0</td></tr><tr><td>Bybit BTC</td><td>90</td><td>1.38</td><td>1.12</td><td>39</td><td>0</td></tr><tr><td>Bybit DOGE</td><td>89</td><td>-1.67</td><td>-2.54</td><td>55</td><td>0</td></tr><tr><td>Bybit ETH</td><td>89</td><td>0.90</td><td>0.84</td><td>43</td><td>0</td></tr></tbody></table><h3>本次真实盘口覆盖</h3><p>北京时间 11 月 22 日 00:01 至 00:21，共 1,440 份盘口，697 / 720 组币种与场所组合通过同步、时延与顺序检查。报价中包含市场深度，另收四次手续费与各币预设不利滑点。六份官方结算历史确认期间没有资金费交割。</p><h3>放宽入场后的代价</h3><p>每见正向毛偏离就模拟入场、两分钟后退出，实际可完整平仓 22 次，合计 −88.15。每个市场无条件往返一次，合计 −27.73。一万名义的两方向成本过线合计为 0，反向测算假设已有库存，未计入任何无成本借币。</p><p class="note">该样本只有周末约二十分钟。币安现货深度没有原生报价时间戳，使用本地收包时间约束，另以 36 个预定时点查币安原生成交，34 个找到附近前一笔、36 个找到后一笔，前一笔与盘口中价的绝对差均低于 1 个基点。这项检查仍无法保证两腿在当时同时成交。</p><p class="caption"><a href="https://bybit-exchange.github.io/docs/v5/market/orderbook">Bybit 订单簿深度与时间戳</a>　<a href="https://developers.binance.com/docs/derivatives/usds-margined-futures/market-data/rest-api/Get-Funding-Rate-History">币安资金费结算接口</a></p></main><footer><span>2026 年 11 月 22 日　·　金额以 USDT 计</span><span>6 / 7</span></footer></section><section class="sheet" id="p7"><header><span>BTC · ETH · DOGE　/　第十二轮研究</span><span>共同检验 · 后续观察</span></header><main><h2 class="title">同时尝试许多策略后，还剩多少可复核收益？</h2><p class="lead">对 28 个有连续净值的账户和 31 个相同交易日、相近风险的超额收益对照，取共同的 99 个日历周、689 天。所有账户一起按四周和八周成块随机翻转，计算同时 95% 区间。</p><table><thead><tr><th>两种窗口均高于零的账户</th><th>整段累计</th><th>四周块 · 年化对数区间</th><th>八周块 · 年化对数区间</th></tr></thead><tbody><tr><td>原资金费合并账户</td><td>1.29%</td><td>0.36% 至 1.00%</td><td>0.29% 至 1.06%</td></tr><tr><td>分币资金费 35% / 35% / 20%</td><td>1.78%</td><td>0.56% 至 1.31%</td><td>0.47% 至 1.40%</td></tr><tr><td>八成资金费、两成美盘排名</td><td>2.33%</td><td>0.10% 至 2.34%</td><td>0.15% 至 2.28%</td></tr></tbody></table><h3>更高的收益目标</h3><p>28 个账户中，没有一个在两种窗口下都显示年化收益高于整笔本金 4% 的统计证据。31 项相对对照也没有一项同时通过。最新按实际成本退出的 35% 档和韩国五次事件未进入这组已对齐的 28 个账户；两者都需后续独立检验。</p><h3>已经公开冻结的下一批观察</h3><p>11 月 23 日原链上活跃度规则把一万元的 1/6 配给 ETH，BTC 和 DOGE 留现金。新稳定币与双美国市场一致规则均保持现金。12 月 1 日另开 90 天的资金费纸面账户。11 月 23 日 ETH 已按原生交易数和费用区间独立核实，未来的价格和收益尚未知。</p><p class="note">这些均为历史回测或预先登记的模拟，未提交订单。资金费方案自有资金小幅盈利的证据最多。韩国异常和链上方向信号目前的独立市场事件太少。</p><p class="caption"><a href="https://2424540049-a11y.github.io/btc-eth-doge-research/reference/forward-2026-11-23.json">11 月 23 日事前记录</a>　<a href="https://2424540049-a11y.github.io/btc-eth-doge-research/reference/supply-pressure-2026-11-23.json">稳定币、美盘与 90 天配对预登记</a></p></main><footer><span>2026 年 11 月 22 日　·　金额以 USDT 计</span><span>7 / 7</span></footer></section><script>const cases=[{"venue":"binance","phase":"early","alloc":0.2,"scenario":"filled","net":480.2301001697,"positive_coupons":597.9656018738,"negative_coupons":-66.0355640646,"net_without_positive":-117.7355017041,"spot_dollar_years":4206.137119907,"spot_debt_simple_breakeven":0.1141736673,"actual_debt_cost":205.7980308436,"implied_simple_rate":0.0489280366,"after_actual_spot_debt":274.4320693262,"minimum_positive_share":0.1968934356,"share_with_actual_debt":0.5410570968},{"venue":"binance","phase":"early","alloc":0.35,"scenario":"filled","net":591.5263637864,"positive_coupons":710.5074450132,"negative_coupons":-34.7654359763,"net_without_positive":-118.9810812268,"spot_dollar_years":3330.5929373499,"spot_debt_simple_breakeven":0.1776039207,"actual_debt_cost":202.6551028968,"implied_simple_rate":0.060846554,"after_actual_spot_debt":388.8712608896,"minimum_positive_share":0.1674593026,"share_with_actual_debt":0.4526851708},{"venue":"binance","phase":"early","alloc":0.45,"scenario":"filled","net":555.0580797412,"positive_coupons":662.2226749576,"negative_coupons":-21.7128150392,"net_without_positive":-107.1645952164,"spot_dollar_years":1805.4375371515,"spot_debt_simple_breakeven":0.3074368779,"actual_debt_cost":155.361339568,"implied_simple_rate":0.0860519051,"after_actual_spot_debt":399.6967401732,"minimum_positive_share":0.1618256204,"share_with_actual_debt":0.3964315097},{"venue":"binance","phase":"early","alloc":0.2,"scenario":"bothstress","net":150.9661554444,"positive_coupons":298.9510145076,"negative_coupons":-65.9841030904,"net_without_positive":-147.9848590632,"spot_dollar_years":4210.7477143823,"spot_debt_simple_breakeven":0.0358525767,"actual_debt_cost":null,"implied_simple_rate":null,"after_actual_spot_debt":null,"minimum_positive_share":0.4950137376,"share_with_actual_debt":null},{"venue":"binance","phase":"early","alloc":0.35,"scenario":"bothstress","net":182.1441543114,"positive_coupons":355.2459122332,"negative_coupons":-34.5380015488,"net_without_positive":-173.1017579218,"spot_dollar_years":3389.3468952686,"spot_debt_simple_breakeven":0.0537401924,"actual_debt_cost":null,"implied_simple_rate":null,"after_actual_spot_debt":null,"minimum_positive_share":0.4872730465,"share_with_actual_debt":null},{"venue":"binance","phase":"early","alloc":0.45,"scenario":"bothstress","net":141.6563866097,"positive_coupons":293.7992810642,"negative_coupons":-18.6945092744,"net_without_positive":-152.1428944545,"spot_dollar_years":1613.6580016357,"spot_debt_simple_breakeven":0.0877858793,"actual_debt_cost":null,"implied_simple_rate":null,"after_actual_spot_debt":null,"minimum_positive_share":0.5178463811,"share_with_actual_debt":null},{"venue":"binance","phase":"middle","alloc":0.2,"scenario":"filled","net":327.2281616155,"positive_coupons":373.4177141041,"negative_coupons":-11.8426511757,"net_without_positive":-46.1895524886,"spot_dollar_years":3591.7369888384,"spot_debt_simple_breakeven":0.091105825,"actual_debt_cost":204.5065113817,"implied_simple_rate":0.0569380531,"after_actual_spot_debt":122.7216502338,"minimum_positive_share":0.1236940583,"share_with_actual_debt":0.6713555742},{"venue":"binance","phase":"middle","alloc":0.35,"scenario":"filled","net":530.7859975382,"positive_coupons":615.1651681438,"negative_coupons":-20.7542948697,"net_without_positive":-84.3791706056,"spot_dollar_years":6061.724362238,"spot_debt_simple_breakeven":0.0875635324,"actual_debt_cost":337.3489357362,"implied_simple_rate":0.0556523054,"after_actual_spot_debt":193.437061802,"minimum_positive_share":0.1371650655,"share_with_actual_debt":0.6855526421},{"venue":"binance","phase":"middle","alloc":0.45,"scenario":"filled","net":425.9943323891,"positive_coupons":504.6360055273,"negative_coupons":-22.1029675373,"net_without_positive":-78.6416731383,"spot_dollar_years":5192.8336717637,"spot_debt_simple_breakeven":0.0820350428,"actual_debt_cost":232.4602528525,"implied_simple_rate":0.044765588,"after_actual_spot_debt":193.5340795366,"minimum_positive_share":0.1558384108,"share_with_actual_debt":0.6164877706},{"venue":"binance","phase":"middle","alloc":0.2,"scenario":"bothstress","net":107.9433000667,"positive_coupons":186.708857052,"negative_coupons":-11.8426511757,"net_without_positive":-78.7655569853,"spot_dollar_years":3596.6785134125,"spot_debt_simple_breakeven":0.0300119401,"actual_debt_cost":204.7883358549,"implied_simple_rate":0.056938182,"after_actual_spot_debt":-96.8450357882,"minimum_positive_share":0.4218629916,"share_with_actual_debt":1.5186954562},{"venue":"binance","phase":"middle","alloc":0.35,"scenario":"bothstress","net":161.0086094096,"positive_coupons":301.8310492278,"negative_coupons":-20.7542948697,"net_without_positive":-140.8224398182,"spot_dollar_years":6025.4932044088,"spot_debt_simple_breakeven":0.0267212333,"actual_debt_cost":327.7023695946,"implied_simple_rate":0.0543859828,"after_actual_spot_debt":-166.693760185,"minimum_positive_share":0.466560482,"share_with_actual_debt":1.5522750579},{"venue":"binance","phase":"middle","alloc":0.45,"scenario":"bothstress","net":108.7202691371,"positive_coupons":243.9702515245,"negative_coupons":-22.13559057,"net_without_positive":-135.2499823875,"spot_dollar_years":5147.1332102993,"spot_debt_simple_breakeven":0.0211224899,"actual_debt_cost":226.0956214636,"implied_simple_rate":0.0439265145,"after_actual_spot_debt":-117.3753523266,"minimum_positive_share":0.5543707954,"share_with_actual_debt":1.4811051823},{"venue":"binance","phase":"recent","alloc":0.2,"scenario":"filled","net":109.4660445775,"positive_coupons":138.7108514465,"negative_coupons":-21.938375781,"net_without_positive":-29.244806869,"spot_dollar_years":3696.1048756657,"spot_debt_simple_breakeven":0.0296165959,"actual_debt_cost":138.9163004997,"implied_simple_rate":0.0375845127,"after_actual_spot_debt":-29.4502559222,"minimum_positive_share":0.2108328697,"share_with_actual_debt":1.2123140015},{"venue":"binance","phase":"recent","alloc":0.35,"scenario":"filled","net":196.4346306695,"positive_coupons":245.6304161594,"negative_coupons":-38.6427819909,"net_without_positive":-49.1957854898,"spot_dollar_years":6535.1576421225,"spot_debt_simple_breakeven":0.0300581319,"actual_debt_cost":244.9952297003,"implied_simple_rate":0.0374888018,"after_actual_spot_debt":-48.5605990308,"minimum_positive_share":0.2002837688,"share_with_actual_debt":1.197697825},{"venue":"binance","phase":"recent","alloc":0.45,"scenario":"filled","net":252.1721377843,"positive_coupons":314.3179960872,"negative_coupons":-49.6013362661,"net_without_positive":-62.1458583029,"spot_dollar_years":8364.6293446898,"spot_debt_simple_breakeven":0.0301474372,"actual_debt_cost":313.2453639348,"implied_simple_rate":0.0374488039,"after_actual_spot_debt":-61.0732261506,"minimum_positive_share":0.1977165135,"share_with_actual_debt":1.1943039435},{"venue":"binance","phase":"recent","alloc":0.2,"scenario":"bothstress","net":33.0397836259,"positive_coupons":69.3235180918,"negative_coupons":-21.9234466374,"net_without_positive":-36.2837344659,"spot_dollar_years":3699.0036134386,"spot_debt_simple_breakeven":0.0089320766,"actual_debt_cost":139.0271918787,"implied_simple_rate":0.0375850381,"after_actual_spot_debt":-105.9874082529,"minimum_positive_share":0.5233971885,"share_with_actual_debt":2.5288809796},{"venue":"binance","phase":"recent","alloc":0.35,"scenario":"bothstress","net":62.9652271473,"positive_coupons":122.6434009049,"negative_coupons":-38.5797160728,"net_without_positive":-59.6781737575,"spot_dollar_years":6533.6912712509,"spot_debt_simple_breakeven":0.0096370068,"actual_debt_cost":244.940257303,"implied_simple_rate":0.0374888018,"after_actual_spot_debt":-181.9750301557,"minimum_positive_share":0.4865991429,"share_with_actual_debt":2.4837735158},{"venue":"binance","phase":"recent","alloc":0.45,"scenario":"bothstress","net":80.6479391027,"positive_coupons":157.1016613998,"negative_coupons":-49.5741096935,"net_without_positive":-76.4537222971,"spot_dollar_years":8372.2738012385,"spot_debt_simple_breakeven":0.0096327403,"actual_debt_cost":313.5318820423,"implied_simple_rate":0.0374488328,"after_actual_spot_debt":-232.8839429396,"minimum_positive_share":0.4866512653,"share_with_actual_debt":2.48237734},{"venue":"bybit","phase":"middle","alloc":0.2,"scenario":"filled","net":271.4765095648,"positive_coupons":307.8314430661,"negative_coupons":-11.9106396346,"net_without_positive":-36.3549335013,"spot_dollar_years":2775.1027565823,"spot_debt_simple_breakeven":0.0978257504,"actual_debt_cost":183.2688493865,"implied_simple_rate":0.0660403832,"after_actual_spot_debt":88.2076601783,"minimum_positive_share":0.1181001302,"share_with_actual_debt":0.7134546773},{"venue":"bybit","phase":"middle","alloc":0.35,"scenario":"filled","net":467.8913218292,"positive_coupons":539.0520911178,"negative_coupons":-20.8486356417,"net_without_positive":-71.1607692887,"spot_dollar_years":4857.958204467,"spot_debt_simple_breakeven":0.0963143984,"actual_debt_cost":320.3397232796,"implied_simple_rate":0.0659412267,"after_actual_spot_debt":147.5515985495,"minimum_positive_share":0.1320109326,"share_with_actual_debt":0.7262758071},{"venue":"bybit","phase":"middle","alloc":0.45,"scenario":"filled","net":554.2356175881,"positive_coupons":636.5407941448,"negative_coupons":-25.9125607283,"net_without_positive":-82.3051765567,"spot_dollar_years":5916.9517748385,"spot_debt_simple_breakeven":0.0936691118,"actual_debt_cost":381.1970303785,"implied_simple_rate":0.0644245627,"after_actual_spot_debt":173.0385872097,"minimum_positive_share":0.1293007099,"share_with_actual_debt":0.7281578984},{"venue":"bybit","phase":"middle","alloc":0.2,"scenario":"bothstress","net":91.7528231955,"positive_coupons":153.8702715065,"negative_coupons":-11.9060285678,"net_without_positive":-62.1174483109,"spot_dollar_years":2778.2305727847,"spot_debt_simple_breakeven":0.033025633,"actual_debt_cost":183.4809285286,"implied_simple_rate":0.066042369,"after_actual_spot_debt":-91.7281053331,"minimum_positive_share":0.4037001281,"share_with_actual_debt":1.596139231},{"venue":"bybit","phase":"middle","alloc":0.35,"scenario":"bothstress","net":163.0976218423,"positive_coupons":269.441936862,"negative_coupons":-20.8397970485,"net_without_positive":-106.3443150197,"spot_dollar_years":4863.1410127419,"spot_debt_simple_breakeven":0.0335375062,"actual_debt_cost":320.6205126794,"implied_simple_rate":0.0659286893,"after_actual_spot_debt":-157.5228908372,"minimum_positive_share":0.3946836052,"share_with_actual_debt":1.584626479},{"venue":"bybit","phase":"middle","alloc":0.45,"scenario":"bothstress","net":173.1168889106,"positive_coupons":314.7210704082,"negative_coupons":-25.9017049722,"net_without_positive":-141.6041814977,"spot_dollar_years":5909.7540458018,"spot_debt_simple_breakeven":0.0292934169,"actual_debt_cost":378.3964258454,"implied_simple_rate":0.0640291327,"after_actual_spot_debt":-205.2795369349,"minimum_positive_share":0.4499354978,"share_with_actual_debt":1.6522586386},{"venue":"bybit","phase":"recent","alloc":0.2,"scenario":"filled","net":111.1808193116,"positive_coupons":148.2450846941,"negative_coupons":-27.0477357999,"net_without_positive":-37.0642653825,"spot_dollar_years":3694.3366048859,"spot_debt_simple_breakeven":0.0300949348,"actual_debt_cost":138.7088452564,"implied_simple_rate":0.0375463473,"after_actual_spot_debt":-27.5280259448,"minimum_positive_share":0.2500201977,"share_with_actual_debt":1.1856926724},{"venue":"bybit","phase":"recent","alloc":0.35,"scenario":"filled","net":195.8415495104,"positive_coupons":258.8170440517,"negative_coupons":-47.4454066311,"net_without_positive":-62.9754945413,"spot_dollar_years":6503.3527951607,"spot_debt_simple_breakeven":0.0301139359,"actual_debt_cost":243.7846375987,"implied_simple_rate":0.037485993,"after_actual_spot_debt":-47.9430880883,"minimum_positive_share":0.2433205076,"share_with_actual_debt":1.1852393001},{"venue":"bybit","phase":"recent","alloc":0.45,"scenario":"filled","net":250.3309598729,"positive_coupons":331.4274427443,"negative_coupons":-60.9432951809,"net_without_positive":-81.0964828715,"spot_dollar_years":8346.0945078815,"spot_debt_simple_breakeven":0.0299937845,"actual_debt_cost":312.4826676833,"implied_simple_rate":0.0374405858,"after_actual_spot_debt":-62.1517078105,"minimum_positive_share":0.2446884971,"share_with_actual_debt":1.1875273432},{"venue":"bybit","phase":"recent","alloc":0.2,"scenario":"bothstress","net":28.7249398905,"positive_coupons":74.0954086527,"negative_coupons":-27.0350574183,"net_without_positive":-45.3704687623,"spot_dollar_years":3697.5913989441,"spot_debt_simple_breakeven":0.0077685544,"actual_debt_cost":138.831118552,"implied_simple_rate":0.0375463656,"after_actual_spot_debt":-110.1061786616,"minimum_positive_share":0.6123249684,"share_with_actual_debt":2.4860054174},{"venue":"bybit","phase":"recent","alloc":0.35,"scenario":"bothstress","net":53.867334058,"positive_coupons":129.3542546372,"negative_coupons":-47.4200498679,"net_without_positive":-75.4869205792,"spot_dollar_years":6508.5977671749,"spot_debt_simple_breakeven":0.0082763348,"actual_debt_cost":243.9812477224,"implied_simple_rate":0.0374859926,"after_actual_spot_debt":-190.1139136644,"minimum_positive_share":0.5835673576,"share_with_actual_debt":2.4697151957},{"venue":"bybit","phase":"recent","alloc":0.45,"scenario":"bothstress","net":68.3337187831,"positive_coupons":165.5312208569,"negative_coupons":-60.8202129169,"net_without_positive":-97.1975020738,"spot_dollar_years":8339.65240435,"spot_debt_simple_breakeven":0.008193833,"actual_debt_cost":312.3340110261,"implied_simple_rate":0.0374516821,"after_actual_spot_debt":-244.000292243,"minimum_positive_share":0.5871853151,"share_with_actual_debt":2.4740439355}];
+const percent=n=>(100*n).toFixed(2)+'%';
+const signed=n=>(n>=0?'+':'−')+Math.abs(n).toFixed(2);
+function redraw(){
+ const venue=document.querySelector('#venue').value,phase=document.querySelector('#phase').value,alloc=+document.querySelector('#alloc').value,rate=+document.querySelector('#rate').value/100,keep=+document.querySelector('#keep').value/100;
+ const x=cases.find(c=>c.venue===venue&&c.phase===phase&&Math.abs(c.alloc-alloc)<1e-8&&c.scenario==='filled');
+ const output=document.querySelector('#out');
+ if(!x){output.textContent='该交易所和时段组合没有完整账户。';return}
+ const profit=x.net_without_positive+x.positive_coupons*keep-rate*x.spot_dollar_years;
+ output.textContent='模拟净额 '+signed(profit)+' USDT　｜　实际正资金费 '+signed(x.positive_coupons)+'　｜　原始资金费下的借款盈亏平衡年利率 '+percent(x.spot_debt_simple_breakeven);
+}
+document.querySelectorAll('select,input').forEach(e=>e.addEventListener('input',redraw));redraw();
+document.querySelector('#dl').onclick=()=>{const a=document.createElement('a'),u=URL.createObjectURL(new Blob(['\uFEFF',"venue,phase,alloc,scenario,net,positive_coupons,negative_coupons,net_without_positive,spot_dollar_years,spot_debt_simple_breakeven,actual_debt_cost,implied_simple_rate,after_actual_spot_debt,minimum_positive_share,share_with_actual_debt\r\nbinance,early,0.2,filled,480.23010016974376,597.9656018738099,-66.03556406456421,-117.73550170406612,4206.137119906998,0.1141736673055399,205.7980308435829,0.048928036575311,274.4320693261609,0.1968934355674059,0.5410570968193\r\nbinance,early,0.35,filled,591.5263637863727,710.507445013214,-34.7654359762826,-118.9810812268413,3330.5929373498866,0.1776039206571558,202.6551028967804,0.0608465539646615,388.8712608895924,0.1674593025898954,0.4526851708325728\r\nbinance,early,0.45,filled,555.0580797412308,662.2226749576498,-21.71281503919974,-107.164595216419,1805.437537151517,0.3074368779420414,155.36133956798795,0.0860519050762095,399.69674017324286,0.161825620397659,0.3964315096899934\r\nbinance,early,0.2,bothstress,150.96615544444785,298.951014507603,-65.98410309042534,-147.98485906315517,4210.7477143822825,0.0358525767119236,,,,0.4950137376415947,\r\nbinance,early,0.35,bothstress,182.1441543113888,355.2459122332282,-34.53800154880802,-173.10175792183938,3389.3468952685985,0.053740192414549,,,,0.4872730465317602,\r\nbinance,early,0.45,bothstress,141.65638660973127,293.7992810642448,-18.694509274430608,-152.1428944545135,1613.6580016356716,0.0877858793289175,,,,0.5178463810510298,\r\nbinance,middle,0.2,filled,327.2281616155351,373.4177141040909,-11.842651175662764,-46.18955248855582,3591.7369888383605,0.0911058250179301,204.50651138169889,0.0569380530972119,122.72165023383624,0.1236940582729837,0.6713555742038865\r\nbinance,middle,0.35,filled,530.7859975381907,615.1651681437554,-20.75429486965765,-84.3791706055647,6061.724362237958,0.0875635323910088,337.34893573618854,0.0556523054459112,193.43706180200215,0.1371650655387017,0.6855526420884762\r\nbinance,middle,0.45,filled,425.99433238905385,504.6360055273104,-22.10296753734809,-78.64167313825658,5192.833671763697,0.0820350427754734,232.46025285245872,0.0447655880288393,193.53407953659516,0.1558384108087598,0.6164877705577803\r\nbinance,middle,0.2,bothstress,107.94330006670224,186.70885705204543,-11.842651175662764,-78.7655569853432,3596.6785134125125,0.0300119400897708,204.78833585485955,0.0569381820174295,-96.84503578815728,0.421862991552603,1.5186954562158856\r\nbinance,middle,0.35,bothstress,161.0086094096023,301.8310492278377,-20.75429486965765,-140.82243981823547,6025.49320440876,0.0267212332580169,327.70236959464364,0.0543859827698202,-166.69376018504136,0.4665604820262721,1.5522750578891311\r\nbinance,middle,0.45,bothstress,108.72026913705348,243.97025152452653,-22.135590570033465,-135.24998238747304,5147.133210299312,0.0211224898783474,226.09562146362572,0.043926514474351,-117.37535232657228,0.5543707953831258,1.481105182263471\r\nbinance,recent,0.2,filled,109.46604457754802,138.7108514465105,-21.93837578096348,-29.244806868962485,3696.104875665656,0.0296165959191927,138.91630049970553,0.0375845126620459,-29.45025592215751,0.2108328696997425,1.2123140015005536\r\nbinance,recent,0.35,filled,196.4346306695411,245.63041615936515,-38.64278199090485,-49.19578548982406,6535.157642122541,0.0300581319421303,244.99522970031836,0.037488801818826,-48.56059903077724,0.2002837688387329,1.1976978250090615\r\nbinance,recent,0.45,filled,252.1721377842537,314.3179960871732,-49.60133626610228,-62.14585830291949,8364.629344689803,0.0301474371897115,313.24536393482896,0.0374488038891632,-61.07322615057527,0.1977165134562766,1.1943039434930642\r\nbinance,recent,0.2,bothstress,33.0397836258735,69.32351809181336,-21.92344663744512,-36.28373446593986,3699.0036134386455,0.0089320766018823,139.0271918787442,0.0375850381366625,-105.9874082528707,0.5233971884964783,2.528880979648191\r\nbinance,recent,0.35,bothstress,62.965227147325095,122.64340090485142,-38.57971607282971,-59.67817375752632,6533.691271250928,0.0096370067903851,244.9402573030401,0.037488801832558,-181.97503015571505,0.48659914285829,2.4837735158444767\r\nbinance,recent,0.45,bothstress,80.647939102691,157.101661399791,-49.5741096935156,-76.4537222971,8372.27380123854,0.0096327402826649,313.5318820423139,0.0374488328362997,-232.8839429396229,0.4866512652755543,2.482377340026862\r\nbybit,middle,0.2,filled,271.4765095648154,307.8314430661078,-11.91063963462019,-36.35493350129241,2775.102756582296,0.0978257503874036,183.26884938654197,0.0660403831720626,88.20766017827344,0.1181001301854829,0.713454677339993\r\nbybit,middle,0.35,filled,467.8913218291664,539.0520911178263,-20.848635641684588,-71.16076928865994,4857.958204466954,0.0963143983822121,320.3397232796232,0.065941226704064,147.5515985495432,0.1320109326375019,0.7262758071421871\r\nbybit,middle,0.45,filled,554.2356175881414,636.5407941448307,-25.91256072834309,-82.30517655668928,5916.951774838469,0.093669111846576,381.1970303784912,0.0644245626607118,173.03858720965025,0.1293007098897145,0.7281578984389818\r\nbybit,middle,0.2,bothstress,91.75282319554162,153.87027150648555,-11.906028567823991,-62.11744831094393,2778.230572784709,0.0330256329673799,183.48092852863047,0.0660423689545399,-91.72810533308883,0.4037001280544677,1.5961392310224305\r\nbybit,middle,0.35,bothstress,163.097621842257,269.4419368619532,-20.83979704846919,-106.34431501969618,4863.141012741909,0.0335375061950548,320.6205126794187,0.0659286892646874,-157.5228908371617,0.3946836051515655,1.5846264789800242\r\nbybit,middle,0.45,bothstress,173.11688891055155,314.7210704082344,-25.90170497220169,-141.60418149768282,5909.754045801805,0.0292934168780731,378.3964258454035,0.0640291326699476,-205.27953693485196,0.4499354978489482,1.6522586386369924\r\nbybit,recent,0.2,filled,111.18081931162716,148.24508469409224,-27.04773579990578,-37.06426538246508,3694.33660488589,0.0300949348157898,138.708845256401,0.0375463473125198,-27.52802594477383,0.250020197694569,1.1856926723849135\r\nbybit,recent,0.35,filled,195.8415495103964,258.817044051699,-47.445406631142575,-62.9754945413026,6503.35279516066,0.0301139359464133,243.7846375986958,0.0374859930373304,-47.94308808829942,0.2433205076274774,1.185239300077636\r\nbybit,recent,0.45,filled,250.3309598728697,331.42744274433073,-60.943295180894566,-81.09648287146103,8346.094507881482,0.0299937844744597,312.48266768332394,0.0374405858198989,-62.15170781045424,0.2446884971261126,1.1875273432272753\r\nbybit,recent,0.2,bothstress,28.724939890453243,74.0954086527259,-27.035057418272785,-45.37046876227265,3697.591398944056,0.0077685543888533,138.831118552005,0.037546365612937,-110.10617866155177,0.6123249684054953,2.4860054173883155\r\nbybit,recent,0.35,bothstress,53.86733405803261,129.35425463720904,-47.42004986787658,-75.48692057917643,6508.597767174868,0.0082763347782381,243.98124772244148,0.0374859925978102,-190.11391366440887,0.5835673576481066,2.469715195666414\r\nbybit,recent,0.45,bothstress,68.33371878310254,165.5312208568786,-60.82021291690556,-97.19750207377606,8339.652404350023,0.0081938329644841,312.334011026113,0.0374516821424352,-244.00029224301045,0.5871853150760897,2.4740439355182287\r\n"],{type:'text/csv;charset=utf-8'}));a.href=u;a.download='funding-financing-frontier.csv';a.click();setTimeout(()=>URL.revokeObjectURL(u),5000)};
+if('serviceWorker' in navigator)navigator.serviceWorker.register('./sw.js').catch(()=>{});</script></body></html>

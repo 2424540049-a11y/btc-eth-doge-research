@@ -1,5 +1,5 @@
 self.RESEARCH_RELEASE = {
-  "version": "d9b0be3432ff8acaeb90a13de82dd70bd18e9597fde6799b502fef8957464478",
+  "version": "2086fe604e6afe7d2d359b19a70004850d2ff3baca5563c8abd93a484004c5ce",
   "files": {
     "app.js": "7be14736c504fc35c4c36463f15ef3335bf6ea2311dd8c8024c29c3967d15f1c",
     "basis.html": "bab9798157358288b1728432e9df6276a698f71ac65087835940aab144a6809e",
@@ -14,9 +14,9 @@ self.RESEARCH_RELEASE = {
     "icons/apple-touch-icon.png": "afeea60530c0e5035e82e719dc6f1ecb166770625e108f86e320f20ef2bf92fc",
     "icons/favicon-32.png": "5ca221c8416fe004dbb3818aacb5b6aede7101f918c821615cfaaef340bfb9e9",
     "icons/favicon.ico": "27cf3deaaccf35c73504ed29a4526c5a508b7ad933543ee2a9065d851d53f6b2",
-    "income11.html": "c2555f3834e6c8a266461b9dc5286288131f495e10ea034f8bd3d99701c37b9a",
+    "income11.html": "49023cc09431f8a7f90da7cc35bb805225d295e90862071e1dde51d273b81acc",
     "income11.pdf": "38596bd9dd7e7c6a29063a23154c6fc59a060bc68321c8bb114ad5c41ee6b2b1",
-    "index.html": "80ab99f68536d65c7ef75b71a391bce462d3909bcd072be40f8e62c0d8011874",
+    "index.html": "0260e752f1943078a7324cfd52a39000b597f6cfae8ee9120d0b3fae154431c1",
     "manifest.webmanifest": "aae3747161cf4b5f93f34c8d210cb62e32f9764754cc36efbabb768bb3edce48",
     "online/api.js": "dfdf4e2feaa20fa6454c5bea1b8b091553eb76f2d534223ff2616df47893869e",
     "online/data.js": "b2785c07c6258357b0895fe33fec83b70ef50b5221b2375612be5b6d89fef5d6",
@@ -27,6 +27,8 @@ self.RESEARCH_RELEASE = {
     "online/worker.js": "eca324e5a63c5ac1859a464fa7f53a26e537d1cfb181804a3c4a46befe6719f7",
     "opportunities10.html": "8777a2486489328886b6fde6078d9b464fc9e1c953aa917065c5d4e6508109ed",
     "opportunities10.pdf": "7a2cfdad6ff7726aca2628b5c2f0b6be904c76eaa33d89e781356025d158eaf9",
+    "opportunities12.html": "78311c0ef93e37519d4c0d3d6084bf63d7cebdaa92e2b7eb93a481caea0cdf69",
+    "opportunities12.pdf": "dd41c8ed6efd503046f9c0867fd2e32bdf78111ec45ab490b3457ae6445194a2",
     "opportunities8.html": "a4033877a7b597cb8b4b7973a56993d2886ef518f047222212ced55d72388a9f",
     "opportunities8.pdf": "a4829c9731b258156423b67a7263fa29de9e917cecb8a49e866b27333dc6bd72",
     "reference/daily_balanced.json": "e3de7aed06a71a71d4d11beef8e1ced8375f2c0a4a18ad66c466372dc9cd6540",
